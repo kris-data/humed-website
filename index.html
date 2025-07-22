@@ -780,16 +780,31 @@
     }
     
     /* Hidden content for Korean language */
-    .ko-content {
+    body:not(.korean-mode) .ko-content {
       display: none !important;
     }
     
-    /* 초기 로딩 시 영어 버튼만 표시 */
+    body.korean-mode .en-content {
+      display: none !important;
+    }
+    
+    /* 초기 로딩 시 영어 콘텐츠 표시 */
     .en-content {
       display: block;
     }
     .en-content.cta-btn {
       display: inline-block;
+    }
+    
+    /* 한글 모드일 때 한글 콘텐츠 표시 */
+    body.korean-mode .ko-content {
+      display: block !important;
+    }
+    body.korean-mode .ko-content.cta-btn {
+      display: inline-block !important;
+    }
+    body.korean-mode .ko-content span {
+      display: inline !important;
     }
     
     @media (max-width: 1100px) {
@@ -1278,48 +1293,18 @@
     function toggleLanguage() {
       isKorean = !isKorean;
       
-      const enElements = document.querySelectorAll('.en-content');
-      const koElements = document.querySelectorAll('.ko-content');
       const langText = document.getElementById('langText');
       const hiddenLanguage = document.getElementById('hiddenLanguage');
       
       if (isKorean) {
-        enElements.forEach(el => {
-          if (el.tagName === 'SPAN') {
-            el.style.display = 'none';
-          } else {
-            el.style.display = 'none';
-          }
-        });
-        koElements.forEach(el => {
-          if (el.tagName === 'SPAN') {
-            el.style.display = 'inline';
-          } else if (el.tagName === 'A') {
-            el.style.display = 'inline-block';
-          } else {
-            el.style.display = 'block';
-          }
-        });
+        // 한글 모드: body에 korean-mode 클래스 추가
+        document.body.classList.add('korean-mode');
         langText.textContent = 'ENG';
         document.documentElement.lang = 'ko';
         hiddenLanguage.value = 'ko';
       } else {
-        enElements.forEach(el => {
-          if (el.tagName === 'SPAN') {
-            el.style.display = 'inline';
-          } else if (el.tagName === 'A') {
-            el.style.display = 'inline-block';
-          } else {
-            el.style.display = 'block';
-          }
-        });
-        koElements.forEach(el => {
-          if (el.tagName === 'SPAN') {
-            el.style.display = 'none';
-          } else {
-            el.style.display = 'none';
-          }
-        });
+        // 영어 모드: body에서 korean-mode 클래스 제거
+        document.body.classList.remove('korean-mode');
         langText.textContent = '한글';
         document.documentElement.lang = 'en';
         hiddenLanguage.value = 'en';
