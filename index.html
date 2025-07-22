@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HuMed Lifesciences - Hybrid Dental Implant Innovation</title>
+  <meta name="description" content="Transforming patient access to Dental Implant treatments to those that need it the most. World's First Hybrid Dental Implant Technology. Revolutionary Bone Ingrowth. Injectable System. 40% Improved Contact. $3K Cost Savings. 3D Stability. 100% Compatibility.">
+  <meta name="keywords" content="HuMed, dental implant, hybrid, bone ingrowth, injectable, innovation, medical device, cost savings, stability, compatibility, team">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="favicon.ico">
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1e40af;
+      --accent: #60a5fa;
+      --bg: #f8fafc;
+      --text: #1e293b;
+      --white: #fff;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Pretendard', 'Noto Sans KR', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: var(--primary);
+      color: var(--white);
+      padding: 1.2rem 0 1.2rem 0;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(37,99,235,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      transition: box-shadow 0.2s;
+    }
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+    }
+    .logo {
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      color: var(--white);
+      text-shadow: 0 2px 8px rgba(37,99,235,0.10);
+    }
+    nav {
+      display: flex;
+      gap: 1.2rem;
+    }
+    nav a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 1.08rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 1.2rem;
+      transition: background 0.2s, color 0.2s;
+    }
+    nav a:hover, nav a.active {
+      background: var(--accent);
+      color: var(--white);
+    }
+    .lang-toggle {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.05rem;
+      font-weight: 700;
+      background: var(--white);
+      color: var(--primary);
+      border: none;
+      border-radius: 2rem;
+      padding: 0.3rem 0.5rem;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      min-width: 110px;
+      justify-content: center;
+      position: relative;
+    }
+    .lang-toggle .lang-option {
+      padding: 0.2rem 0.8rem;
+      border-radius: 1.2rem;
+      font-weight: 700;
+      font-size: 1.08rem;
+      color: var(--primary-dark);
+      background: transparent;
+      cursor: pointer;
+      border: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .lang-toggle .lang-option.active {
+      background: var(--primary);
+      color: var(--white);
+      box-shadow: 0 2px 8px rgba(37,99,235,0.10);
+    }
+    .lang-toggle .divider {
+      width: 1px;
+      height: 22px;
+      background: #dbeafe;
+      margin: 0 0.2rem;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 60vh;
+      background: linear-gradient(120deg, var(--primary) 60%, var(--accent) 100%);
+      color: var(--white);
+      border-radius: 0 0 2rem 2rem;
+      box-shadow: 0 4px 24px rgba(37,99,235,0.10);
+      text-align: center;
+      margin-bottom: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-img {
+      position: absolute;
+      right: 5%;
+      bottom: 0;
+      width: 400px;
+      max-width: 45vw;
+      height: auto;
+      opacity: 0.18;
+      z-index: 1;
+      pointer-events: none;
+      transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+      object-fit: contain;
+    }
+    .hero-img:hover {
+      transform: scale(1.08);
+      box-shadow: 0 8px 32px rgba(37,99,235,0.18);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 4rem 0 2rem 0;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1.2rem;
+    }
+    .hero .sub {
+      font-size: 1.2rem;
+      margin-bottom: 0.7rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .hero .desc {
+      font-size: 1.08rem;
+      margin-bottom: 2rem;
+      color: #e0e7ef;
+    }
+    .hero .cta-group {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      margin-top: 1.2rem;
+    }
+    .hero .cta-btn {
+      background: var(--white);
+      color: var(--primary);
+      border: none;
+      padding: 0.9rem 2.2rem;
+      border-radius: 2rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(37,99,235,0.10);
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .hero .cta-btn.primary {
+      background: var(--primary-dark);
+      color: var(--white);
+    }
+    .hero .cta-btn:hover {
+      background: var(--accent);
+      color: var(--white);
+    }
+    section {
+      margin-bottom: 3.5rem;
+    }
+    section h2 {
+      color: var(--primary-dark);
+      font-size: 2rem;
+      margin-bottom: 1.2rem;
+      font-weight: 700;
+      text-align: center;
+    }
+    .section-img-row {
+      display: flex;
+      gap: 2.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .section-img {
+      background: var(--white);
+      border-radius: 1.5rem;
+      box-shadow: 0 2px 16px rgba(37,99,235,0.10);
+      overflow: hidden;
+      max-width: 420px;
+      width: 100%;
+      min-width: 280px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+    }
+    .section-img img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+      max-width: 100%;
+      border-radius: 1rem 1rem 0 0;
+    }
+    .section-img:hover {
+      transform: scale(1.06);
+      box-shadow: 0 8px 32px rgba(37,99,235,0.18);
+    }
+    .section-img .caption {
+      font-size: 1.13rem;
+      color: #334155;
+      padding: 1rem 1.2rem 1.2rem 1.2rem;
+      text-align: center;
+      font-weight: 600;
+    }
+    
+    /* 제품 섹션 */
+    .solutions-row {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      gap: 3rem;
+      margin-top: 2.5rem;
+      flex-wrap: wrap;
+    }
+    .solution-card {
+      background: var(--white);
+      border-radius: 1.5rem;
+      box-shadow: 0 2px 16px rgba(37,99,235,0.10);
+      width: 340px;
+      min-width: 260px;
+      max-width: 100vw;
+      min-height: 420px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+      transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+      justify-content: flex-start;
+    }
+    .solution-card:hover {
+      transform: scale(1.06);
+      box-shadow: 0 8px 32px rgba(37,99,235,0.18);
+    }
+    .solution-card img {
+      width: 100%;
+      max-width: 300px;
+      height: 240px;
+      object-fit: contain;
+      object-position: center;
+      border-radius: 1rem;
+      margin-bottom: 1.2rem;
+      box-shadow: 0 1px 8px rgba(37,99,235,0.07);
+      background: #f3f6fa;
+      display: block;
+    }
+    .solution-card h3 {
+      font-size: 1.22rem;
+      font-weight: 700;
+      margin-bottom: 0.7rem;
+    }
+    .solution-card p {
+      font-size: 1.09rem;
+      color: #334155;
+      margin: 0;
+    }
+    .solution-card .coming-soon {
+      color: var(--accent);
+      font-size: 1.08rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    
+    /* Benefits 섹션 */
+    .benefit-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1.2rem;
+    }
+    .benefit-item {
+      background: var(--white);
+      border-radius: 1.5rem;
+      box-shadow: 0 2px 16px rgba(37,99,235,0.10);
+      padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+      min-width: 220px;
+      max-width: 340px;
+      flex: 1 1 220px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 180px;
+      height: 100%;
+      transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+    }
+    .benefit-item:hover {
+      transform: scale(1.08);
+      box-shadow: 0 8px 32px rgba(37,99,235,0.18);
+    }
+    .benefit-item img {
+      width: 100%;
+      max-width: 140px;
+      height: 140px;
+      object-fit: cover;
+      object-position: center;
+      margin: 0 auto 1.1rem auto;
+      border-radius: 1rem;
+      transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+      display: block;
+    }
+    .benefit-item h3 {
+      margin-bottom: 0.7rem;
+      font-size: 1.22rem;
+      font-weight: 700;
+    }
+    .benefit-item p {
+      font-size: 1.09rem;
+      margin: 0;
+    }
+    
+    /* Clinical Evidence 섹션 */
+    .clinical-evidence {
+      background: var(--white);
+      border-radius: 1.2rem;
+      box-shadow: 0 2px 12px rgba(37,99,235,0.06);
+      padding: 2rem 1.5rem;
+      max-width: 900px;
+      margin: 0 auto 2rem auto;
+      text-align: center;
+    }
+    .proven-card {
+      background: var(--white);
+      border-radius: 1.5rem;
+      box-shadow: 0 2px 16px rgba(37,99,235,0.10);
+      width: 650px;
+      max-width: 98vw;
+      margin: 2.5rem auto 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+      transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+      justify-content: flex-start;
+    }
+    .proven-card img {
+      width: 100%;
+      max-width: 600px;
+      height: 350px;
+      object-fit: contain;
+      object-position: center;
+      border-radius: 1rem;
+      margin-bottom: 1.2rem;
+      box-shadow: 0 1px 8px rgba(37,99,235,0.07);
+      background: #f3f6fa;
+      display: block;
+    }
+    .proven-card h3 {
+      font-size: 1.22rem;
+      font-weight: 700;
+      margin-bottom: 0.7rem;
+    }
+    .proven-card p {
+      font-size: 1.09rem;
+      color: #334155;
+      margin: 0;
+    }
+    
+    /* Team 섹션 */
+    .team-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1.2rem;
+    }
+    .team-member {
+      background: var(--white);
+      border-radius: 1rem;
+      box-shadow: 0 1px 6px rgba(37,99,235,0.07);
+      padding: 1.2rem 1.5rem;
+      min-width: 220px;
+      max-width: 320px;
+      flex: 1 1 220px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .team-member img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center;
+      margin: 0 auto 0.7rem auto;
+      border: 2px solid var(--primary);
+      display: block;
+    }
+    .team-member h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.2rem;
+    }
+    .team-member span {
+      font-size: 0.98rem;
+      color: var(--primary-dark);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .team-member p {
+      font-size: 1.02rem;
+      color: #334155;
+    }
+    
+    /* News 섹션 */
+    .news-section {
+      background: var(--white);
+      border-radius: 1.2rem;
+      box-shadow: 0 2px 12px rgba(37,99,235,0.06);
+      padding: 2rem 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto 2rem auto;
+      text-align: center;
+    }
+    .news-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      justify-content: center;
+      margin-top: 1.2rem;
+    }
+    .news-card {
+      background: var(--bg);
+      border-radius: 1rem;
+      box-shadow: 0 1px 6px rgba(37,99,235,0.07);
+      padding: 1.2rem 1.2rem 1.5rem 1.2rem;
+      max-width: 320px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: left;
+    }
+    .news-card img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 0.7rem;
+      margin-bottom: 0.8rem;
+      display: block;
+    }
+    .news-card h4 {
+      font-size: 1.08rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      color: var(--primary-dark);
+    }
+    .news-card p {
+      font-size: 1rem;
+      color: #334155;
+      margin-bottom: 0.7rem;
+    }
+    .news-card .date {
+      font-size: 0.95rem;
+      color: #64748b;
+      margin-bottom: 0.3rem;
+    }
+    .news-section .view-all-btn {
+      margin-top: 1.5rem;
+      background: var(--primary);
+      color: var(--white);
+      border: none;
+      padding: 0.7rem 2rem;
+      border-radius: 2rem;
+      font-size: 1.05rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .news-section .view-all-btn:hover {
+      background: var(--primary-dark);
+    }
+    
+    /* Milestones 섹션 */
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin: 2rem auto 0 auto;
+      max-width: 600px;
+    }
+    .timeline-item {
+      background: var(--white);
+      border-radius: 1rem;
+      box-shadow: 0 1px 6px rgba(37,99,235,0.07);
+      padding: 1rem 1.5rem;
+      text-align: left;
+      font-size: 1.08rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+    .timeline-item strong {
+      color: var(--primary);
+      min-width: 70px;
+      font-size: 1.1rem;
+    }
+    
+    /* Contact 섹션 */
+    .contact {
+      background: var(--white);
+      border-radius: 1.2rem;
+      box-shadow: 0 2px 12px rgba(37,99,235,0.06);
+      padding: 2rem 1.5rem;
+      max-width: 500px;
+      margin: 0 auto 2rem auto;
+      text-align: center;
+    }
+    .contact h2 {
+      margin-bottom: 1rem;
+    }
+    .contact-info {
+      color: #64748b;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    .contact-form {
+      max-width: 420px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .contact-form input, .contact-form textarea {
+      padding: 0.8rem 1rem;
+      border: 1px solid #cbd5e1;
+      border-radius: 0.7rem;
+      font-size: 1rem;
+      resize: none;
+    }
+    .contact-form button {
+      background: var(--primary);
+      color: var(--white);
+      border: none;
+      padding: 0.9rem 0;
+      border-radius: 2rem;
+      font-size: 1.1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .contact-form button:hover {
+      background: var(--primary-dark);
+    }
+    .section-title-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.2rem;
+      margin-bottom: 1.2rem;
+    }
+    .top-btn {
+      background: var(--primary-dark);
+      color: var(--white);
+      border: none;
+      border-radius: 1.2rem;
+      padding: 0.2rem 1.1rem;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      margin-left: 0.5rem;
+      transition: background 0.2s;
+    }
+    .top-btn:hover {
+      background: var(--accent);
+      color: var(--white);
+    }
+    
+    @media (max-width: 1100px) {
+      .container, .clinical-evidence, .news-section {
+        max-width: 98vw;
+      }
+    }
+    @media (max-width: 900px) {
+      .header-inner, .container {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+      }
+      .benefit-list, .solutions-row, .team-list, .section-img-row, .news-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+      }
+      .benefit-item, .solution-card, .team-member, .section-img, .news-card {
+        min-width: 180px;
+        max-width: 100%;
+        width: 100%;
+      }
+      .benefit-item img {
+        width: 100px;
+        height: 100px;
+      }
+      .section-img img, .solution-card img {
+        height: 180px;
+      }
+      .hero-img {
+        display: none;
+      }
+      .proven-card img {
+        width: 98vw;
+        max-width: 600px;
+        height: 220px;
+      }
+      .proven-card {
+        width: 98vw;
+        min-width: 0;
+        padding: 1.2rem 0.5rem 1.2rem 0.5rem;
+      }
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 1rem 0.3rem;
+      }
+      .hero h1 {
+        font-size: 1.3rem;
+      }
+      section h2 {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="logo">HuMed Lifesciences</div>
+      <nav>
+        <a href="#hero">Home</a>
+        <a href="#technology">Technology</a>
+        <a href="#products">Products</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#clinical">Clinical</a>
+        <a href="#team">Team</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="lang-toggle" id="langToggle" title="Change language">
+        <span class="lang-option active" id="langEN">EN</span>
+        <span class="divider"></span>
+        <span class="lang-option" id="langKR">KR</span>
+      </button>
+    </div>
+  </header>
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <img src="./images/products/heroproduct1.png" alt="HuMed Hybrid Implant Hero" class="hero-img" />
+      <div class="hero-content">
+        <h1>Transforming patient access to Dental Implant treatments to those that need it the most</h1>
+        <div class="sub">World's First Hybrid Dental Implant Technology</div>
+        <div class="desc">30+ years of implant breakthrough</div>
+        <div class="cta-group">
+          <a href="#technology" class="cta-btn primary">Learn More</a>
+          <a href="#contact" class="cta-btn">Contact Us</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Technology Section -->
+    <section class="container" id="technology">
+      <div class="section-title-row">
+        <h2>Revolutionary Innovation</h2>
+        <button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲ Top</button>
+      </div>
+      <div class="section-img-row">
+        <div class="section-img">
+          <img src="images/process/patent-document.jpg" alt="US Patent Document" />
+          <div class="caption">혁신적 골융합 기술<br><span style='font-size:0.98em;color:#64748b;'>US Patent: Hybrid Dental Implant System</span></div>
+        </div>
+        <div class="section-img">
+          <img src="images/products/future-injectable-system-pct.png" alt="PCT Patent Drawing" />
+          <div class="caption">세계 최초 주입형 임플란트 시스템<br><span style='font-size:0.98em;color:#64748b;'>PCT Patent: Injectable Hybrid Implant</span></div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Products Section -->
+    <section class="container" id="products">
+      <div class="section-title-row">
+        <h2>Our Solutions</h2>
+        <button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲ Top</button>
+      </div>
+      <div class="solutions-row">
+        <div class="solution-card">
+          <img src="images/products/kiis-product-innovation.jpg" alt="KIIS Product Innovation" />
+          <h3>Hybrid Dental Implant</h3>
+          <p>Cutting-edge hybrid dental implant for superior osseointegration and patient outcomes.</p>
+        </div>
+        <div class="solution-card">
+          <div class="coming-soon">Coming Soon 2027</div>
+          <img src="images/products/productshot1.png" alt="Injectable System Product" />
+          <h3>Injectable System</h3>
+          <p>Next-generation minimally invasive implant delivery system.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Benefits Section -->
+    <section class="container" id="benefits">
+      <div class="section-title-row">
+        <h2>Key Benefits</h2>
+        <button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲ Top</button>
+      </div>
+      <div class="benefit-list">
+        <div class="benefit-item">
+          <img src="images/marketing_design/happy-family-cost-relief.jpg" alt="Improved Contact" />
+          <h3>40% Improved Contact</h3>
+          <p>Better bone-to-implant contact compared to traditional implants</p>
+        </div>
+        <div class="benefit-item">
+          <img src="images/marketing_design/cost-burden.jpg" alt="Cost Savings" />
+          <h3>$3K Cost Savings</h3>
+          <p>Eliminates bone grafting cost and 6-month waiting period</p>
+        </div>
+        <div class="benefit-item">
+          <img src="images/marketing_design/dental-team-efficiency.jpg" alt="3D Stability" />
+          <h3>3D Stronger Stability</h3>
+          <p>Enhanced structural stability through 3-dimensional bone ingrowth</p>
+        </div>
+        <div class="benefit-item">
+          <img src="images/marketing_design/kiis-implant-solution.jpg" alt="Compatibility" />
+          <h3>100% Compatibility</h3>
+          <p>Works with existing surgical instruments and procedures</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Clinical Evidence Section -->
+    <section class="clinical-evidence" id="clinical">
+      <div class="section-title-row">
+        <h2>Proven Results</h2>
+        <button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲ Top</button>
+      </div>
+      <div class="proven-card">
+        <img src="images/process/micro-ct-bone-growth.jpg" alt="Micro-CT Bone Growth Evidence" />
+        <h3>Clinical Evidence: Micro-CT Analysis</h3>
+        <p>Direct evidence of superior bone integration with our hybrid implant technology</p>
+      </div>
+      <p style="text-align:center;">Our technology is currently undergoing final bench testing and FDA 510(k) review. Clinical studies demonstrate significant improvements in bone contact, stability, and patient outcomes. <br><em>Academic publications and detailed data available upon request.</em></p>
+      <div style="margin-top:1rem;text-align:center;">
+        <a href="#" style="color:var(--primary);text-decoration:underline;">View Academic Publications (Coming Soon)</a>
+      </div>
+    </section>
+    
+    <!-- Team Section -->
+    <section class="container" id="team">
+      <div class="section-title-row">
+        <h2>Our Team</h2>
+        <button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲ Top</button>
+      </div>
+      <div class="team-list">
+        <div class="team-member">
+          <img src="images/team/hongsuk-kim.jpg" alt="Hongsuk Kim" />
+          <h3>Hongsuk Kim</h3>
+          <span>CEO</span>
+          <p>Global commercialization expert, ex-Samsung/J&J/P&G, Harvard A.M.</p>
+        </div>
+        <div class="team-member">
+          <img src="images/team/dogyoon-kim.jpg" alt="Do-Gyoon Kim" />
+          <h3>Do-Gyoon Kim</h3>
+          <span>CTO</span>
+          <p>Ohio State University Professor, Inventor of Hybrid Implant, 20+ years R&D</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- News & Insights Section -->
+    <section class="news-section" id="news">
+      <div class="section-title-row">
+        <h2>Latest Updates</h2>
+        <button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲ Top</button>
+      </div>
+      <div class="news-list">
+        <div class="news-card">
+          <img src="images/marketing_design/patient-kiisplus-proposition.jpg" alt="Patient Story" />
+          <h4>Patient Story: Life-changing Results</h4>
+          <div class="date">2024-07-21</div>
+          <p>Discover how HuMed's hybrid implant transformed a patient's quality of life and confidence.</p>
+        </div>
+        <div class="news-card">
+          <img src="images/marketing_design/kiis-implant-solution.jpg" alt="Product Launch" />
+          <h4>Product Launch: Hybrid Implant System</h4>
+          <div class="date">2024-06-15</div>
+          <p>Our flagship hybrid implant system is now available for select clinical partners.</p>
+        </div>
+        <div class="news-card">
+          <img src="images/marketing_design/patient-kiisrelax-proposition.jpg" alt="Clinical Update" />
+          <h4>Clinical Update: FDA Submission</h4>
+          <div class="date">2024-05-10</div>
+          <p>Final bench testing completed, 510(k) submission to FDA is imminent.</p>
+        </div>
+      </div>
+      <button class="view-all-btn">View All News</button>
+    </section>
+    
+    <!-- Milestones Section -->
+    <section class="container" id="milestones">
+      <div class="section-title-row">
+        <h2>Milestones</h2>
+        <button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲ Top</button>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item"><strong>2025</strong> Final bench testing → 510(k) submission imminent</div>
+        <div class="timeline-item"><strong>2026</strong> 510(k) clearance + US launch & marketing</div>
+        <div class="timeline-item"><strong>2027</strong> Injectable De Novo path → Next-gen innovation</div>
+      </div>
+    </section>
+    
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="section-title-row">
+        <h2>Contact</h2>
+        <button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲ Top</button>
+      </div>
+      <div class="contact-info">
+        <p>Email (CEO): <a href="mailto:hskim@humedlifesciences.com">hskim@humedlifesciences.com</a></p>
+        <p>Tel: +82 10-4053-1257</p>
+        <p>10F, 123, Teheran-ro, Gangnam-gu, Seoul, Korea</p>
+      </div>
+      <form class="contact-form" id="contactForm" autocomplete="off">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" rows="5" placeholder="Type your message here." required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div id="formResult" style="text-align:center; margin-top:1rem;"></div>
+    </section>
+  </main>
+  
+  <footer style="text-align:center; padding:2rem; color:#64748b; font-size:0.9rem;">
+    &copy; 2024 HuMed Lifesciences. All rights reserved.
+  </footer>
+
+  <script>
+    // i18n data
+    const i18n = {
+      en: {
+        nav: ["Home", "Technology", "Products", "Benefits", "Clinical", "Team", "News", "Contact"],
+        hero_h1: "Transforming patient access to Dental Implant treatments to those that need it the most",
+        hero_sub: "World's First Hybrid Dental Implant Technology",
+        hero_desc: "30+ years of implant breakthrough",
+        hero_learn: "Learn More",
+        hero_contact: "Contact Us",
+        tech_title: "Revolutionary Innovation",
+        tech1: "혁신적 골융합 기술",
+        tech2: "세계 최초 주입형 임플란트 시스템",
+        prod_title: "Our Solutions",
+        prod1: "Hybrid Dental Implant",
+        prod1_desc: "Cutting-edge hybrid dental implant for superior osseointegration and patient outcomes.",
+        prod2: "Injectable System",
+        prod2_soon: "Coming Soon 2027",
+        prod2_desc: "Next-generation minimally invasive implant delivery system.",
+        benefit_title: "Key Benefits",
+        benefit1: "40% Improved Contact",
+        benefit1_desc: "Better bone-to-implant contact compared to traditional implants",
+        benefit2: "$3K Cost Savings",
+        benefit2_desc: "Eliminates bone grafting cost and 6-month waiting period",
+        benefit3: "3D Stronger Stability",
+        benefit3_desc: "Enhanced structural stability through 3-dimensional bone ingrowth",
+        benefit4: "100% Compatibility",
+        benefit4_desc: "Works with existing surgical instruments and procedures",
+        clinical_title: "Proven Results",
+        clinical_caption: "Clinical Evidence: Micro-CT Analysis",
+        clinical_desc: "Direct evidence of superior bone integration with our hybrid implant technology",
+        clinical_text: "Our technology is currently undergoing final bench testing and FDA 510(k) review. Clinical studies demonstrate significant improvements in bone contact, stability, and patient outcomes. <br><em>Academic publications and detailed data available upon request.</em>",
+        clinical_link: "View Academic Publications (Coming Soon)",
+        team_title: "Our Team",
+        team1: "Hongsuk Kim",
+        team1_role: "CEO",
+        team1_desc: "Global commercialization expert, ex-Samsung/J&J/P&G, Harvard A.M.",
+        team2: "Do-Gyoon Kim",
+        team2_role: "CTO",
+        team2_desc: "Ohio State University Professor, Inventor of Hybrid Implant, 20+ years R&D",
+        news_title: "Latest Updates",
+        news1_title: "Patient Story: Life-changing Results",
+        news1_date: "2024-07-21",
+        news1_desc: "Discover how HuMed's hybrid implant transformed a patient's quality of life and confidence.",
+        news2_title: "Product Launch: Hybrid Implant System",
+        news2_date: "2024-06-15",
+        news2_desc: "Our flagship hybrid implant system is now available for select clinical partners.",
+        news3_title: "Clinical Update: FDA Submission",
+        news3_date: "2024-05-10",
+        news3_desc: "Final bench testing completed, 510(k) submission to FDA is imminent.",
+        news_btn: "View All News",
+        milestones_title: "Milestones",
+        milestone1: "2025 Final bench testing → 510(k) submission imminent",
+        milestone2: "2026 510(k) clearance + US launch & marketing",
+        milestone3: "2027 Injectable De Novo path → Next-gen innovation",
+        contact_title: "Contact",
+        contact_email: "Email (CEO): ",
+        contact_tel: "Tel: +82 10-4053-1257",
+        contact_addr: "10F, 123, Teheran-ro, Gangnam-gu, Seoul, Korea",
+        contact_form_name: "Your Name",
+        contact_form_email: "Your Email",
+        contact_form_msg: "Type your message here.",
+        contact_form_btn: "Send Message",
+        contact_form_success: "Your inquiry has been received. We will contact you soon."
+      },
+      ko: {
+        nav: ["홈", "기술", "제품", "장점", "임상", "팀", "소식", "문의"],
+        hero_h1: "임플란트 치료의 새로운 접근, 필요한 모든 이에게.",
+        hero_sub: "세계 최초 하이브리드 치과 임플란트 기술",
+        hero_desc: "30년 이상의 임플란트 혁신",
+        hero_learn: "자세히 보기",
+        hero_contact: "문의하기",
+        tech_title: "혁신 기술",
+        tech1: "혁신적 골융합 기술",
+        tech2: "세계 최초 주입형 임플란트 시스템",
+        prod_title: "제품 소개",
+        prod1: "하이브리드 임플란트",
+        prod1_desc: "골유착과 환자 결과를 극대화하는 첨단 하이브리드 설계.",
+        prod2: "주입형 시스템",
+        prod2_soon: "2027년 출시 예정",
+        prod2_desc: "최소침습, 차세대 임플란트 전달 시스템",
+        benefit_title: "핵심 장점",
+        benefit1: "40% 접촉면 향상",
+        benefit1_desc: "기존 임플란트 대비 골-임플란트 접촉면 40% 향상",
+        benefit2: "$3K 비용 절감",
+        benefit2_desc: "골이식 비용 및 6개월 대기기간 제거",
+        benefit3: "3D 구조적 안정성",
+        benefit3_desc: "3차원 골유착으로 구조적 안정성 강화",
+        benefit4: "100% 호환성",
+        benefit4_desc: "기존 수술 기구 및 프로토콜과 완벽 호환",
+        clinical_title: "임상 근거",
+        clinical_caption: "임상 근거: Micro-CT 분석",
+        clinical_desc: "하이브리드 임플란트 기술의 우수한 골 유착 직접 증거",
+        clinical_text: "현재 최종 벤치테스트 및 FDA 510(k) 심사 중입니다. 임상 연구에서 골 접촉, 안정성, 환자 결과의 유의미한 개선이 입증되었습니다.<br><em>학술 논문 및 상세 데이터는 요청 시 제공됩니다.</em>",
+        clinical_link: "학술 논문 보기 (준비중)",
+        team_title: "팀 소개",
+        team1: "김홍석",
+        team1_role: "대표이사",
+        team1_desc: "글로벌 상용화 전문가, 前 삼성/J&J/P&G, 하버드 A.M.",
+        team2: "김도균",
+        team2_role: "CTO",
+        team2_desc: "오하이오주립대 교수, 하이브리드 임플란트 발명, 20년+ R&D",
+        news_title: "최신 소식",
+        news1_title: "환자 스토리: 삶이 바뀌다",
+        news1_date: "2024-07-21",
+        news1_desc: "HuMed 하이브리드 임플란트로 환자의 삶과 자신감이 변화한 실제 사례.",
+        news2_title: "제품 출시: 하이브리드 임플란트 시스템",
+        news2_date: "2024-06-15",
+        news2_desc: "주요 임상 파트너 대상으로 하이브리드 임플란트 시스템 출시.",
+        news3_title: "임상 업데이트: FDA 제출",
+        news3_date: "2024-05-10",
+        news3_desc: "최종 벤치테스트 완료, FDA 510(k) 제출 임박.",
+        news_btn: "전체 소식 보기",
+        milestones_title: "연혁",
+        milestone1: "2025 최종 벤치테스트 → 510(k) 제출 임박",
+        milestone2: "2026 510(k) 승인 + 미국 출시/마케팅",
+        milestone3: "2027 주입형 De Novo 경로 → 차세대 혁신",
+        contact_title: "문의",
+        contact_email: "이메일(대표): ",
+        contact_tel: "전화: 010-4053-1257",
+        contact_addr: "서울특별시 강남구 테헤란로 123, 10층",
+        contact_form_name: "이름",
+        contact_form_email: "이메일",
+        contact_form_msg: "문의 내용을 입력하세요.",
+        contact_form_btn: "문의 보내기",
+        contact_form_success: "문의가 성공적으로 접수되었습니다. 빠른 시일 내에 연락드리겠습니다."
+      }
+    };
+    
+    let currentLang = 'en';
+    
+    function setLang(lang) {
+      currentLang = lang;
+      
+      // Navigation
+      document.querySelectorAll('nav a').forEach((el, i) => {
+        el.textContent = i18n[lang].nav[i];
+      });
+      
+      // Hero
+      document.querySelector('.hero h1').textContent = i18n[lang].hero_h1;
+      document.querySelector('.hero .sub').textContent = i18n[lang].hero_sub;
+      document.querySelector('.hero .desc').textContent = i18n[lang].hero_desc;
+      document.querySelector('.hero .cta-btn.primary').textContent = i18n[lang].hero_learn;
+      document.querySelector('.hero .cta-btn:not(.primary)').textContent = i18n[lang].hero_contact;
+      
+      // Technology
+      document.querySelector('#technology h2').textContent = i18n[lang].tech_title;
+      
+      // Products
+      document.querySelector('#products h2').textContent = i18n[lang].prod_title;
+      document.querySelectorAll('#products .solution-card h3')[0].textContent = i18n[lang].prod1;
+      document.querySelectorAll('#products .solution-card p')[0].textContent = i18n[lang].prod1_desc;
+      document.querySelectorAll('#products .solution-card h3')[1].textContent = i18n[lang].prod2;
+      document.querySelector('#products .coming-soon').textContent = i18n[lang].prod2_soon;
+      document.querySelectorAll('#products .solution-card p')[1].textContent = i18n[lang].prod2_desc;
+      
+      // Benefits
+      document.querySelector('#benefits h2').textContent = i18n[lang].benefit_title;
+      document.querySelectorAll('#benefits .benefit-item h3')[0].textContent = i18n[lang].benefit1;
+      document.querySelectorAll('#benefits .benefit-item p')[0].textContent = i18n[lang].benefit1_desc;
+      document.querySelectorAll('#benefits .benefit-item h3')[1].textContent = i18n[lang].benefit2;
+      document.querySelectorAll('#benefits .benefit-item p')[1].textContent = i18n[lang].benefit2_desc;
+      document.querySelectorAll('#benefits .benefit-item h3')[2].textContent = i18n[lang].benefit3;
+      document.querySelectorAll('#benefits .benefit-item p')[2].textContent = i18n[lang].benefit3_desc;
+      document.querySelectorAll('#benefits .benefit-item h3')[3].textContent = i18n[lang].benefit4;
+      document.querySelectorAll('#benefits .benefit-item p')[3].textContent = i18n[lang].benefit4_desc;
+      
+      // Clinical
+      document.querySelector('#clinical h2').textContent = i18n[lang].clinical_title;
+      document.querySelector('.proven-card h3').textContent = i18n[lang].clinical_caption;
+      document.querySelector('.proven-card p').textContent = i18n[lang].clinical_desc;
+      document.querySelector('#clinical p').innerHTML = i18n[lang].clinical_text;
+      document.querySelector('#clinical a').textContent = i18n[lang].clinical_link;
+      
+      // Team
+      document.querySelector('#team h2').textContent = i18n[lang].team_title;
+      document.querySelectorAll('#team .team-member h3')[0].textContent = i18n[lang].team1;
+      document.querySelectorAll('#team .team-member span')[0].textContent = i18n[lang].team1_role;
+      document.querySelectorAll('#team .team-member p')[0].textContent = i18n[lang].team1_desc;
+      document.querySelectorAll('#team .team-member h3')[1].textContent = i18n[lang].team2;
+      document.querySelectorAll('#team .team-member span')[1].textContent = i18n[lang].team2_role;
+      document.querySelectorAll('#team .team-member p')[1].textContent = i18n[lang].team2_desc;
+      
+      // News
+      document.querySelector('#news h2').textContent = i18n[lang].news_title;
+      document.querySelectorAll('#news .news-card h4')[0].textContent = i18n[lang].news1_title;
+      document.querySelectorAll('#news .news-card .date')[0].textContent = i18n[lang].news1_date;
+      document.querySelectorAll('#news .news-card p')[0].textContent = i18n[lang].news1_desc;
+      document.querySelectorAll('#news .news-card h4')[1].textContent = i18n[lang].news2_title;
+      document.querySelectorAll('#news .news-card .date')[1].textContent = i18n[lang].news2_date;
+      document.querySelectorAll('#news .news-card p')[1].textContent = i18n[lang].news2_desc;
+      document.querySelectorAll('#news .news-card h4')[2].textContent = i18n[lang].news3_title;
+      document.querySelectorAll('#news .news-card .date')[2].textContent = i18n[lang].news3_date;
+      document.querySelectorAll('#news .news-card p')[2].textContent = i18n[lang].news3_desc;
+      document.querySelector('#news .view-all-btn').textContent = i18n[lang].news_btn;
+      
+      // Milestones
+      document.querySelector('#milestones h2').textContent = i18n[lang].milestones_title;
+      document.querySelectorAll('#milestones .timeline-item')[0].innerHTML = `<strong>${i18n[lang].milestone1.split(' ')[0]}</strong> ${i18n[lang].milestone1.split(' ').slice(1).join(' ')}`;
+      document.querySelectorAll('#milestones .timeline-item')[1].innerHTML = `<strong>${i18n[lang].milestone2.split(' ')[0]}</strong> ${i18n[lang].milestone2.split(' ').slice(1).join(' ')}`;
+      document.querySelectorAll('#milestones .timeline-item')[2].innerHTML = `<strong>${i18n[lang].milestone3.split(' ')[0]}</strong> ${i18n[lang].milestone3.split(' ').slice(1).join(' ')}`;
+      
+      // Contact
+      document.querySelector('#contact h2').textContent = i18n[lang].contact_title;
+      document.querySelectorAll('#contact .contact-info p')[0].innerHTML = i18n[lang].contact_email + '<a href="mailto:hskim@humedlifesciences.com">hskim@humedlifesciences.com</a>';
+      document.querySelectorAll('#contact .contact-info p')[1].textContent = i18n[lang].contact_tel;
+      document.querySelectorAll('#contact .contact-info p')[2].textContent = i18n[lang].contact_addr;
+      document.querySelector('#contactForm input[name="name"]').placeholder = i18n[lang].contact_form_name;
+      document.querySelector('#contactForm input[name="email"]').placeholder = i18n[lang].contact_form_email;
+      document.querySelector('#contactForm textarea').placeholder = i18n[lang].contact_form_msg;
+      document.querySelector('#contactForm button').textContent = i18n[lang].contact_form_btn;
+    }
+    
+    // 언어 토글 버튼 동작
+    document.getElementById('langEN').addEventListener('click', function() {
+      setLang('en');
+      this.classList.add('active');
+      document.getElementById('langKR').classList.remove('active');
+    });
+    
+    document.getElementById('langKR').addEventListener('click', function() {
+      setLang('ko');
+      this.classList.add('active');
+      document.getElementById('langEN').classList.remove('active');
+    });
+    
+    // Smooth scroll for nav links
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href.startsWith('#')) {
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+    
+    // Contact form handler
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('formResult').textContent = i18n[currentLang].contact_form_success;
+      this.reset();
+    });
+    
+    // 초기 언어 설정
+    setLang('en');
+  </script>
+</body>
+</html>
