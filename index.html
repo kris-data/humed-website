@@ -476,39 +476,49 @@
     .news-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 2rem;
+      gap: 1.5rem;
       justify-content: center;
       margin-top: 1.2rem;
     }
     .news-card {
-      background: var(--bg);
-      border-radius: 1rem;
-      box-shadow: 0 1px 6px rgba(37,99,235,0.07);
-      padding: 1.2rem 1.2rem 1.5rem 1.2rem;
-      max-width: 320px;
-      width: 100%;
+      background: var(--white);
+      border-radius: 1.5rem;
+      box-shadow: 0 2px 16px rgba(37,99,235,0.10);
+      padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+      min-width: 220px;
+      max-width: 340px;
+      flex: 1 1 220px;
+      text-align: center;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
-      text-align: left;
+      min-height: 180px;
+      height: 100%;
+      transition: transform 0.3s cubic-bezier(.4,2,.6,1), box-shadow 0.3s;
+    }
+    .news-card:hover {
+      transform: scale(1.08);
+      box-shadow: 0 8px 32px rgba(37,99,235,0.18);
     }
     .news-card img {
       width: 100%;
+      max-width: 140px;
       height: 140px;
       object-fit: cover;
       object-position: center;
-      border-radius: 0.7rem;
-      margin-bottom: 0.8rem;
+      margin: 0 auto 1.1rem auto;
+      border-radius: 1rem;
       display: block;
     }
     .news-card h4 {
-      font-size: 1.08rem;
+      font-size: 1.22rem;
       font-weight: 700;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.7rem;
       color: var(--primary-dark);
     }
     .news-card p {
-      font-size: 1rem;
+      font-size: 1.09rem;
       color: #334155;
       margin-bottom: 0.7rem;
     }
@@ -871,12 +881,14 @@
       }
       
       .news-card img {
-        height: 30vw !important;  /* 뷰포트 너비의 30% */
-        min-height: 140px !important;
-        max-height: 180px !important;
+        width: 25vw !important;   /* 뷰포트 너비의 25% */
+        height: 25vw !important;
+        min-width: 80px !important;
+        min-height: 80px !important;
+        max-width: 120px !important;
+        max-height: 120px !important;
         object-fit: contain !important;
         background: #f8fafc !important;
-        width: 100% !important;
       }
       
       .benefit-item img {
@@ -950,9 +962,12 @@
       }
       
       .news-card img {
-        height: 32vw !important;
-        min-height: 120px !important;
-        max-height: 150px !important;
+        width: 22vw !important;
+        height: 22vw !important;
+        min-width: 70px !important;
+        min-height: 70px !important;
+        max-width: 90px !important;
+        max-height: 90px !important;
       }
       
       .benefit-item img {
