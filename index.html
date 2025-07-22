@@ -47,6 +47,11 @@
       letter-spacing: 1px;
       color: var(--white);
     }
+    .nav-section {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
     nav {
       display: flex;
       gap: 1.2rem;
@@ -64,6 +69,35 @@
       background: var(--accent);
       color: var(--white);
     }
+    
+    /* Language Toggle Button */
+    .lang-toggle {
+      background: rgba(255, 255, 255, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 20px;
+      padding: 0.4rem 0.8rem;
+      color: var(--white);
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      min-width: 60px;
+      justify-content: center;
+    }
+    .lang-toggle:hover {
+      background: rgba(255, 255, 255, 0.3);
+      border-color: rgba(255, 255, 255, 0.5);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+    .lang-toggle:active {
+      transform: translateY(0);
+    }
+    
     .container {
       max-width: 1200px;
       margin: 0 auto;
@@ -594,6 +628,11 @@
       color: var(--white);
     }
     
+    /* Hidden content for Korean language */
+    .ko-content {
+      display: none;
+    }
+    
     @media (max-width: 1100px) {
       .container, .clinical-evidence, .news-section {
         max-width: 98vw;
@@ -603,6 +642,10 @@
       .header-inner, .container {
         flex-direction: column;
         align-items: stretch;
+      }
+      .nav-section {
+        flex-direction: column;
+        gap: 1rem;
       }
       nav {
         justify-content: center;
@@ -673,28 +716,42 @@
   <header>
     <div class="header-inner">
       <div class="logo">HuMed Lifesciences</div>
-      <nav>
-        <a href="#hero">Home</a>
-        <a href="#technology">Technology</a>
-        <a href="#products">Products</a>
-        <a href="#benefits">Benefits</a>
-        <a href="#clinical">Clinical</a>
-        <a href="#team">Team</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <div class="nav-section">
+        <nav>
+          <a href="#hero">Home</a>
+          <a href="#technology">Technology</a>
+          <a href="#products">Products</a>
+          <a href="#benefits">Benefits</a>
+          <a href="#clinical">Clinical</a>
+          <a href="#team">Team</a>
+          <a href="#news">News</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <button class="lang-toggle" onclick="toggleLanguage()">
+          <span id="langText">한글</span>
+        </button>
+      </div>
     </div>
   </header>
   <main>
     <!-- Hero Section -->
     <section class="hero" id="hero">
       <div class="hero-content">
-        <h1 class="hero-main">World's First Hybrid Dental Implant Technology</h1>
-        <div class="hero-sub">30+ years of implant breakthrough</div>
-        <div class="hero-desc">Transforming patient access to Dental Implant treatments to those that need it the most</div>
+        <h1 class="hero-main en-content">World's First Hybrid Dental Implant Technology</h1>
+        <h1 class="hero-main ko-content">세계 최초 하이브리드 치과 임플란트 기술</h1>
+        
+        <div class="hero-sub en-content">30+ years of implant breakthrough</div>
+        <div class="hero-sub ko-content">30년 이상의 임플란트 혁신</div>
+        
+        <div class="hero-desc en-content">Transforming patient access to Dental Implant treatments to those that need it the most</div>
+        <div class="hero-desc ko-content">가장 필요한 환자들에게 치과 임플란트 치료의 접근성을 혁신합니다</div>
+        
         <div class="cta-group">
-          <a href="#technology" class="cta-btn primary">Learn More</a>
-          <a href="#contact" class="cta-btn">Contact Us</a>
+          <a href="#technology" class="cta-btn primary en-content">Learn More</a>
+          <a href="#technology" class="cta-btn primary ko-content">자세히 보기</a>
+          
+          <a href="#contact" class="cta-btn en-content">Contact Us</a>
+          <a href="#contact" class="cta-btn ko-content">문의하기</a>
         </div>
       </div>
     </section>
@@ -702,17 +759,20 @@
     <!-- Technology Section -->
     <section class="container" id="technology">
       <div class="section-title-row">
-        <h2>Revolutionary Innovation</h2>
+        <h2 class="en-content">Revolutionary Innovation</h2>
+        <h2 class="ko-content">혁신적인 기술</h2>
         <button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲ Top</button>
       </div>
       <div class="section-img-row">
         <div class="section-img">
           <img src="images/process/patent-document.jpg" alt="US Patent Document" />
-          <div class="caption">Revolutionary Bone Ingrowth Technology<br><span style='font-size:0.98em;color:#64748b;'>US Patent: Hybrid Dental Implant System</span></div>
+          <div class="caption en-content">Revolutionary Bone Ingrowth Technology<br><span style='font-size:0.98em;color:#64748b;'>US Patent: Hybrid Dental Implant System</span></div>
+          <div class="caption ko-content">혁신적인 골내성장 기술<br><span style='font-size:0.98em;color:#64748b;'>미국 특허: 하이브리드 치과 임플란트 시스템</span></div>
         </div>
         <div class="section-img">
           <img src="images/products/future-injectable-system-pct.png" alt="PCT Patent Drawing" />
-          <div class="caption">World's First Injectable Implant System<br><span style='font-size:0.98em;color:#64748b;'>PCT Patent: Injectable Hybrid Implant</span></div>
+          <div class="caption en-content">World's First Injectable Implant System<br><span style='font-size:0.98em;color:#64748b;'>PCT Patent: Injectable Hybrid Implant</span></div>
+          <div class="caption ko-content">세계 최초 주사형 임플란트 시스템<br><span style='font-size:0.98em;color:#64748b;'>PCT 특허: 주사형 하이브리드 임플란트</span></div>
         </div>
       </div>
     </section>
@@ -720,20 +780,26 @@
     <!-- Products Section -->
     <section class="container" id="products">
       <div class="section-title-row">
-        <h2>Our Solutions</h2>
+        <h2 class="en-content">Our Solutions</h2>
+        <h2 class="ko-content">우리의 솔루션</h2>
         <button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲ Top</button>
       </div>
       <div class="solutions-row">
         <div class="solution-card">
           <img src="images/products/kiis-product-innovation.jpg" alt="KIIS Product Innovation" />
-          <h3>Hybrid Dental Implant</h3>
-          <p>Cutting-edge hybrid dental implant for superior osseointegration and patient outcomes.</p>
+          <h3 class="en-content">Hybrid Dental Implant</h3>
+          <h3 class="ko-content">하이브리드 치과 임플란트</h3>
+          <p class="en-content">Cutting-edge hybrid dental implant for superior osseointegration and patient outcomes.</p>
+          <p class="ko-content">뛰어난 골유착과 환자 결과를 위한 최첨단 하이브리드 치과 임플란트입니다.</p>
         </div>
         <div class="solution-card">
-          <div class="coming-soon">Coming Soon 2027</div>
+          <div class="coming-soon en-content">Coming Soon 2027</div>
+          <div class="coming-soon ko-content">2027년 출시 예정</div>
           <img src="images/products/productshot1.png" alt="Injectable System Product" />
-          <h3>Injectable System</h3>
-          <p>Next-generation minimally invasive implant delivery system.</p>
+          <h3 class="en-content">Injectable System</h3>
+          <h3 class="ko-content">주사형 시스템</h3>
+          <p class="en-content">Next-generation minimally invasive implant delivery system.</p>
+          <p class="ko-content">차세대 최소침습 임플란트 전달 시스템입니다.</p>
         </div>
       </div>
     </section>
@@ -741,29 +807,38 @@
     <!-- Benefits Section -->
     <section class="container" id="benefits">
       <div class="section-title-row">
-        <h2>Key Benefits</h2>
+        <h2 class="en-content">Key Benefits</h2>
+        <h2 class="ko-content">주요 혜택</h2>
         <button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲ Top</button>
       </div>
       <div class="benefit-list">
         <div class="benefit-item">
           <img src="images/marketing_design/happy-family-cost-relief.jpg" alt="Improved Contact" />
-          <h3>40% Improved Contact</h3>
-          <p>Better bone-to-implant contact compared to traditional implants</p>
+          <h3 class="en-content">40% Improved Contact</h3>
+          <h3 class="ko-content">40% 향상된 접촉면</h3>
+          <p class="en-content">Better bone-to-implant contact compared to traditional implants</p>
+          <p class="ko-content">기존 임플란트 대비 향상된 골-임플란트 접촉</p>
         </div>
         <div class="benefit-item">
           <img src="images/marketing_design/cost-burden.jpg" alt="Cost Savings" />
-          <h3>$3K Cost Savings</h3>
-          <p>Eliminates bone grafting cost and 6-month waiting period</p>
+          <h3 class="en-content">$3K Cost Savings</h3>
+          <h3 class="ko-content">300만원 비용 절감</h3>
+          <p class="en-content">Eliminates bone grafting cost and 6-month waiting period</p>
+          <p class="ko-content">골이식 비용과 6개월 대기 기간 제거</p>
         </div>
         <div class="benefit-item">
           <img src="images/marketing_design/dental-team-efficiency.jpg" alt="3D Stability" />
-          <h3>3D Stronger Stability</h3>
-          <p>Enhanced structural stability through 3-dimensional bone ingrowth</p>
+          <h3 class="en-content">3D Stronger Stability</h3>
+          <h3 class="ko-content">3배 강한 안정성</h3>
+          <p class="en-content">Enhanced structural stability through 3-dimensional bone ingrowth</p>
+          <p class="ko-content">3차원 골내성장을 통한 향상된 구조적 안정성</p>
         </div>
         <div class="benefit-item">
           <img src="images/marketing_design/kiis-implant-solution.jpg" alt="Compatibility" />
-          <h3>100% Compatibility</h3>
-          <p>Works with existing surgical instruments and procedures</p>
+          <h3 class="en-content">100% Compatibility</h3>
+          <h3 class="ko-content">100% 호환성</h3>
+          <p class="en-content">Works with existing surgical instruments and procedures</p>
+          <p class="ko-content">기존 수술 기구 및 절차와 완벽 호환</p>
         </div>
       </div>
     </section>
@@ -771,79 +846,99 @@
     <!-- Clinical Evidence Section -->
     <section class="clinical-evidence" id="clinical">
       <div class="section-title-row">
-        <h2>Proven Results</h2>
+        <h2 class="en-content">Proven Results</h2>
+        <h2 class="ko-content">입증된 결과</h2>
         <button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲ Top</button>
       </div>
       <div class="proven-card">
         <img src="images/process/micro-ct-bone-growth.jpg" alt="Micro-CT Bone Growth Evidence" />
-        <h3>Clinical Evidence: Micro-CT Analysis</h3>
-        <p>Direct evidence of superior bone integration with our hybrid implant technology</p>
+        <h3 class="en-content">Clinical Evidence: Micro-CT Analysis</h3>
+        <h3 class="ko-content">임상 증거: 마이크로-CT 분석</h3>
+        <p class="en-content">Direct evidence of superior bone integration with our hybrid implant technology</p>
+        <p class="ko-content">우리의 하이브리드 임플란트 기술로 뛰어난 골유착의 직접적 증거</p>
       </div>
-      <p style="text-align:center;">Our technology is currently undergoing final bench testing and FDA 510(k) review. Clinical studies demonstrate significant improvements in bone contact, stability, and patient outcomes. <br><em>Academic publications and detailed data available upon request.</em></p>
+      <p style="text-align:center;" class="en-content">Our technology is currently undergoing final bench testing and FDA 510(k) review. Clinical studies demonstrate significant improvements in bone contact, stability, and patient outcomes. <br><em>Academic publications and detailed data available upon request.</em></p>
+      <p style="text-align:center;" class="ko-content">우리 기술은 현재 최종 벤치 테스트와 FDA 510(k) 검토를 진행 중입니다. 임상 연구는 골접촉, 안정성, 환자 결과에서 상당한 개선을 보여줍니다. <br><em>학술 출판물과 상세 데이터는 요청 시 제공 가능합니다.</em></p>
       <div style="margin-top:1rem;text-align:center;">
-        <a href="#" style="color:var(--primary);text-decoration:underline;">View Academic Publications (Coming Soon)</a>
+        <a href="#" style="color:var(--primary);text-decoration:underline;" class="en-content">View Academic Publications (Coming Soon)</a>
+        <a href="#" style="color:var(--primary);text-decoration:underline;" class="ko-content">학술 출판물 보기 (출간 예정)</a>
       </div>
     </section>
     
     <!-- Team Section -->
     <section class="container" id="team">
       <div class="section-title-row">
-        <h2>Our Team</h2>
+        <h2 class="en-content">Our Team</h2>
+        <h2 class="ko-content">우리 팀</h2>
         <button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲ Top</button>
       </div>
       
       <!-- Core Team -->
       <div style="text-align: center; margin-bottom: 3rem;">
-        <h3 style="color: var(--primary-dark); font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem;">Core Team</h3>
+        <h3 style="color: var(--primary-dark); font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem;" class="en-content">Core Team</h3>
+        <h3 style="color: var(--primary-dark); font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem;" class="ko-content">핵심 팀</h3>
         <div class="team-list">
           <div class="team-member">
             <img src="images/team/hongsuk-kim.jpg" alt="Hongsuk Kim" />
             <h3>Hongsuk Kim</h3>
             <span>CEO</span>
-            <p>Global commercialization expert, ex-Samsung/J&J/P&G, Harvard A.M.</p>
+            <p class="en-content">Global commercialization expert, ex-Samsung/J&J/P&G, Harvard A.M.</p>
+            <p class="ko-content">글로벌 상용화 전문가, 前 삼성/J&J/P&G, 하버드 석사</p>
           </div>
           <div class="team-member">
             <img src="images/team/dogyoon-kim.jpg" alt="Do-Gyoon Kim" />
             <h3>Do-Gyoon Kim</h3>
             <span>CTO</span>
-            <p>Ohio State University Professor, Inventor of Hybrid Implant, 20+ years R&D</p>
+            <p class="en-content">Ohio State University Professor, Inventor of Hybrid Implant, 20+ years R&D</p>
+            <p class="ko-content">오하이오 주립대학교 교수, 하이브리드 임플란트 발명자, 20년+ R&D</p>
           </div>
         </div>
       </div>
       
       <!-- Strategic Advisors -->
       <div style="text-align: center; padding-top: 2rem; border-top: 1px solid #e2e8f0;">
-        <h3 style="color: var(--primary-dark); font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem;">Strategic Advisors</h3>
+        <h3 style="color: var(--primary-dark); font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem;" class="en-content">Strategic Advisors</h3>
+        <h3 style="color: var(--primary-dark); font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem;" class="ko-content">전략 고문</h3>
         <div class="advisors-list">
           <div class="team-member advisor">
             <img src="images/team/jinyong-oh.jpg" alt="Jinyong Oh" />
             <h3>Jinyong Oh</h3>
-            <span>Strategic Advisor</span>
-            <p>J&J Medical Devices & P&G veteran, global scaling expert, MIT MBA</p>
+            <span class="en-content">Strategic Advisor</span>
+            <span class="ko-content">전략 고문</span>
+            <p class="en-content">J&J Medical Devices & P&G veteran, global scaling expert, MIT MBA</p>
+            <p class="ko-content">J&J 의료기기 & P&G 베테랑, 글로벌 확장 전문가, MIT MBA</p>
           </div>
           <div class="team-member advisor">
             <img src="images/team/john-hong.jpg" alt="John Hong" />
             <h3>John Hong</h3>
-            <span>Strategic Advisor</span>
-            <p>Dental Market Access, Practicing Dentist & Entrepreneur, DDS University of Oklahoma</p>
+            <span class="en-content">Strategic Advisor</span>
+            <span class="ko-content">전략 고문</span>
+            <p class="en-content">Dental Market Access, Practicing Dentist & Entrepreneur, DDS University of Oklahoma</p>
+            <p class="ko-content">치과 시장 접근, 개원의 & 기업가, 오클라호마대학교 DDS</p>
           </div>
           <div class="team-member advisor">
             <img src="images/team/paul-fagan.jpg" alt="Paul Fagan" />
             <h3>Paul Fagan</h3>
-            <span>Strategic Advisor</span>
-            <p>Life Sciences Entrepreneurship, CEO ERA Therapeutics, MIT MBA, Scripps & CPA</p>
+            <span class="en-content">Strategic Advisor</span>
+            <span class="ko-content">전략 고문</span>
+            <p class="en-content">Life Sciences Entrepreneurship, CEO ERA Therapeutics, MIT MBA, Scripps & CPA</p>
+            <p class="ko-content">생명과학 기업가정신, ERA Therapeutics CEO, MIT MBA, Scripps & CPA</p>
           </div>
           <div class="team-member advisor">
             <img src="images/team/sreenivas-koka.jpg" alt="Sreenivas Koka" />
             <h3>Dr. Sreenivas Koka</h3>
-            <span>Strategic Advisor</span>
-            <p>Clinical Validation & Market Adoption, Dean Univ of Mississippi, Former Mayo Clinic Chairman</p>
+            <span class="en-content">Strategic Advisor</span>
+            <span class="ko-content">전략 고문</span>
+            <p class="en-content">Clinical Validation & Market Adoption, Dean Univ of Mississippi, Former Mayo Clinic Chairman</p>
+            <p class="ko-content">임상 검증 & 시장 도입, 미시시피대학교 학장, 前 메이요클리닉 회장</p>
           </div>
           <div class="team-member advisor">
             <img src="images/team/tomas-cole.jpg" alt="Tomas Cole" />
             <h3>Tomas Cole</h3>
-            <span>Strategic Advisor</span>
-            <p>Manufacturing & Operations Excellence, VP Operations, MBA & Dentistry, UC Denver Anschutz Comprehensive</p>
+            <span class="en-content">Strategic Advisor</span>
+            <span class="ko-content">전략 고문</span>
+            <p class="en-content">Manufacturing & Operations Excellence, VP Operations, MBA & Dentistry, UC Denver Anschutz Comprehensive</p>
+            <p class="ko-content">제조 & 운영 우수성, VP 운영, MBA & 치의학, UC 덴버 안슈츠 종합</p>
           </div>
         </div>
       </div>
@@ -852,71 +947,124 @@
     <!-- News & Insights Section -->
     <section class="news-section" id="news">
       <div class="section-title-row">
-        <h2>Latest Updates</h2>
+        <h2 class="en-content">Latest Updates</h2>
+        <h2 class="ko-content">최신 소식</h2>
         <button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲ Top</button>
       </div>
       <div class="news-list">
         <div class="news-card">
           <img src="images/marketing_design/patient-kiisplus-proposition.jpg" alt="Patient Story" />
-          <h4>Patient Story: Life-changing Results</h4>
+          <h4 class="en-content">Patient Story: Life-changing Results</h4>
+          <h4 class="ko-content">환자 스토리: 삶을 바꾼 결과</h4>
           <div class="date">2024-07-21</div>
-          <p>Discover how HuMed's hybrid implant transformed a patient's quality of life and confidence.</p>
+          <p class="en-content">Discover how HuMed's hybrid implant transformed a patient's quality of life and confidence.</p>
+          <p class="ko-content">HuMed의 하이브리드 임플란트가 환자의 삶의 질과 자신감을 어떻게 변화시켰는지 알아보세요.</p>
         </div>
         <div class="news-card">
           <img src="images/marketing_design/kiis-implant-solution.jpg" alt="Product Launch" />
-          <h4>Product Launch: Hybrid Implant System</h4>
+          <h4 class="en-content">Product Launch: Hybrid Implant System</h4>
+          <h4 class="ko-content">제품 출시: 하이브리드 임플란트 시스템</h4>
           <div class="date">2024-06-15</div>
-          <p>Our flagship hybrid implant system is now available for select clinical partners.</p>
+          <p class="en-content">Our flagship hybrid implant system is now available for select clinical partners.</p>
+          <p class="ko-content">우리의 플래그십 하이브리드 임플란트 시스템이 선별된 임상 파트너들에게 제공됩니다.</p>
         </div>
         <div class="news-card">
           <img src="images/marketing_design/patient-kiisrelax-proposition.jpg" alt="Clinical Update" />
-          <h4>Clinical Update: FDA Submission</h4>
+          <h4 class="en-content">Clinical Update: FDA Submission</h4>
+          <h4 class="ko-content">임상 업데이트: FDA 제출</h4>
           <div class="date">2024-05-10</div>
-          <p>Final bench testing completed, 510(k) submission to FDA is imminent.</p>
+          <p class="en-content">Final bench testing completed, 510(k) submission to FDA is imminent.</p>
+          <p class="ko-content">최종 벤치 테스트 완료, FDA 510(k) 제출이 임박했습니다.</p>
         </div>
       </div>
-      <button class="view-all-btn">View All News</button>
+      <button class="view-all-btn en-content">View All News</button>
+      <button class="view-all-btn ko-content">모든 뉴스 보기</button>
     </section>
     
     <!-- Milestones Section -->
     <section class="container" id="milestones">
       <div class="section-title-row">
-        <h2>Milestones</h2>
+        <h2 class="en-content">Milestones</h2>
+        <h2 class="ko-content">마일스톤</h2>
         <button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲ Top</button>
       </div>
       <div class="timeline">
-        <div class="timeline-item"><strong>2025</strong> Final bench testing → 510(k) submission imminent</div>
-        <div class="timeline-item"><strong>2026</strong> 510(k) clearance + US launch & marketing</div>
-        <div class="timeline-item"><strong>2027</strong> Injectable De Novo path → Next-gen innovation</div>
+        <div class="timeline-item">
+          <strong>2025</strong> 
+          <span class="en-content">Final bench testing → 510(k) submission imminent</span>
+          <span class="ko-content">최종 벤치 테스트 → 510(k) 제출 임박</span>
+        </div>
+        <div class="timeline-item">
+          <strong>2026</strong> 
+          <span class="en-content">510(k) clearance + US launch & marketing</span>
+          <span class="ko-content">510(k) 승인 + 미국 출시 & 마케팅</span>
+        </div>
+        <div class="timeline-item">
+          <strong>2027</strong> 
+          <span class="en-content">Injectable De Novo path → Next-gen innovation</span>
+          <span class="ko-content">주사형 De Novo 경로 → 차세대 혁신</span>
+        </div>
       </div>
     </section>
     
     <!-- Contact Section -->
     <section class="contact" id="contact">
       <div class="section-title-row">
-        <h2>Contact</h2>
+        <h2 class="en-content">Contact</h2>
+        <h2 class="ko-content">연락처</h2>
         <button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲ Top</button>
       </div>
       <div class="contact-info">
         <p>Email (CEO): <a href="mailto:hskim@humedlifesciences.com">hskim@humedlifesciences.com</a></p>
         <p>Tel: +82 10-4053-1257</p>
-        <p>10F, 123, Teheran-ro, Gangnam-gu, Seoul, Korea</p>
+        <p class="en-content">10F, 123, Teheran-ro, Gangnam-gu, Seoul, Korea</p>
+        <p class="ko-content">서울특별시 강남구 테헤란로 123, 10층</p>
       </div>
       <form class="contact-form" id="contactForm" autocomplete="off">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" rows="5" placeholder="Type your message here." required></textarea>
-        <button type="submit">Send Message</button>
+        <input type="text" name="name" placeholder="Your Name" class="en-content" required>
+        <input type="text" name="name" placeholder="성함" class="ko-content" required>
+        
+        <input type="email" name="email" placeholder="Your Email" class="en-content" required>
+        <input type="email" name="email" placeholder="이메일" class="ko-content" required>
+        
+        <textarea name="message" rows="5" placeholder="Type your message here." class="en-content" required></textarea>
+        <textarea name="message" rows="5" placeholder="메시지를 입력해주세요." class="ko-content" required></textarea>
+        
+        <button type="submit" class="en-content">Send Message</button>
+        <button type="submit" class="ko-content">메시지 보내기</button>
       </form>
       <div id="formResult" style="text-align:center; margin-top:1rem;"></div>
     </section>
   </main>
   
   <footer style="text-align:center; padding:2rem; color:#64748b; font-size:0.9rem;">
-    &copy; 2024 HuMed Lifesciences. All rights reserved.
+    <span class="en-content">&copy; 2024 HuMed Lifesciences. All rights reserved.</span>
+    <span class="ko-content">&copy; 2024 HuMed Lifesciences. 모든 권리 보유.</span>
   </footer>
 
   <script>
+    let isKorean = false;
+
+    function toggleLanguage() {
+      isKorean = !isKorean;
+      
+      const enElements = document.querySelectorAll('.en-content');
+      const koElements = document.querySelectorAll('.ko-content');
+      const langText = document.getElementById('langText');
+      
+      if (isKorean) {
+        enElements.forEach(el => el.style.display = 'none');
+        koElements.forEach(el => el.style.display = el.tagName === 'SPAN' ? 'inline' : 'block');
+        langText.textContent = 'ENG';
+        document.documentElement.lang = 'ko';
+      } else {
+        enElements.forEach(el => el.style.display = el.tagName === 'SPAN' ? 'inline' : 'block');
+        koElements.forEach(el => el.style.display = 'none');
+        langText.textContent = '한글';
+        document.documentElement.lang = 'en';
+      }
+    }
+
     // Smooth scroll for navigation
     document.querySelectorAll('nav a').forEach(link => {
       link.addEventListener('click', function(e) {
@@ -931,7 +1079,8 @@
     // Contact form handler
     document.querySelector('.contact-form').addEventListener('submit', function(e) {
       e.preventDefault();
-      alert('Thank you for your message! We will contact you soon.');
+      const message = isKorean ? '메시지 감사합니다! 곧 연락드리겠습니다.' : 'Thank you for your message! We will contact you soon.';
+      alert(message);
       this.reset();
     });
   </script>
