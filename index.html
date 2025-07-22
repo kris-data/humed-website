@@ -781,7 +781,15 @@
     
     /* Hidden content for Korean language */
     .ko-content {
-      display: none;
+      display: none !important;
+    }
+    
+    /* 초기 로딩 시 영어 버튼만 표시 */
+    .en-content {
+      display: block;
+    }
+    .en-content.cta-btn {
+      display: inline-block;
     }
     
     @media (max-width: 1100px) {
