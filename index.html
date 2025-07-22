@@ -411,18 +411,55 @@
       gap: 2rem;
       margin-top: 1.2rem;
     }
+    .advisors-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1.2rem;
+    }
     .team-member {
       background: var(--white);
       border-radius: 1rem;
       box-shadow: 0 1px 6px rgba(37,99,235,0.07);
       padding: 1.2rem 1.5rem;
       min-width: 220px;
-      max-width: 320px;
+      max-width: 280px;
       flex: 1 1 220px;
       text-align: center;
       display: flex;
       flex-direction: column;
       align-items: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .team-member:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 16px rgba(37,99,235,0.12);
+    }
+    .team-member.advisor {
+      background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+      border: 1px solid #e2e8f0;
+      max-width: 240px;
+      min-width: 200px;
+      padding: 1rem 1.2rem;
+      transform: scale(0.9);
+    }
+    .team-member.advisor img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 0.5rem;
+    }
+    .team-member.advisor h3 {
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+    }
+    .team-member.advisor span {
+      font-size: 0.9rem;
+      margin-bottom: 0.4rem;
+    }
+    .team-member.advisor p {
+      font-size: 0.95rem;
+      line-height: 1.4;
     }
     .team-member img {
       width: 80px;
@@ -631,7 +668,7 @@
         flex-wrap: wrap;
         gap: 0.7rem;
       }
-      .benefit-list, .solutions-row, .team-list, .section-img-row, .news-list {
+      .team-list, .advisors-list, .section-img-row, .news-list {
         flex-direction: column;
         align-items: center;
         gap: 1.5rem;
@@ -802,18 +839,60 @@
         <h2>Our Team</h2>
         <button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲ Top</button>
       </div>
-      <div class="team-list">
-        <div class="team-member">
-          <img src="images/team/hongsuk-kim.jpg" alt="Hongsuk Kim" />
-          <h3>Hongsuk Kim</h3>
-          <span>CEO</span>
-          <p>Global commercialization expert, ex-Samsung/J&J/P&G, Harvard A.M.</p>
+      
+      <!-- Core Team -->
+      <div style="text-align: center; margin-bottom: 2rem;">
+        <h3 style="color: var(--primary-dark); font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem;">Core Team</h3>
+        <div class="team-list">
+          <div class="team-member">
+            <img src="images/team/hongsuk-kim.jpg" alt="Hongsuk Kim" />
+            <h3>Hongsuk Kim</h3>
+            <span>CEO</span>
+            <p>Global commercialization expert, ex-Samsung/J&J/P&G, Harvard A.M.</p>
+          </div>
+          <div class="team-member">
+            <img src="images/team/dogyoon-kim.jpg" alt="Do-Gyoon Kim" />
+            <h3>Do-Gyoon Kim</h3>
+            <span>CTO</span>
+            <p>Ohio State University Professor, Inventor of Hybrid Implant, 20+ years R&D</p>
+          </div>
         </div>
-        <div class="team-member">
-          <img src="images/team/dogyoon-kim.jpg" alt="Do-Gyoon Kim" />
-          <h3>Do-Gyoon Kim</h3>
-          <span>CTO</span>
-          <p>Ohio State University Professor, Inventor of Hybrid Implant, 20+ years R&D</p>
+      </div>
+      
+      <!-- Strategic Advisors -->
+      <div style="text-align: center;">
+        <h3 style="color: var(--primary-dark); font-size: 1.5rem; font-weight: 700; margin-bottom: 1.5rem;">Strategic Advisors</h3>
+        <div class="advisors-list">
+          <div class="team-member advisor">
+            <img src="images/team/jinyong-oh.jpg" alt="Jinyong Oh" />
+            <h3>Jinyong Oh</h3>
+            <span>Strategic Advisor</span>
+            <p>J&J Medical Devices & P&G veteran, global scaling expert, MIT MBA</p>
+          </div>
+          <div class="team-member advisor">
+            <img src="images/team/john-hong.jpg" alt="John Hong" />
+            <h3>John Hong</h3>
+            <span>Strategic Advisor</span>
+            <p>Dental Market Access, Practicing Dentist & Entrepreneur, DDS University of Oklahoma</p>
+          </div>
+          <div class="team-member advisor">
+            <img src="images/team/paul-fagan.jpg" alt="Paul Fagan" />
+            <h3>Paul Fagan</h3>
+            <span>Strategic Advisor</span>
+            <p>Life Sciences Entrepreneurship, CEO ERA Therapeutics, MIT MBA, Scripps & CPA</p>
+          </div>
+          <div class="team-member advisor">
+            <img src="images/team/sreenivas-koka.jpg" alt="Sreenivas Koka" />
+            <h3>Dr. Sreenivas Koka</h3>
+            <span>Strategic Advisor</span>
+            <p>Clinical Validation & Market Adoption, Dean Univ of Mississippi, Former Mayo Clinic Chairman</p>
+          </div>
+          <div class="team-member advisor">
+            <img src="images/team/tomas-cole.jpg" alt="Tomas Cole" />
+            <h3>Tomas Cole</h3>
+            <span>Strategic Advisor</span>
+            <p>Manufacturing & Operations Excellence, VP Operations, MBA & Dentistry, UC Denver Anschutz Comprehensive</p>
+          </div>
         </div>
       </div>
     </section>
@@ -925,6 +1004,21 @@
         team2: "Do-Gyoon Kim",
         team2_role: "CTO",
         team2_desc: "Ohio State University Professor, Inventor of Hybrid Implant, 20+ years R&D",
+        advisor1: "Jinyong Oh",
+        advisor1_role: "Strategic Advisor",
+        advisor1_desc: "J&J Medical Devices & P&G veteran, global scaling expert, MIT MBA",
+        advisor2: "John Hong",
+        advisor2_role: "Strategic Advisor", 
+        advisor2_desc: "Dental Market Access, Practicing Dentist & Entrepreneur, DDS University of Oklahoma",
+        advisor3: "Paul Fagan",
+        advisor3_role: "Strategic Advisor",
+        advisor3_desc: "Life Sciences Entrepreneurship, CEO ERA Therapeutics, MIT MBA, Scripps & CPA",
+        advisor4: "Dr. Sreenivas Koka",
+        advisor4_role: "Strategic Advisor",
+        advisor4_desc: "Clinical Validation & Market Adoption, Dean Univ of Mississippi, Former Mayo Clinic Chairman",
+        advisor5: "Tomas Cole",
+        advisor5_role: "Strategic Advisor",
+        advisor5_desc: "Manufacturing & Operations Excellence, VP Operations, MBA & Dentistry, UC Denver Anschutz Comprehensive",
         news_title: "Latest Updates",
         news1_title: "Patient Story: Life-changing Results",
         news1_date: "2024-07-21",
@@ -987,6 +1081,21 @@
         team2: "김도균",
         team2_role: "CTO",
         team2_desc: "오하이오주립대 교수, 하이브리드 임플란트 발명, 20년+ R&D",
+        advisor1: "오진용",
+        advisor1_role: "전략고문",
+        advisor1_desc: "J&J/P&G 출신, 글로벌 스케일링 전문가, MIT MBA",
+        advisor2: "홍요한",
+        advisor2_role: "전략고문",
+        advisor2_desc: "치과 시장 접근, 개업의사 & 기업가, 오클라호마대 치과대학 DDS",
+        advisor3: "폴 파간",
+        advisor3_role: "전략고문", 
+        advisor3_desc: "생명과학 기업가정신, ERA Therapeutics CEO, MIT MBA, Scripps & CPA",
+        advisor4: "스리니바스 코카 박사",
+        advisor4_role: "전략고문",
+        advisor4_desc: "임상 검증 & 시장 도입, 미시시피대 학장, 前 메이요클리닉 회장",
+        advisor5: "토마스 콜",
+        advisor5_role: "전략고문",
+        advisor5_desc: "제조 & 운영 우수성, VP 운영, MBA & 치의학, UC 덴버 안슈츠 종합",
         news_title: "최신 소식",
         news1_title: "환자 스토리: 삶이 바뀌다",
         news1_date: "2024-07-21",
