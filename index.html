@@ -15,6 +15,8 @@
       --bg: #f8fafc;
       --text: #1e293b;
       --white: #fff;
+      --success: #10b981;
+      --error: #ef4444;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
@@ -556,13 +558,13 @@
       font-size: 1.1rem;
     }
     
-    /* Contact 섹션 */
+    /* Contact 섹션 개선 */
     .contact {
       background: var(--white);
       border-radius: 1.2rem;
       box-shadow: 0 2px 12px rgba(37,99,235,0.06);
       padding: 2rem 1.5rem;
-      max-width: 500px;
+      max-width: 600px;
       margin: 0 auto 2rem auto;
       text-align: center;
     }
@@ -572,36 +574,185 @@
     .contact-info {
       color: #64748b;
       font-size: 1rem;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
     .contact-form {
-      max-width: 420px;
+      max-width: 500px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      gap: 1.2rem;
     }
-    .contact-form input, .contact-form textarea {
-      padding: 0.8rem 1rem;
-      border: 1px solid #cbd5e1;
-      border-radius: 0.7rem;
+    
+    /* 폼 필드 스타일 개선 */
+    .form-field {
+      position: relative;
+      text-align: left;
+    }
+    .form-field label {
+      display: block;
+      margin-bottom: 0.3rem;
+      font-weight: 600;
+      color: var(--text);
+      font-size: 0.9rem;
+    }
+    .contact-form input, 
+    .contact-form textarea, 
+    .contact-form select {
+      width: 100%;
+      padding: 0.9rem 1rem;
+      border: 2px solid #e2e8f0;
+      border-radius: 0.8rem;
       font-size: 1rem;
       resize: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      background: #fafbfc;
     }
-    .contact-form button {
+    .contact-form input:focus, 
+    .contact-form textarea:focus, 
+    .contact-form select:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+      background: var(--white);
+    }
+    
+    /* 폼 에러 스타일 */
+    .form-field-error {
+      border-color: var(--error) !important;
+      box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1) !important;
+    }
+    .field-error-message {
+      color: var(--error);
+      font-size: 0.875rem;
+      margin-top: 0.25rem;
+      display: block;
+    }
+    
+    /* 제출 버튼 개선 */
+    .submit-button {
       background: var(--primary);
       color: var(--white);
       border: none;
-      padding: 0.9rem 0;
+      padding: 1rem 0;
       border-radius: 2rem;
       font-size: 1.1rem;
       font-weight: 700;
       cursor: pointer;
-      transition: background 0.2s;
+      transition: all 0.2s;
+      position: relative;
+      overflow: hidden;
     }
-    .contact-form button:hover {
+    .submit-button:hover:not(:disabled) {
       background: var(--primary-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
     }
+    .submit-button:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+      transform: none;
+    }
+    
+    /* 로딩 스피너 */
+    .loading-spinner {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 2px solid #ffffff;
+      border-radius: 50%;
+      border-top-color: transparent;
+      animation: spin 1s ease-in-out infinite;
+      margin-right: 0.5rem;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    /* 알림 시스템 개선 */
+    .notification {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      max-width: 450px;
+      animation: slideInRight 0.3s ease-out;
+      font-family: inherit;
+    }
+    .notification-content {
+      padding: 1.2rem 1.5rem;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    }
+    .notification-success .notification-content {
+      background: linear-gradient(135deg, var(--success), #059669);
+      color: white;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+    .notification-error .notification-content {
+      background: linear-gradient(135deg, var(--error), #dc2626);
+      color: white;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+    .notification-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+    .notification-message {
+      flex: 1;
+      font-weight: 500;
+      font-size: 1rem;
+      line-height: 1.4;
+    }
+    .notification-close {
+      background: rgba(255, 255, 255, 0.2);
+      border: none;
+      color: inherit;
+      font-size: 1.2rem;
+      cursor: pointer;
+      padding: 0.3rem;
+      margin-left: 0.5rem;
+      opacity: 0.8;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .notification-close:hover {
+      opacity: 1;
+      background: rgba(255, 255, 255, 0.3);
+    }
+    
+    @keyframes slideInRight {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+    
+    /* Formspree 감사 메시지 스타일 */
+    .thank-you-message {
+      background: linear-gradient(135deg, var(--success), #059669);
+      color: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      text-align: center;
+      margin: 2rem 0;
+      display: none;
+    }
+    .thank-you-message.show {
+      display: block;
+      animation: fadeIn 0.5s ease-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
     .section-title-row {
       display: flex;
       align-items: center;
@@ -708,6 +859,11 @@
       }
       section h2 {
         font-size: 1.1rem;
+      }
+      .notification {
+        right: 10px;
+        left: 10px;
+        max-width: none;
       }
     }
   </style>
@@ -1010,30 +1166,95 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
       <div class="section-title-row">
-        <h2 class="en-content">Contact</h2>
-        <h2 class="ko-content">연락처</h2>
+        <h2 class="en-content">Contact Us</h2>
+        <h2 class="ko-content">문의하기</h2>
         <button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲ Top</button>
       </div>
+      
       <div class="contact-info">
-        <p>Email (CEO): <a href="mailto:hskim@humedlifesciences.com">hskim@humedlifesciences.com</a></p>
-        <p>Tel: +82 10-4053-1257</p>
+        <p><strong>CEO:</strong> <a href="mailto:hskim@humedlifesciences.com">hskim@humedlifesciences.com</a></p>
+        <p><strong>Tel:</strong> +82 10-4053-1257</p>
         <p class="en-content">10F, 123, Teheran-ro, Gangnam-gu, Seoul, Korea</p>
         <p class="ko-content">서울특별시 강남구 테헤란로 123, 10층</p>
       </div>
-      <form class="contact-form" id="contactForm" autocomplete="off">
-        <input type="text" name="name" placeholder="Your Name" class="en-content" required>
-        <input type="text" name="name" placeholder="성함" class="ko-content" required>
+      
+      <!-- Formspree 폼 -->
+      <form class="contact-form" action="https://formspree.io/f/xpwlpzpn" method="POST" id="contactForm">
+        <!-- 숨겨진 필드들 (Formspree 기능 향상) -->
+        <input type="hidden" name="_subject" value="New inquiry from HuMed website">
+        <input type="hidden" name="_next" value="https://kris-data.github.io/humed-website/?success=true">
+        <input type="hidden" name="_language" id="hiddenLanguage" value="en">
         
-        <input type="email" name="email" placeholder="Your Email" class="en-content" required>
-        <input type="email" name="email" placeholder="이메일" class="ko-content" required>
+        <div class="form-field">
+          <label class="en-content">Full Name *</label>
+          <label class="ko-content">성함 *</label>
+          <input type="text" name="name" required>
+        </div>
         
-        <textarea name="message" rows="5" placeholder="Type your message here." class="en-content" required></textarea>
-        <textarea name="message" rows="5" placeholder="메시지를 입력해주세요." class="ko-content" required></textarea>
+        <div class="form-field">
+          <label class="en-content">Email Address *</label>
+          <label class="ko-content">이메일 주소 *</label>
+          <input type="email" name="email" required>
+        </div>
         
-        <button type="submit" class="en-content">Send Message</button>
-        <button type="submit" class="ko-content">메시지 보내기</button>
+        <div class="form-field">
+          <label class="en-content">Company / Organization</label>
+          <label class="ko-content">회사 / 기관</label>
+          <input type="text" name="company">
+        </div>
+        
+        <div class="form-field">
+          <label class="en-content">Phone Number</label>
+          <label class="ko-content">전화번호</label>
+          <input type="tel" name="phone">
+        </div>
+        
+        <div class="form-field">
+          <label class="en-content">Inquiry Type</label>
+          <label class="ko-content">문의 유형</label>
+          <select name="inquiryType">
+            <option value="" class="en-content">Select Inquiry Type</option>
+            <option value="" class="ko-content">문의 유형 선택</option>
+            
+            <option value="Product Information" class="en-content">Product Information</option>
+            <option value="제품 정보" class="ko-content">제품 정보</option>
+            
+            <option value="Partnership Opportunities" class="en-content">Partnership Opportunities</option>
+            <option value="파트너십 기회" class="ko-content">파트너십 기회</option>
+            
+            <option value="Investment Inquiries" class="en-content">Investment Inquiries</option>
+            <option value="투자 문의" class="ko-content">투자 문의</option>
+            
+            <option value="Clinical Studies" class="en-content">Clinical Studies</option>
+            <option value="임상 연구" class="ko-content">임상 연구</option>
+            
+            <option value="Media & Press" class="en-content">Media & Press</option>
+            <option value="미디어 & 언론" class="ko-content">미디어 & 언론</option>
+            
+            <option value="Other" class="en-content">Other</option>
+            <option value="기타" class="ko-content">기타</option>
+          </select>
+        </div>
+        
+        <div class="form-field">
+          <label class="en-content">Your Message *</label>
+          <label class="ko-content">문의 내용 *</label>
+          <textarea name="message" rows="5" required></textarea>
+        </div>
+        
+        <button type="submit" class="submit-button">
+          <span class="en-content">Send Message</span>
+          <span class="ko-content">메시지 보내기</span>
+        </button>
       </form>
-      <div id="formResult" style="text-align:center; margin-top:1rem;"></div>
+      
+      <!-- 성공 메시지 -->
+      <div class="thank-you-message" id="thankYouMessage">
+        <h3 class="en-content">Thank You!</h3>
+        <h3 class="ko-content">감사합니다!</h3>
+        <p class="en-content">Your message has been sent successfully. We will respond within 24 hours.</p>
+        <p class="ko-content">메시지가 성공적으로 전송되었습니다. 24시간 내에 답변드리겠습니다.</p>
+      </div>
     </section>
   </main>
   
@@ -1045,43 +1266,239 @@
   <script>
     let isKorean = false;
 
+    // 언어 토글
     function toggleLanguage() {
       isKorean = !isKorean;
       
       const enElements = document.querySelectorAll('.en-content');
       const koElements = document.querySelectorAll('.ko-content');
       const langText = document.getElementById('langText');
+      const hiddenLanguage = document.getElementById('hiddenLanguage');
       
       if (isKorean) {
-        enElements.forEach(el => el.style.display = 'none');
-        koElements.forEach(el => el.style.display = el.tagName === 'SPAN' ? 'inline' : 'block');
+        enElements.forEach(el => {
+          if (el.tagName === 'SPAN') {
+            el.style.display = 'none';
+          } else {
+            el.style.display = 'none';
+          }
+        });
+        koElements.forEach(el => {
+          if (el.tagName === 'SPAN') {
+            el.style.display = 'inline';
+          } else if (el.tagName === 'A') {
+            el.style.display = 'inline-block';
+          } else {
+            el.style.display = 'block';
+          }
+        });
         langText.textContent = 'ENG';
         document.documentElement.lang = 'ko';
+        hiddenLanguage.value = 'ko';
       } else {
-        enElements.forEach(el => el.style.display = el.tagName === 'SPAN' ? 'inline' : 'block');
-        koElements.forEach(el => el.style.display = 'none');
+        enElements.forEach(el => {
+          if (el.tagName === 'SPAN') {
+            el.style.display = 'inline';
+          } else if (el.tagName === 'A') {
+            el.style.display = 'inline-block';
+          } else {
+            el.style.display = 'block';
+          }
+        });
+        koElements.forEach(el => {
+          if (el.tagName === 'SPAN') {
+            el.style.display = 'none';
+          } else {
+            el.style.display = 'none';
+          }
+        });
         langText.textContent = '한글';
         document.documentElement.lang = 'en';
+        hiddenLanguage.value = 'en';
       }
+      
+      // 폼 플레이스홀더 업데이트
+      updateFormPlaceholders();
     }
-
-    // Smooth scroll for navigation
-    document.querySelectorAll('nav a').forEach(link => {
-      link.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
-        if (href.startsWith('#')) {
-          e.preventDefault();
-          document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+    
+    // 폼 플레이스홀더 업데이트
+    function updateFormPlaceholders() {
+      const placeholders = {
+        en: {
+          name: 'Enter your full name',
+          email: 'Enter your email address',
+          company: 'Enter your company or organization',
+          phone: 'Enter your phone number',
+          message: 'Tell us about your inquiry, interests, or how we can help you...'
+        },
+        ko: {
+          name: '성함을 입력해주세요',
+          email: '이메일 주소를 입력해주세요',
+          company: '회사나 기관명을 입력해주세요',
+          phone: '전화번호를 입력해주세요',
+          message: '문의사항, 관심분야, 또는 도움이 필요한 내용을 자세히 알려주세요...'
+        }
+      };
+      
+      const lang = isKorean ? 'ko' : 'en';
+      const form = document.getElementById('contactForm');
+      
+      Object.keys(placeholders[lang]).forEach(name => {
+        const field = form.querySelector(`[name="${name}"]`);
+        if (field) {
+          field.placeholder = placeholders[lang][name];
         }
       });
-    });
-
-    // Contact form handler
-    document.querySelector('.contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const message = isKorean ? '메시지 감사합니다! 곧 연락드리겠습니다.' : 'Thank you for your message! We will contact you soon.';
-      alert(message);
-      this.reset();
+    }
+    
+    // 폼 검증
+    function validateForm(formData) {
+      const errors = [];
+      
+      // 이름 검증
+      if (!formData.get('name').trim()) {
+        errors.push(isKorean ? '이름을 입력해주세요' : 'Please enter your name');
+      } else if (formData.get('name').trim().length < 2) {
+        errors.push(isKorean ? '이름은 최소 2글자 이상 입력해주세요' : 'Name must be at least 2 characters');
+      }
+      
+      // 이메일 검증
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!formData.get('email').trim()) {
+        errors.push(isKorean ? '이메일을 입력해주세요' : 'Please enter your email');
+      } else if (!emailRegex.test(formData.get('email'))) {
+        errors.push(isKorean ? '올바른 이메일 형식을 입력해주세요' : 'Please enter a valid email address');
+      }
+      
+      // 메시지 검증
+      if (!formData.get('message').trim()) {
+        errors.push(isKorean ? '문의 내용을 입력해주세요' : 'Please enter your message');
+      } else if (formData.get('message').trim().length < 10) {
+        errors.push(isKorean ? '문의 내용은 최소 10글자 이상 입력해주세요' : 'Message must be at least 10 characters');
+      }
+      
+      if (errors.length > 0) {
+        showNotification(errors.join('\n'), 'error');
+        return false;
+      }
+      
+      return true;
+    }
+    
+    // 로딩 상태 표시
+    function showLoadingState() {
+      const submitBtn = document.querySelector('.submit-button');
+      const spinner = '<span class="loading-spinner"></span>';
+      const text = isKorean ? '전송 중...' : 'Sending...';
+      submitBtn.innerHTML = spinner + text;
+      submitBtn.disabled = true;
+    }
+    
+    // 로딩 상태 제거
+    function hideLoadingState() {
+      const submitBtn = document.querySelector('.submit-button');
+      submitBtn.innerHTML = `
+        <span class="en-content" style="display: ${isKorean ? 'none' : 'inline'}">Send Message</span>
+        <span class="ko-content" style="display: ${isKorean ? 'inline' : 'none'}">메시지 보내기</span>
+      `;
+      submitBtn.disabled = false;
+    }
+    
+    // 알림 표시
+    function showNotification(message, type) {
+      // 기존 알림 제거
+      const existingNotification = document.querySelector('.notification');
+      if (existingNotification) {
+        existingNotification.remove();
+      }
+      
+      // 새 알림 생성
+      const notification = document.createElement('div');
+      notification.className = `notification notification-${type}`;
+      notification.innerHTML = `
+        <div class="notification-content">
+          <span class="notification-icon">${type === 'success' ? '✅' : '❌'}</span>
+          <span class="notification-message">${message}</span>
+          <button class="notification-close" onclick="this.parentElement.parentElement.remove()">×</button>
+        </div>
+      `;
+      
+      document.body.appendChild(notification);
+      
+      // 5초 후 자동 제거
+      setTimeout(() => {
+        if (notification && notification.parentElement) {
+          notification.remove();
+        }
+      }, 5000);
+    }
+    
+    // URL 파라미터 확인하여 성공 메시지 표시
+    function checkForSuccess() {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('success') === 'true') {
+        // 성공 메시지 표시
+        const successMessage = isKorean 
+          ? '✅ 문의해주셔서 감사합니다! 24시간 내에 답변드리겠습니다.' 
+          : '✅ Thank you for your inquiry! We will respond within 24 hours.';
+        showNotification(successMessage, 'success');
+        
+        // 감사 메시지 카드도 표시
+        document.getElementById('thankYouMessage').classList.add('show');
+        document.getElementById('contactForm').style.display = 'none';
+        
+        // URL에서 success 파라미터 제거
+        window.history.replaceState({}, document.title, window.location.pathname);
+      }
+    }
+    
+    // 폼 제출 처리
+    function handleFormSubmit(event) {
+      const formData = new FormData(event.target);
+      
+      // 클라이언트 사이드 검증
+      if (!validateForm(formData)) {
+        event.preventDefault();
+        return false;
+      }
+      
+      // 로딩 상태 표시
+      showLoadingState();
+      
+      // 성공 알림을 미리 준비 (Formspree 제출 후 페이지 이동하기 전)
+      setTimeout(() => {
+        const successMessage = isKorean 
+          ? '메시지가 전송되었습니다! 감사합니다.' 
+          : 'Message sent successfully! Thank you.';
+        showNotification(successMessage, 'success');
+      }, 1000);
+      
+      // Formspree가 처리하도록 폼이 정상 제출됨
+      // 성공 시 _next URL로 리다이렉트됨
+    }
+    
+    // 초기화
+    document.addEventListener('DOMContentLoaded', function() {
+      // 폼 이벤트 리스너 설정
+      const form = document.getElementById('contactForm');
+      form.addEventListener('submit', handleFormSubmit);
+      
+      // 초기 플레이스홀더 설정
+      updateFormPlaceholders();
+      
+      // 성공 상태 확인
+      checkForSuccess();
+      
+      // 네비게이션 스무스 스크롤
+      document.querySelectorAll('nav a').forEach(link => {
+        link.addEventListener('click', function(e) {
+          const href = this.getAttribute('href');
+          if (href.startsWith('#')) {
+            e.preventDefault();
+            document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+          }
+        });
+      });
     });
   </script>
 </body>
