@@ -812,88 +812,156 @@
     
     /* 갤럭시 폴드 접힌 상태 (374x812) 및 좁은 화면 대응 */
     @media (max-width: 400px) {
-      /* 모든 이미지를 contain으로 변경하여 잘림 방지 - !important로 우선순위 보장 */
+      /* 이미지 컨테이너 높이를 모바일에 적합하게 조정 */
+      .section-img {
+        min-height: auto !important;
+        max-width: 95% !important;
+        width: 95% !important;
+        margin: 0 auto 2rem auto !important;
+      }
+      
+      .solution-card {
+        min-height: auto !important;
+        max-width: 95% !important;
+        width: 95% !important;
+        margin: 0 auto 2rem auto !important;
+        padding: 2rem 1rem !important;
+      }
+      
+      .proven-card {
+        min-height: auto !important;
+        max-width: 95% !important;
+        width: 95% !important;
+        margin: 0 auto 2rem auto !important;
+        padding: 2rem 1rem !important;
+      }
+      
+      .news-card {
+        max-width: 95% !important;
+        width: 95% !important;
+        margin: 0 auto 1rem auto !important;
+      }
+      
+      /* 이미지 높이를 화면 비율에 맞게 동적 조정 */
       .section-img img {
-        height: 220px !important;
+        height: 35vw !important;  /* 뷰포트 너비의 35% */
+        min-height: 180px !important;
+        max-height: 250px !important;
         object-fit: contain !important;
         background: #f8fafc !important;
+        width: 100% !important;
       }
       
       .solution-card img {
-        height: 200px !important;
+        height: 32vw !important;  /* 뷰포트 너비의 32% */
+        min-height: 160px !important;
+        max-height: 220px !important;
         object-fit: contain !important;
         background: #f3f6fa !important;
+        width: 100% !important;
       }
       
       .proven-card img {
-        height: 280px !important;
+        height: 45vw !important;  /* 뷰포트 너비의 45% */
+        min-height: 200px !important;
+        max-height: 300px !important;
         object-fit: contain !important;
         background: #f3f6fa !important;
+        width: 100% !important;
       }
       
       .news-card img {
-        height: 160px !important;
+        height: 30vw !important;  /* 뷰포트 너비의 30% */
+        min-height: 140px !important;
+        max-height: 180px !important;
         object-fit: contain !important;
         background: #f8fafc !important;
+        width: 100% !important;
       }
       
       .benefit-item img {
-        width: 100px !important;
-        height: 100px !important;
+        width: 25vw !important;   /* 뷰포트 너비의 25% */
+        height: 25vw !important;
+        min-width: 80px !important;
+        min-height: 80px !important;
+        max-width: 120px !important;
+        max-height: 120px !important;
         object-fit: contain !important;
         background: #f8fafc !important;
-      }
-      
-      /* 컨테이너도 좁은 화면에 최적화 */
-      .section-img, 
-      .solution-card, 
-      .proven-card {
-        min-width: 280px;
-        max-width: 100%;
-        width: 100%;
-        margin: 0 auto;
-      }
-      
-      .solution-card, 
-      .proven-card {
-        padding: 1.5rem 1rem;
       }
       
       /* 히어로 섹션 최적화 */
       .hero {
-        min-height: 50vh;
+        min-height: 50vh !important;
+        padding: 2rem 1rem !important;
+      }
+      
+      .hero-content {
+        padding: 2rem 1rem !important;
       }
       
       .hero-main {
-        font-size: 1.4rem;
-        line-height: 1.3;
+        font-size: 1.4rem !important;
+        line-height: 1.3 !important;
       }
       
       .hero-sub {
-        font-size: 1.1rem;
+        font-size: 1.1rem !important;
       }
       
       .hero-desc {
-        font-size: 1rem;
+        font-size: 1rem !important;
+      }
+      
+      /* 섹션 간격 조정 */
+      .section-img-row {
+        gap: 1.5rem !important;
+        margin-bottom: 2rem !important;
+      }
+      
+      .solutions-row {
+        gap: 2rem !important;
+        margin-top: 2rem !important;
+      }
+      
+      .benefit-list {
+        gap: 1.2rem !important;
       }
     }
     
-    /* 극소형 화면 (아이폰 SE 등) */
+    /* 극소형 화면 (아이폰 SE, 갤럭시 Z Flip 접힌 상태 등) */
     @media (max-width: 375px) {
       .section-img img {
-        height: 200px !important;
-        object-fit: contain !important;
+        height: 38vw !important;
+        min-height: 160px !important;
+        max-height: 200px !important;
       }
       
       .solution-card img {
-        height: 180px !important;
-        object-fit: contain !important;
+        height: 35vw !important;
+        min-height: 140px !important;
+        max-height: 180px !important;
+      }
+      
+      .proven-card img {
+        height: 48vw !important;
+        min-height: 180px !important;
+        max-height: 250px !important;
+      }
+      
+      .news-card img {
+        height: 32vw !important;
+        min-height: 120px !important;
+        max-height: 150px !important;
       }
       
       .benefit-item img {
-        width: 90px !important;
-        height: 90px !important;
-        object-fit: contain !important;
+        width: 22vw !important;
+        height: 22vw !important;
+        min-width: 70px !important;
+        min-height: 70px !important;
+        max-width: 90px !important;
+        max-height: 90px !important;
       }
     }
     
