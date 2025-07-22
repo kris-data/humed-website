@@ -812,36 +812,36 @@
     
     /* 갤럭시 폴드 접힌 상태 (374x812) 및 좁은 화면 대응 */
     @media (max-width: 400px) {
-      /* 모든 이미지를 contain으로 변경하여 잘림 방지 */
+      /* 모든 이미지를 contain으로 변경하여 잘림 방지 - !important로 우선순위 보장 */
       .section-img img {
-        height: 220px;
-        object-fit: contain;
-        background: #f8fafc;
+        height: 220px !important;
+        object-fit: contain !important;
+        background: #f8fafc !important;
       }
       
       .solution-card img {
-        height: 200px;
-        object-fit: contain;
-        background: #f3f6fa;
+        height: 200px !important;
+        object-fit: contain !important;
+        background: #f3f6fa !important;
       }
       
       .proven-card img {
-        height: 280px;
-        object-fit: contain;
-        background: #f3f6fa;
+        height: 280px !important;
+        object-fit: contain !important;
+        background: #f3f6fa !important;
       }
       
       .news-card img {
-        height: 160px;
-        object-fit: contain;
-        background: #f8fafc;
+        height: 160px !important;
+        object-fit: contain !important;
+        background: #f8fafc !important;
       }
       
       .benefit-item img {
-        width: 100px;
-        height: 100px;
-        object-fit: contain;
-        background: #f8fafc;
+        width: 100px !important;
+        height: 100px !important;
+        object-fit: contain !important;
+        background: #f8fafc !important;
       }
       
       /* 컨테이너도 좁은 화면에 최적화 */
@@ -881,18 +881,19 @@
     /* 극소형 화면 (아이폰 SE 등) */
     @media (max-width: 375px) {
       .section-img img {
-        height: 200px;
-        object-fit: contain;
+        height: 200px !important;
+        object-fit: contain !important;
       }
       
       .solution-card img {
-        height: 180px;
-        object-fit: contain;
+        height: 180px !important;
+        object-fit: contain !important;
       }
       
       .benefit-item img {
-        width: 90px;
-        height: 90px;
+        width: 90px !important;
+        height: 90px !important;
+        object-fit: contain !important;
       }
     }
     
