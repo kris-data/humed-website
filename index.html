@@ -1,201 +1,290 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>HuMed Lifesciences — Hybrid Dental Implant (KiiS)</title>
-  <meta name="description" content="World’s first hybrid dental implant technology (KiiS). Partners & clinicians welcome (pre-FDA).">
-  <style>
-    :root{
-      --bg:#0f3b9a;--card:#f5f7fb;--txt:#0b1b3f;--muted:#5f77a6;--pill:#e8f0ff;
-      --white:#fff;--btn:#103a95;--btn2:#0b2f7a;--ring:rgba(16,58,149,.18);
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;color:var(--txt);background:#f7f9fc}
-    .wrap{max-width:1160px;margin:0 auto;padding:24px 20px}
-    .hero{background:linear-gradient(180deg,#1346c5, #0e3aa2); color:var(--white)}
-    .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;min-height:520px}
-    .badge{font-size:.82rem;opacity:.9;text-align:right;padding:6px 0 0 0}
-    h1{font-size:2.6rem;line-height:1.18;margin:.35rem 0 1rem}
-    .lead{font-size:1.15rem;opacity:.9;margin-bottom:1.4rem}
-    .bullets{font-size:1.02rem;line-height:1.65}
-    .bullets p{margin:.35rem 0}
-    .cta{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
-    .btn{background:var(--white);color:var(--btn);border:0;border-radius:12px;padding:12px 16px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:0 6px 20px var(--ring)}
-    .btn:hover{background:#eaf0ff}
-    .btn.primary{background:#0b2f7a;color:#fff}
-    .btn.primary:hover{background:#092a6b}
-    .mock{background:#f0f2f8;border-radius:22px;padding:18px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
-    .mock img{width:100%;height:auto;display:block}
-    /* sections */
-    section{padding:48px 0}
-    h2{font-size:1.8rem;margin-bottom:18px}
-    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card{background:var(--card);border-radius:18px;padding:18px 18px 16px;box-shadow:0 4px 14px rgba(10,25,80,.06)}
-    .pill{display:inline-block;background:var(--pill);padding:6px 10px;border-radius:999px;font-size:.88rem;margin:8px 0 6px;color:#144}
-    .who{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    ul{padding-left:18px}
-    li{margin:.38rem 0}
-    .progress .box{background:var(--card);border-radius:14px;padding:16px;box-shadow:0 4px 14px rgba(10,25,80,.06)}
-    .chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
-    .chip{background:var(--pill);border-radius:999px;padding:6px 10px;font-size:.88rem}
-    .team .row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-    .team .m{background:var(--card);border-radius:14px;padding:14px;box-shadow:0 4px 14px rgba(10,25,80,.06)}
-    .contact .box{background:var(--card);border-radius:16px;padding:18px;box-shadow:0 6px 20px rgba(10,25,80,.08)}
-    /* form */
-    form{display:grid;gap:12px;margin-top:8px}
-    input,textarea,select{width:100%;padding:12px;border:2px solid #e6ebf6;border-radius:10px;font:inherit;background:#fff}
-    input:focus,textarea:focus,select:focus{outline:none;border-color:#2a55cc;box-shadow:0 0 0 3px rgba(42,85,204,.12)}
-    textarea{min-height:120px;resize:vertical}
-    .submit{background:#0b2f7a;color:#fff;border:0;border-radius:12px;padding:12px 16px;font-weight:800;cursor:pointer}
-    .submit:hover{background:#092a6b}
-    footer{padding:26px 0;color:#63709a;text-align:center}
-    @media (max-width:980px){.hero .wrap{grid-template-columns:1fr} .badge{text-align:left}}
-    @media (max-width:760px){h1{font-size:2.1rem} .grid3{grid-template-columns:1fr} .who{grid-template-columns:1fr} .team .row{grid-template-columns:1fr}}
-  </style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HuMed Lifesciences — Hybrid Dental Implant (KiiS)</title>
+<meta name="description" content="World’s first hybrid dental implant technology (KiiS). Internal bone-ingrowth chamber, universal compatibility, and an injectable platform roadmap."/>
+<meta name="robots" content="index,follow"/>
+
+<style>
+:root{
+  --primary:#1f4ad7;      /* deep brand blue */
+  --primary-2:#2b6af0;    /* accent blue */
+  --ink:#0f172a;          /* text */
+  --ink-2:#334155;        /* muted text */
+  --bg:#f6f8fc;           /* page */
+  --white:#fff;
+  --ring:#e6ecff;
+  --shadow:0 6px 24px rgba(37,99,235,.08);
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Noto Sans, "Apple SD Gothic Neo", "Malgun Gothic", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.6;
+}
+
+/* ---------- Header ---------- */
+.header{
+  background: linear-gradient(180deg, #173bbf 0%, #2355e6 100%);
+  color:#e7efff;
+  padding:16px 18px;
+  position:sticky; top:0; z-index:10;
+}
+.header__inner{
+  max-width:1120px; margin:0 auto;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.brand{font-weight:900; letter-spacing:.2px}
+.header__note{font-size:.9rem; opacity:.85}
+
+/* ---------- Hero ---------- */
+.hero{
+  background:linear-gradient(140deg, #1e46d9 0%, #2a63ef 60%);
+  color:var(--white);
+  padding:48px 0 28px;
+}
+.hero__grid{
+  max-width:1120px; margin:0 auto; padding:0 18px;
+  display:grid; grid-template-columns: 1.05fr .95fr; gap:28px;
+}
+.hero h1{font-size:2.1rem; line-height:1.25; margin:0 0 10px 0}
+.hero p{opacity:.92; font-size:1.05rem; margin:.2rem 0}
+.bullets{margin-top:16px}
+.bullets p{margin:.4rem 0}
+
+.cta-row{display:flex; gap:12px; margin-top:18px; flex-wrap:wrap}
+.btn{
+  display:inline-flex; align-items:center; gap:8px;
+  border:none; cursor:pointer; text-decoration:none;
+  padding:12px 16px; border-radius:12px; font-weight:800;
+  background:var(--white); color:var(--primary);
+  box-shadow: var(--shadow);
+}
+.btn--dark{background:#0b2a94; color:#fff}
+.btn:focus{outline:3px solid rgba(255,255,255,.35); outline-offset:2px}
+
+/* Right card */
+.hero-card{
+  background:var(--white); border-radius:18px; box-shadow: var(--shadow);
+  padding:10px; display:flex; align-items:center; justify-content:center;
+}
+.hero-card img{width:100%; height:auto; display:block}
+
+/* ---------- Section band layout ---------- */
+.band{
+  max-width:1120px; margin:24px auto; padding:56px 18px;
+  background:linear-gradient(180deg,#eef4ff 0%, #ffffff 70%);
+  border-radius:18px; box-shadow: var(--shadow);
+}
+.section-title{margin:0 0 18px 0; font-size:1.6rem}
+
+/* cards */
+.row{display:grid; gap:16px}
+.row--3{grid-template-columns: repeat(3,1fr)}
+.row--2{grid-template-columns: repeat(2,1fr)}
+.card{
+  background:#fff; border:1px solid var(--ring); border-radius:14px; padding:18px;
+  box-shadow:0 4px 18px rgba(37,99,235,.08);
+}
+.badge{
+  display:inline-block; padding:6px 12px; border-radius:999px;
+  background:#e6efff; color:#173bbf; font-weight:800; font-size:.92rem;
+  margin-bottom:8px;
+}
+
+/* ---------- Progress ---------- */
+.pill{
+  display:inline-block; padding:8px 12px; border-radius:999px;
+  background:#e9f0ff; color:#113190; font-weight:800; margin:8px 8px 0 0;
+}
+
+/* ---------- Team ---------- */
+.team-card h4{margin:0 0 6px 0}
+.team-role{color:#113190; font-weight:800; margin-bottom:6px}
+
+/* ---------- Contact ---------- */
+.contact-wrap .help{color:var(--ink-2); margin:-10px 0 10px 0}
+.input, .textarea{
+  width:100%; border:2px solid var(--ring); background:#fbfdff;
+  border-radius:12px; padding:12px 14px; font-size:1rem;
+}
+.textarea{min-height:120px; resize:vertical}
+.submit{margin-top:8px}
+
+/* ---------- Footer ---------- */
+.footer{max-width:1120px; margin:0 auto; padding:22px 18px; color:#64748b; text-align:center}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 980px){
+  .hero__grid{grid-template-columns:1fr}
+}
+@media (max-width: 640px){
+  .hero h1{font-size:1.7rem}
+  .band{padding:44px 14px; margin:18px auto}
+}
+</style>
 </head>
+
 <body>
 
-  <!-- HERO -->
-  <header class="hero">
-    <div class="wrap">
-      <div>
-        <div class="badge">Pre-FDA • Partners &amp; Clinicians Welcome</div>
-        <h1>World’s First Hybrid Dental<br/>Implant Technology (KiiS)</h1>
-        <p class="lead">30+ years after osseointegration, KiiS delivers the next structural leap.</p>
+<!-- Header -->
+<header class="header">
+  <div class="header__inner">
+    <div class="brand">HuMed Lifesciences</div>
+    <div class="header__note">Pre-FDA • Partners &amp; Clinicians Welcome</div>
+  </div>
+</header>
 
-        <div class="bullets">
-          <p>Patented internal bone-ingrowth chamber for 3-D load sharing</p>
-          <p>Compatible today (Nobel-style conical/standard workflow) — injectable-ready tomorrow</p>
-          <p>Final bench tests complete soon → 510(k) submission imminent</p>
-        </div>
+<!-- Hero -->
+<section class="hero">
+  <div class="hero__grid">
+    <div>
+      <h1>World’s First Hybrid Dental<br/>Implant Technology (KiiS)</h1>
+      <p><strong>30+ years</strong> after osseointegration, KiiS delivers the next structural leap.</p>
 
-        <div class="cta">
-          <a class="btn" href="files/KiiS-OnePage-Brief.pdf" target="_blank">⬇️  Download One-Pager</a>
-          <!-- Contact CEO → 폼 섹션으로 스크롤 -->
-          <a class="btn primary" href="#contact">✉️  Contact CEO</a>
-        </div>
+      <div class="bullets">
+        <p>• Patented <b>internal bone-ingrowth chamber</b> for 3-D load sharing</p>
+        <p>• Compatible today (Nobel-style conical/standard workflow) — <b>injectable-ready</b> tomorrow</p>
+        <p>• Final bench tests complete soon → <b>510(k) submission</b> imminent</p>
       </div>
 
-      <div class="mock">
-        <img src="images/hero-implant.png" alt="KiiS implant">
+      <div class="cta-row">
+        <a class="btn" href="files/KiiS-OnePage-Brief.pdf" target="_blank" rel="noopener">
+          <span>⬇</span> Download One-Pager
+        </a>
+        <a class="btn btn--dark" href="#contact" id="cta-contact">✉️ Contact CEO</a>
       </div>
     </div>
-  </header>
 
-  <main>
-    <!-- WHY -->
-    <section>
-      <div class="wrap">
-        <h2>Why KiiS</h2>
-        <div class="grid3">
-          <div class="card">
-            <div class="pill">Internal bone-ingrowth chamber</div>
-            <p>Creates living bone inside the implant body for early stability and long-term durability.</p>
-          </div>
-          <div class="card">
-            <div class="pill">Works with existing workflows</div>
-            <p>Nobel-compatible conical connection and platform switching for proven coronal seal &amp; prosthetic fit.</p>
-          </div>
-          <div class="card">
-            <div class="pill">Injectable platform roadmap</div>
-            <p>On-demand antimicrobial/osteoinductive delivery for peri-implantitis defense and true healing.</p>
-          </div>
+    <div class="hero-card">
+      <img src="images/hero-implant.png" alt="KiiS Hybrid Implant">
+    </div>
+  </div>
+</section>
+
+<!-- Why KiiS -->
+<section class="band" id="why">
+  <h2 class="section-title">Why KiiS</h2>
+  <div class="row row--3">
+    <div class="card">
+      <div class="badge">Internal bone-ingrowth chamber</div>
+      Creates living bone inside the implant body for early stability and long-term durability.
+    </div>
+    <div class="card">
+      <div class="badge">Works with existing workflows</div>
+      Nobel-compatible conical connection and platform switching for proven coronal seal &amp; prosthetic fit.
+    </div>
+    <div class="card">
+      <div class="badge">Injectable platform roadmap</div>
+      On-demand antimicrobial/osteoinductive delivery for peri-implantitis defense and true healing.
+    </div>
+  </div>
+</section>
+
+<!-- Who It Helps (generic wording) -->
+<section class="band" id="who">
+  <h2 class="section-title">Who It Helps</h2>
+  <div class="row row--2">
+    <div class="card">
+      <div class="badge">Everyday cases (primary implants in common bone)</div>
+      <ul style="margin:6px 0 0 18px;">
+        <li>Immediate stability without premium pricing</li>
+        <li>Fast, predictable recovery; universal prosthetic compatibility</li>
+        <li>11° conical seal → microleakage control &amp; soft-tissue health</li>
+        <li><em>Post-extraction immediate</em> ready: early stability from the bone-ingrowth chamber</li>
+      </ul>
+    </div>
+    <div class="card">
+      <div class="badge">Complex cases (soft/fragile bone &amp; compromised sites)</div>
+      <ul style="margin:6px 0 0 18px;">
+        <li>Deep trabecular engagement + variable pitch for gentle, strong grip</li>
+        <li>Bone-ingrowth chamber supports staged regeneration &amp; long-term load sharing</li>
+        <li>Open drilling sequence — no brand-exclusive kits required</li>
+        <li>Helps reduce graft dependence via bone compaction (0.6–0.75 mm pitch near apex)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Progress & Validation -->
+<section class="band" id="progress">
+  <h2 class="section-title">Progress &amp; Validation</h2>
+  <div class="card">
+    Packaging/Sterility/Biocompatibility testing completed; final bench testing nearing completion for
+    510(k) submission. Academic collaborations active; clinical advisors engaged.
+    <div>
+      <span class="pill">US Patent Granted</span>
+      <span class="pill">510(k) Path</span>
+      <span class="pill">KOL &amp; Dental School Support</span>
+    </div>
+  </div>
+</section>
+
+<!-- Team -->
+<section class="band" id="team">
+  <h2 class="section-title">Team</h2>
+  <div class="row row--2">
+    <div class="card team-card">
+      <h4>Hongsuk Kim — CEO</h4>
+      <div class="team-role">Global commercialization (ex-Samsung/J&amp;J/P&amp;G), Harvard A.M.</div>
+      Leads market entry, partnerships, and scale-up.
+    </div>
+    <div class="card team-card">
+      <h4>Dr. Do-Gyoon Kim — CTA, Founder</h4>
+      <div class="team-role">Ohio State Univ. • Inventor of Hybrid Implant (KiiS) • 20+ years R&amp;D</div>
+      Drives clinical science, product architecture, and academic validation.
+    </div>
+  </div>
+</section>
+
+<!-- Contact (Formspree) -->
+<section class="band" id="contact">
+  <h2 class="section-title">Get in Touch</h2>
+  <div class="row row--2 contact-wrap">
+    <div class="card">
+      <div class="help">Send a message to the CEO. We typically reply within 24 hours.</div>
+      <form action="https://formspree.io/f/xpwlpzpn" method="POST" id="leadForm">
+        <input type="hidden" name="_subject" value="New inquiry from HuMed website" />
+        <div style="margin-bottom:10px;">
+          <label>Your Email *</label>
+          <input class="input" type="email" name="email" id="emailInput" placeholder="name@example.com" required />
         </div>
-      </div>
-    </section>
-
-    <!-- WHO -->
-    <section>
-      <div class="wrap">
-        <h2>Who It Helps</h2>
-        <div class="who">
-          <div class="card">
-            <div class="pill">FOUNDATION (Primary implants in common bone types)</div>
-            <ul>
-              <li>Immediate stability without premium pricing</li>
-              <li>Fast, predictable recovery; universal prosthetic compatibility</li>
-              <li>11° conical seal → microleakage control &amp; tissue health</li>
-            </ul>
-          </div>
-          <div class="card">
-            <div class="pill">CHALLENGE (Soft/fragile bone &amp; complex cases)</div>
-            <ul>
-              <li>Deep trabecular engagement + variable pitch for gentle, strong grip</li>
-              <li>Bone-ingrowth chamber supports staged regeneration</li>
-              <li>Open drilling sequence — no brand-exclusive kits required</li>
-            </ul>
-          </div>
+        <div style="margin-bottom:6px;">
+          <label>Your Message *</label>
+          <textarea class="textarea" name="message" placeholder="How can we help? Partnership, clinical interest, or investment…" required></textarea>
         </div>
-      </div>
-    </section>
+        <button class="btn btn--dark submit" type="submit">Send to CEO via Form</button>
+      </form>
+    </div>
 
-    <!-- PROGRESS -->
-    <section class="progress">
-      <div class="wrap">
-        <h2>Progress &amp; Validation</h2>
-        <div class="box">
-          Packaging/Sterility/Biocompatibility testing completed; final bench testing nearing completion for 510(k) submission. Academic collaborations active; clinical advisors engaged.
-          <div class="chips">
-            <span class="chip">US Patent Granted</span>
-            <span class="chip">510(k) Path</span>
-            <span class="chip">KOL &amp; Dental School Support</span>
-          </div>
-        </div>
-      </div>
-    </section>
+    <div class="card" style="display:flex;flex-direction:column;gap:10px;justify-content:center">
+      <a class="btn" href="files/KiiS-OnePage-Brief.pdf" target="_blank" rel="noopener">⬇ Download One-Pager</a>
+      <a class="btn btn--dark" href="#contact" id="emailBtn">✉️ Email: hskim@humedlifesciences.com</a>
+      <small style="color:var(--ink-2);">The email button opens the form above so your message is delivered directly.</small>
+    </div>
+  </div>
+</section>
 
-    <!-- TEAM -->
-    <section class="team">
-      <div class="wrap">
-        <h2>Team</h2>
-        <div class="row">
-          <div class="m">
-            <strong>Hongsuk Kim — CEO</strong>
-            <div class="muted">Global commercialization (ex-Samsung/J&amp;J/P&amp;G), Harvard A.M.</div>
-          </div>
-          <div class="m">
-            <strong>Dr. Do-Gyoon Kim — CTA</strong>
-            <div class="muted">Ohio State Univ. Inventor of Hybrid Implant (KiiS), 20+ years R&amp;D.</div>
-          </div>
-        </div>
-      </div>
-    </section>
+<footer class="footer">
+  © 2025 HuMed Lifesciences. All rights reserved.
+</footer>
 
-    <!-- CONTACT (Formspree) -->
-    <section class="contact" id="contact">
-      <div class="wrap">
-        <h2>Get in Touch</h2>
-        <div class="box">
-          <p style="margin-bottom:10px">Send a message to the CEO. We typically reply within 24 hours.</p>
+<script>
+// smooth focus to contact form
+const contactBtn = document.getElementById('cta-contact');
+const emailBtn   = document.getElementById('emailBtn');
+function focusForm(){
+  const el = document.getElementById('emailInput');
+  if(el){ el.scrollIntoView({behavior:'smooth', block:'center'}); setTimeout(()=>el.focus(), 500); }
+}
+if(contactBtn) contactBtn.addEventListener('click', focusForm);
+if(emailBtn)   emailBtn.addEventListener('click', focusForm);
+</script>
 
-          <!-- 이 폼이 Formspree로 전송됩니다 -->
-          <form action="https://formspree.io/f/xpwlpzpn" method="POST">
-            <input type="hidden" name="_subject" value="HuMed Website Inquiry (to CEO)" />
-            <input type="hidden" name="_language" value="en" />
-            <label>
-              Your Email *
-              <input type="email" name="email" required placeholder="name@example.com">
-            </label>
-            <label>
-              Your Message *
-              <textarea name="message" required placeholder="How can we help? Partnership, clinical interest, or investment…"></textarea>
-            </label>
-            <button class="submit" type="submit">Send to CEO via Form</button>
-          </form>
-
-          <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap">
-            <a class="btn" href="files/KiiS-OnePage-Brief.pdf" target="_blank">⬇️  Download One-Pager</a>
-            <!-- 하단의 Email 버튼도 폼으로 유도 -->
-            <a class="btn primary" href="#contact">✉️  Email: hskim@humedlifesciences.com</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    © 2025 HuMed Lifesciences. All rights reserved.
-  </footer>
 </body>
 </html>
