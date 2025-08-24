@@ -3,107 +3,98 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HuMed Lifesciences — KiiS Enhanced Integration Implant</title>
-<meta name="description" content="Proven innovation for the next evolution of implant integration. Pre-FDA. Partners & clinicians welcome."/>
+<title>HuMed Lifesciences — KiiS Enhanced Integration</title>
+<meta name="description" content="KiiS — Proven innovation for the next evolution of implant integration. Pre-FDA. Partners & Clinicians welcome."/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
 <style>
 :root{
-  --bg:#0f2e8a; --bg-soft:#0b235f; --card:#ffffff; --ink:#0b1324; --ink-2:#334155;
-  --brand:#1849d6; --accent:#7aa5ff; --pill:#edf2ff; --ring:rgba(24,73,214,.2);
-  --shadow:0 8px 32px rgba(10,30,80,.12); --radius:18px;
+  --bg:#0f2e8a; --bg-soft:#0b235f; --card:#fff; --ink:#0b1324; --ink-2:#334155;
+  --brand:#0e2ea8; --pill:#edf2ff; --ring:rgba(24,73,214,.18);
+  --shadow:0 10px 30px rgba(10,30,80,.12); --radius:18px
 }
 *{box-sizing:border-box}
 html,body{margin:0}
 body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:#f6f8fc;line-height:1.55}
 
-/* header */
+/* Header */
 .header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,var(--bg),var(--bg-soft));color:#fff;border-bottom:1px solid rgba(255,255,255,.08)}
-.header-inner{max-width:1100px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.brand{font-weight:800}
+.header-inner{max-width:1100px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.brand{font-weight:800;letter-spacing:.2px}
 .tagline{font-size:.9rem;opacity:.9}
-.langbtn{appearance:none;border:0;background:#2446d6;color:#fff;padding:8px 12px;border-radius:999px;font-weight:700;cursor:pointer}
+.langbtn{appearance:none;border:0;background:rgba(255,255,255,.14);color:#fff;padding:8px 12px;border-radius:999px;font-weight:700;cursor:pointer}
 
-/* hero */
+/* Hero */
 .hero{background:linear-gradient(180deg,var(--bg),var(--bg-soft));color:#fff}
-.hero-wrap{max-width:1100px;margin:0 auto;padding:52px 20px 24px;display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center}
-.h-title{font-size:40px;line-height:1.2;margin:0 0 12px;font-weight:800}
-.h-sub{font-size:18px;opacity:.95;margin-bottom:18px}
-.h-bullets{list-style:none;padding:0;margin:0 0 26px}
+.hero-wrap{max-width:1100px;margin:0 auto;padding:28px 16px 28px;display:grid;grid-template-columns:1fr;gap:18px;align-items:center}
+.h-title{font-size:32px;line-height:1.25;margin:0 0 10px;font-weight:800}
+.h-sub{font-size:16px;opacity:.95;margin:0 0 14px}
+.h-bullets{list-style:none;padding:0;margin:0 0 18px}
 .h-bullets li{margin:10px 0;display:flex;gap:8px}
 .h-bullets li::before{content:"•";font-weight:800}
-.cta-row{display:flex;gap:12px;flex-wrap:wrap}
-.btn{appearance:none;border:0;cursor:pointer;background:#fff;color:#1849d6;padding:12px 18px;border-radius:12px;font-weight:700;box-shadow:var(--shadow);display:inline-flex;align-items:center;gap:10px;text-decoration:none}
+.cta-row{display:flex;gap:10px;flex-wrap:wrap}
+.btn{appearance:none;border:0;cursor:pointer;background:#fff;color:var(--brand);padding:12px 16px;border-radius:12px;font-weight:700;box-shadow:var(--shadow);text-decoration:none;display:inline-flex;align-items:center;gap:10px}
 .btn.primary{background:#0e2ea8;color:#fff}
-.hero-card{background:#f9fbff;border-radius:22px;box-shadow:var(--shadow);padding:16px;display:flex;align-items:center;justify-content:center}
-.hero-card img{max-width:100%;height:auto;display:block}
+.hero-card{background:#fff;border-radius:20px;box-shadow:var(--shadow);padding:10px;display:flex;align-items:center;justify-content:center}
+.hero-card img{width:100%;height:auto;display:block;object-fit:contain;max-height:360px}
 
-/* section scaffold */
-.section{position:relative;padding:56px 20px}
-.section.inset{
-  background:
-    radial-gradient(1200px 400px at 50% -240px,#dfe8ff,transparent 60%),
-    radial-gradient(1200px 400px at 50% 120%,#e9f0ff,transparent 60%);
-}
+/* Section scaffold */
+.section{position:relative;padding:36px 16px}
+.section.inset{background:
+  radial-gradient(900px 300px at 50% -180px,#dfe8ff,transparent 60%),
+  radial-gradient(900px 300px at 50% 110%,#e9f0ff,transparent 60%)}
 .wrap{max-width:1100px;margin:0 auto}
-.h2{font-size:28px;margin:0 0 22px;font-weight:800;color:#0a1f66}
+.h2{font-size:24px;margin:0 0 18px;font-weight:800;color:#0a1f66}
 
-/* cards */
-.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;border:1px solid #eef3ff}
-.kicker{display:inline-block;background:var(--pill);color:#274ae6;font-weight:700;padding:6px 10px;border-radius:999px;font-size:.92rem;margin-bottom:10px}
+/* Cards / grids */
+.grid-3{display:grid;grid-template-columns:1fr;gap:14px}
+.card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;border:1px solid #eef3ff}
+.kicker{display:inline-block;background:var(--pill);color:#274ae6;font-weight:700;padding:6px 10px;border-radius:999px;font-size:.9rem;margin-bottom:8px}
 
-/* who it helps */
-.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+/* Two columns */
+.grid-2{display:grid;grid-template-columns:1fr;gap:14px}
 .list{padding-left:18px;margin:0}
 .list li{margin:10px 0;color:var(--ink-2)}
 
-/* progress + evidence */
-.progress-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:18px}
-.evidence figure{margin:0;background:#fff;border:1px solid #eef3ff;box-shadow:var(--shadow);border-radius:16px;overflow:hidden}
-.evidence img{display:block;width:100%;height:auto}
-.evidence figcaption{font-size:.85rem;color:var(--ink-2);padding:8px 10px;text-align:center}
+/* Progress */
+.progress-grid{display:grid;grid-template-columns:1fr;gap:14px}
+.progress-grid .card-media{display:flex;flex-direction:column;align-items:center;justify-content:center}
+.progress-grid img{width:100%;max-height:450px;object-fit:contain;border-radius:12px}
+.caption{font-size:.9rem;text-align:center;margin-top:8px;color:#334155}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
+.badge{background:#ecf1ff;color:#2038c8;padding:8px 12px;border-radius:999px;font-weight:700}
 
-/* team & contact */
-.team{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.member{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;border:1px solid #eef3ff}
-.member b{font-size:1.05rem}
-.contact{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.form{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;border:1px solid #eef3ff}
-.form label{display:block;font-weight:700;margin:8px 0 6px}
-.input,textarea{width:100%;padding:12px 14px;border-radius:12px;border:2px solid #e7edff;outline:none;font:inherit;background:#fbfdff}
-.input:focus,textarea:focus{box-shadow:0 0 0 4px var(--ring);border-color:#cfe0ff}
-textarea{min-height:140px;resize:vertical}
-.actions{margin-top:12px}
-.btn.block{width:100%;justify-content:center}
-.contact-side{background:linear-gradient(180deg,#f7f9ff,#eef3ff);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;border:1px solid #e9efff}
-.note{font-size:.95rem;color:var(--ink-2);margin-top:10px}
+/* Team */
+.team{display:grid;grid-template-columns:1fr;gap:14px}
+.member{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:16px;border:1px solid #eef3ff}
+.member b{font-size:1.02rem}
 
-/* footer */
-.footer{padding:36px 20px;text-align:center;color:#6b7a99}
+/* Footer */
+.footer{padding:28px 16px;text-align:center;color:#6b7a99}
 
-/* mobile */
-@media (max-width: 900px){
-  .hero-wrap{grid-template-columns:1fr;gap:20px;padding-top:36px}
-  .h-title{font-size:32px}
-  .grid-3{grid-template-columns:1fr}
-  .grid-2{grid-template-columns:1fr}
-  .team{grid-template-columns:1fr}
-  .contact{grid-template-columns:1fr}
-  .progress-grid{grid-template-columns:1fr}
+/* Desktop */
+@media (min-width: 900px){
+  .hero-wrap{grid-template-columns:1.05fr .95fr;padding:56px 20px}
+  .h-title{font-size:40px}
+  .grid-3{grid-template-columns:repeat(3,1fr);gap:18px}
+  .grid-2{grid-template-columns:1fr 1fr;gap:18px}
+  .progress-grid{grid-template-columns:1fr 1fr;gap:18px;align-items:stretch}
+  .hero-card img{max-height:520px}
 }
 </style>
 </head>
 <body>
+
 <header class="header">
   <div class="header-inner">
     <div class="brand">HuMed Lifesciences</div>
-    <div class="tagline">Pre-FDA • Partners & Clinicians Welcome</div>
-    <button class="langbtn" id="langBtn">KR / EN</button>
+    <div class="tagline" data-i18n="tagline">Pre-FDA • Partners & Clinicians Welcome</div>
+    <button class="langbtn" id="langToggle">KR / EN</button>
   </div>
 </header>
 
-<!-- HERO -->
+<!-- Hero -->
 <section class="hero">
   <div class="hero-wrap">
     <div>
@@ -111,7 +102,7 @@ textarea{min-height:140px;resize:vertical}
         KiiS — Proven Innovation for the Next Evolution of Implant Integration
       </h1>
       <p class="h-sub" data-i18n="hero_sub">
-        From surface fixation to enhanced 3-D integration—without changing your workflow.
+        From surface fixation to enhanced 3-D integration — without changing your workflow.
       </p>
       <ul class="h-bullets">
         <li data-i18n="b1">Patented internal bone-ingrowth chamber → 3-D load sharing & sustained performance</li>
@@ -120,56 +111,56 @@ textarea{min-height:140px;resize:vertical}
         <li data-i18n="b4">Injectable care platform on roadmap (peri-implantitis defense & healing)</li>
       </ul>
       <div class="cta-row">
-        <a class="btn" href="files/KiiS-OnePage-Brief.pdf" target="_blank" rel="noopener">⬇️ <span data-i18n="onepager">One-Pager</span></a>
-        <a class="btn primary" href="#contact">✉️ <span data-i18n="contact_ceo">Contact CEO</span></a>
+        <a class="btn" href="files/KiiS-OnePage-Brief.pdf" target="_blank" rel="noopener"><span>⬇️</span><span data-i18n="cta_onepager">One-Pager</span></a>
+        <a class="btn primary" href="#progress"><span data-i18n="cta_progress">See Validation</span></a>
       </div>
     </div>
     <div class="hero-card">
-      <!-- Use the product cutaway for clinical credibility -->
-      <img src="images/kiis-hero-cutaway.png" alt="KiiS cutaway implant showing internal chamber">
+      <!-- 메인 제품 이미지 -->
+      <img src="images/hero-implant.png" alt="KiiS implant cutaway hero" loading="eager">
     </div>
   </div>
 </section>
 
-<!-- WHY -->
+<!-- Why -->
 <section class="section inset">
   <div class="wrap">
-    <h2 class="h2" data-i18n="why">Why KiiS</h2>
+    <h2 class="h2" data-i18n="why_title">Why KiiS</h2>
     <div class="grid-3">
       <div class="card">
-        <div class="kicker" data-i18n="why_k1">Internal bone-ingrowth chamber</div>
-        <p data-i18n="why_p1">Creates living bone inside the implant body for early and long-term stability.</p>
+        <div class="kicker" data-i18n="why1_k">Internal bone-ingrowth chamber</div>
+        <p data-i18n="why1_p">Creates living bone inside the implant body for early and long-term stability.</p>
       </div>
       <div class="card">
-        <div class="kicker" data-i18n="why_k2">Works with existing workflows</div>
-        <p data-i18n="why_p2">Standard conical connection with platform switching for proven coronal seal & prosthetic fit.</p>
+        <div class="kicker" data-i18n="why2_k">Works with existing workflows</div>
+        <p data-i18n="why2_p">Standard connections & instruments for proven coronal seal and prosthetic fit.</p>
       </div>
       <div class="card">
-        <div class="kicker" data-i18n="why_k3">Injectable platform roadmap</div>
-        <p data-i18n="why_p3">On-demand antimicrobial/osteoinductive delivery for peri-implantitis defense and true healing.</p>
+        <div class="kicker" data-i18n="why3_k">Injectable care roadmap</div>
+        <p data-i18n="why3_p">On-demand antimicrobial/osteoinductive delivery for peri-implantitis defense and healing.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHO IT HELPS -->
+<!-- Who it helps -->
 <section class="section">
   <div class="wrap">
-    <h2 class="h2" data-i18n="who">Who It Helps</h2>
+    <h2 class="h2" data-i18n="who_title">Who It Helps</h2>
     <div class="grid-2">
       <div class="card">
-        <div class="kicker" data-i18n="who_k1">Everyday cases (primary implants)</div>
+        <div class="kicker" data-i18n="who1_k">Everyday cases (primary implants)</div>
         <ul class="list">
           <li data-i18n="who1_1">Immediate stability without premium pricing</li>
           <li data-i18n="who1_2">Predictable recovery; universal prosthetic compatibility</li>
           <li data-i18n="who1_3">11° conical seal → microleakage control & soft-tissue health</li>
-          <li data-i18n="who1_4"><b>Immediate & long-term stability</b> from the ingrowth chamber—supports immediate placement and sustained performance</li>
+          <li data-i18n="who1_4"><b>Early and long-term stability</b> via bone-ingrowth chamber</li>
         </ul>
       </div>
       <div class="card">
-        <div class="kicker" data-i18n="who_k2">Complex cases (soft/fragile bone & compromised sites)</div>
+        <div class="kicker" data-i18n="who2_k">Complex cases (soft/fragile bone & compromised sites)</div>
         <ul class="list">
-          <li data-i18n="who2_1">Deep trabecular engagement + variable pitch for gentle, strong grip</li>
+          <li data-i18n="who2_1">Deep trabecular engagement with gentle, strong grip</li>
           <li data-i18n="who2_2">Ingrowth chamber supports staged regeneration & 3-D load sharing</li>
           <li data-i18n="who2_3">Open drilling sequence — no brand-exclusive kits required</li>
           <li data-i18n="who2_4">May reduce graft dependence via bone compaction near apex</li>
@@ -179,70 +170,48 @@ textarea{min-height:140px;resize:vertical}
   </div>
 </section>
 
-<!-- PROGRESS + MICRO-CT EVIDENCE -->
-<section class="section inset">
+<!-- Progress & Validation -->
+<section id="progress" class="section inset">
   <div class="wrap">
-    <h2 class="h2" data-i18n="progress">Progress & Validation</h2>
+    <h2 class="h2" data-i18n="progress_title">Progress & Validation</h2>
     <div class="progress-grid">
       <div class="card">
-        <p data-i18n="progress_p">
-          Packaging/Sterility/Biocompatibility testing completed; final bench testing nearing completion for 510(k) submission. Academic collaborations active; clinical advisors engaged.
+        <p data-i18n="progress_body">
+          Packaging/Sterility/Biocompatibility testing completed; final bench testing nearing completion for 510(k) submission.
+          Academic collaborations active; clinical advisors engaged.
         </p>
         <div class="badges">
-          <span class="badge" data-i18n="badge1">US Patent Granted</span>
-          <span class="badge" data-i18n="badge2">510(k) Path</span>
-          <span class="badge" data-i18n="badge3">KOL & Dental School Support</span>
+          <span class="badge" data-i18n="badge_patent">US Patent Granted</span>
+          <span class="badge" data-i18n="badge_510k">510(k) Path</span>
+          <span class="badge" data-i18n="badge_kol">KOL & Dental School Support</span>
         </div>
       </div>
-      <div class="evidence">
-        <figure>
-          <img src="images/kiis-microct.png" alt="Micro-CT: bone growing inside KiiS internal chamber">
-          <figcaption data-i18n="microct_cap">
-            Micro-CT (10μ) at 6 weeks in canine mandible: bone growing into the internal chamber (3-D fixation).
-          </figcaption>
-        </figure>
+      <div class="card card-media">
+        <img src="images/kiis-microct.png" alt="Micro-CT bone ingrowth inside KiiS" loading="lazy">
+        <div class="caption" data-i18n="microct_cap">
+          Micro-CT (10μ) image of KiiS in canine mandibular bone<br>(6 weeks post-implantation)
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- TEAM -->
+<!-- Team -->
 <section class="section">
   <div class="wrap">
-    <h2 class="h2" data-i18n="team">Team</h2>
+    <h2 class="h2" data-i18n="team_title">Team</h2>
     <div class="team">
       <div class="member">
         <b>Hongsuk Kim — CEO</b>
-        <p style="margin:.4rem 0 0;color:var(--ink-2)" data-i18n="t1">Global commercialization (ex-Samsung/J&J/P&G), Harvard A.M.</p>
+        <p style="margin:.4rem 0 0;color:var(--ink-2)" data-i18n="team_ceo">
+          Global commercialization (ex-Samsung/J&J/P&G), Harvard A.M.
+        </p>
       </div>
       <div class="member">
         <b>Dr. Do-Gyoon Kim — CTA, Founder</b>
-        <p style="margin:.4rem 0 0;color:var(--ink-2)" data-i18n="t2">Ohio State Univ. Inventor of Hybrid Implant (KiiS), 20+ years R&D.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="section inset">
-  <div class="wrap">
-    <h2 class="h2" data-i18n="contact">Get in Touch</h2>
-    <div class="contact">
-      <form class="form" action="https://formspree.io/f/xpwlpzpn" method="POST">
-        <p style="margin-top:0;color:var(--ink-2)" data-i18n="form_hint">Send a message to the CEO. We typically reply within 24 hours.</p>
-        <label data-i18n="email_label">Your Email *</label>
-        <input class="input" type="email" name="email" required placeholder="name@example.com"/>
-        <label data-i18n="msg_label">Your Message *</label>
-        <textarea name="message" required placeholder="Partnership, clinical interest, or investment…"></textarea>
-        <div class="actions"><button class="btn primary block" type="submit" data-i18n="send_btn">Send to CEO via Form</button></div>
-        <input type="hidden" name="_subject" value="New inquiry from HuMed website"/>
-      </form>
-      <div class="contact-side">
-        <a class="btn" href="files/KiiS-OnePage-Brief.pdf" target="_blank" rel="noopener">⬇️ <span data-i18n="onepager">Download One-Pager</span></a>
-        <div class="actions" style="margin-top:12px">
-          <a class="btn block" href="#contact">✉️ <span data-i18n="email_cta">Email: hskim@humedlifesciences.com</span></a>
-        </div>
-        <p class="note" data-i18n="email_note">The email button opens the form above so your message is delivered directly.</p>
+        <p style="margin:.4rem 0 0;color:var(--ink-2)" data-i18n="team_cta">
+          Ohio State Univ. Inventor of Hybrid Implant (KiiS), 20+ years R&D.
+        </p>
       </div>
     </div>
   </div>
@@ -251,66 +220,96 @@ textarea{min-height:140px;resize:vertical}
 <footer class="footer">© 2025 HuMed Lifesciences. All rights reserved.</footer>
 
 <script>
-const KR = {
-  hero_title:"KiiS — 임플란트 통합의 ‘다음 진화’를 이끄는 검증된 혁신",
-  hero_sub:"워크플로우는 그대로, 표면 고정에서 3-D 생체 통합으로.",
-  b1:"특허받은 내부 골-인그로스 챔버 → 3-D 하중 분산 & 장기 안정성",
-  b2:"표준 코니컬/스트레이트 연결 및 기구와 호환",
-  b3:"510(k) 패키지 ~90% 완료; 잔여: 피로/표면 특성화",
-  b4:"주사형 케어 플랫폼 로드맵 (임플란티티스 방어 & 치유)",
-  onepager:"원페이지",
-  contact_ceo:"대표에게 연락",
-  why:"Why KiiS",
-  why_k1:"내부 골-인그로스 챔버",
-  why_p1:"임플란트 내부에 살아있는 뼈를 형성해 초기와 장기 안정성을 동시에 강화합니다.",
-  why_k2:"기존 워크플로우와 호환",
-  why_p2:"표준 코니컬 커넥션과 플랫폼 스위칭으로 검증된 코로날 실과 보철 적합을 제공합니다.",
-  why_k3:"주사형 플랫폼 로드맵",
-  why_p3:"필요 시 항균/골유도 물질을 전달해 임플란티티스 방어와 근본 치유를 돕습니다.",
-  who:"누구에게 도움이 되나요",
-  who_k1:"일상 케이스(프라이머리 임플란트)",
-  who1_1:"프리미엄 가격 없이도 즉시 안정성",
-  who1_2:"예측 가능한 회복, 보편적 보철 호환성",
-  who1_3:"11° 코니컬 실 → 미세누출 제어 & 연조직 건강",
-  who1_4:"내부 챔버로 <b>즉시 및 장기 안정성</b>을 동시에 확보 — 즉시 식립과 지속 성능을 뒷받침",
-  who_k2:"복잡 케이스(연약/취약골 & 손상 부위)",
-  who2_1:"깊은 해면골 결합 + 가변 피치로 부드럽고 강한 그립",
-  who2_2:"인그로스 챔버가 단계적 재생과 3-D 하중 분산을 지원",
-  who2_3:"오픈 드릴링 시퀀스 — 전용 키트 불필요",
-  who2_4:"근단부 압축으로 골이식 의존도 감소 가능",
-  progress:"진행 상황 & 밸리데이션",
-  progress_p:"포장/멸균/생체적합성 테스트 완료, 510(k) 제출을 위한 최종 벤치 테스트 막바지 단계. 대학/임상 자문 협업 진행 중.",
-  badge1:"미국 특허 등록",
-  badge2:"510(k) 경로",
-  badge3:"KOL & 대학 협력",
-  microct_cap:"마이크로 CT(10μ), 6주: 내부 챔버로 뼈가 자라 들어가 3-D 고정을 형성한 증거",
-  team:"팀",
-  t1:"글로벌 상용화 (삼성/ J&J/ P&G), Harvard A.M.",
-  t2:"오하이오주립대 교수, Hybrid Implant 발명자(KiiS), 20+년 R&D",
-  contact:"문의하기",
-  form_hint:"대표에게 메시지를 보내주세요. 보통 24시간 내 회신합니다.",
-  email_label:"이메일 *",
-  msg_label:"메시지 *",
-  send_btn:"폼으로 전송",
-  email_cta:"이메일: hskim@humedlifesciences.com",
-  email_note:"위 폼으로 직접 전송되도록 이메일 버튼을 설정했습니다."
+/* === very-light i18n (KR/EN toggle) === */
+const i18n = {
+  en: {
+    tagline:"Pre-FDA • Partners & Clinicians Welcome",
+    hero_title:"KiiS — Proven Innovation for the Next Evolution of Implant Integration",
+    hero_sub:"From surface fixation to enhanced 3-D integration — without changing your workflow.",
+    b1:"Patented internal bone-ingrowth chamber → 3-D load sharing & sustained performance",
+    b2:"Works with standard conical/straight connections and instruments",
+    b3:"510(k) package ~90% complete; remaining: fatigue & surface characterization",
+    b4:"Injectable care platform on roadmap (peri-implantitis defense & healing)",
+    cta_onepager:"One-Pager", cta_progress:"See Validation",
+    why_title:"Why KiiS",
+    why1_k:"Internal bone-ingrowth chamber",
+    why1_p:"Creates living bone inside the implant body for early and long-term stability.",
+    why2_k:"Works with existing workflows",
+    why2_p:"Standard connections & instruments for proven coronal seal and prosthetic fit.",
+    why3_k:"Injectable care roadmap",
+    why3_p:"On-demand antimicrobial/osteoinductive delivery for peri-implantitis defense and healing.",
+    who_title:"Who It Helps",
+    who1_k:"Everyday cases (primary implants)",
+    who1_1:"Immediate stability without premium pricing",
+    who1_2:"Predictable recovery; universal prosthetic compatibility",
+    who1_3:"11° conical seal → microleakage control & soft-tissue health",
+    who1_4:"Early and long-term stability via bone-ingrowth chamber",
+    who2_k:"Complex cases (soft/fragile bone & compromised sites)",
+    who2_1:"Deep trabecular engagement with gentle, strong grip",
+    who2_2:"Ingrowth chamber supports staged regeneration & 3-D load sharing",
+    who2_3:"Open drilling sequence — no brand-exclusive kits required",
+    who2_4:"May reduce graft dependence via bone compaction near apex",
+    progress_title:"Progress & Validation",
+    progress_body:"Packaging/Sterility/Biocompatibility testing completed; final bench testing nearing completion for 510(k) submission. Academic collaborations active; clinical advisors engaged.",
+    badge_patent:"US Patent Granted", badge_510k:"510(k) Path", badge_kol:"KOL & Dental School Support",
+    microct_cap:"Micro-CT (10μ) image of KiiS in canine mandibular bone<br>(6 weeks post-implantation)",
+    team_title:"Team",
+    team_ceo:"Global commercialization (ex-Samsung/J&J/P&G), Harvard A.M.",
+    team_cta:"Ohio State Univ. Inventor of Hybrid Implant (KiiS), 20+ years R&D."
+  },
+  kr: {
+    tagline:"Pre-FDA • 파트너 & 임상의 환영",
+    hero_title:"KiiS — 검증된 혁신, 임플란트 통합의 다음 단계",
+    hero_sub:"수면(표면) 고정에서 3-D 통합 강화로 — 기존 워크플로우는 그대로.",
+    b1:"특허 내부 뼈-인그로스 챔버 → 3-D 하중 분산 & 지속 성능",
+    b2:"표준 코니컬/스트레이트 연결·도구와 호환",
+    b3:"510(k) 패키지 약 90% 완료 (잔여: 피로/표면 특성 평가)",
+    b4:"주사용 케어 플랫폼 로드맵 (임플란티티스 방어 & 치유)",
+    cta_onepager:"원페이지", cta_progress:"검증 보기",
+    why_title:"왜 KiiS인가",
+    why1_k:"내부 뼈-인그로스 챔버",
+    why1_p:"임플란트 본체 내부에 생체 뼈를 형성하여 초기와 장기 안정성을 동시에 강화합니다.",
+    why2_k:"기존 워크플로우와 호환",
+    why2_p:"검증된 코로날 실과 보철 적합을 위한 표준 연결·도구 사용.",
+    why3_k:"주사용 케어 로드맵",
+    why3_p:"필요 시 항미생물/골유도 물질을 전달하여 임플란티티스 방어와 치유를 지원.",
+    who_title:"어떤 환자에 도움되나",
+    who1_k:"일상 케이스(일차 식립)",
+    who1_1:"프리미엄 가격 없이 즉시 안정성",
+    who1_2:"예측 가능한 회복; 보편적 보철 호환",
+    who1_3:"11° 코니컬 실 → 마이크로누출 제어 & 연조직 건강",
+    who1_4:"뼈-인그로스 챔버로 <b>초기와 장기 안정성</b> 동시 강화",
+    who2_k:"복잡 케이스(연약/취약골·문제 부위)",
+    who2_1:"해면골 깊은 결속, 부드럽고 강한 그립",
+    who2_2:"인그로스 챔버가 단계적 재생 & 3-D 하중 분산을 지원",
+    who2_3:"오픈 드릴링 시퀀스 — 전용 키트 강제 없음",
+    who2_4:"근첨부 콤팩션으로 이식재 의존도 감소 가능",
+    progress_title:"진행 현황 & 검증",
+    progress_body:"포장/멸균/생체적합 시험 완료; 최종 벤치 테스트 마무리 단계(510(k) 제출 임박). 대학·KOL 협업 진행 중.",
+    badge_patent:"미국 특허 등록", badge_510k:"510(k) 경로", badge_kol:"KOL & 치과대학 협력",
+    microct_cap:"개(하악) 6주 식립 후 Micro-CT(10μ)에서 관찰된 KiiS 내부의 뼈 인그로스",
+    team_title:"팀",
+    team_ceo:"글로벌 상업화 (삼성/얀센/P&G), Harvard A.M.",
+    team_cta:"오하이오주립대. KiiS 발명자, 20년+ R&D"
+  }
 };
-const EN = {}; // fallback uses original English text
-let isKR = false;
-const $ = s=>document.querySelectorAll(s);
-function setLang(kr){
-  isKR = kr;
-  $("[data-i18n]").forEach(el=>{
+
+let lang = localStorage.getItem("lang") || "en";
+function applyLang(){
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
     const key = el.getAttribute("data-i18n");
-    if(kr && KR[key]) el.innerHTML = KR[key];
-    else if(!kr && KR[key]){ /* revert to original text stored in data-orig */
-      if(!el.dataset.orig){ el.dataset.orig = el.innerHTML; }
-      el.innerHTML = el.dataset.orig;
-    }
+    const txt = i18n[lang][key];
+    if(!txt) return;
+    if(txt.includes("<br>")) el.innerHTML = txt;
+    else el.textContent = txt;
   });
-  document.documentElement.lang = kr ? "ko" : "en";
 }
-document.getElementById("langBtn").addEventListener("click",()=>setLang(!isKR));
+document.getElementById("langToggle").addEventListener("click", ()=>{
+  lang = lang==="en" ? "kr" : "en";
+  localStorage.setItem("lang", lang);
+  applyLang();
+});
+applyLang();
 </script>
 </body>
 </html>
