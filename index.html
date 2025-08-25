@@ -80,12 +80,22 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 .contact-sub{color:#4b5b7a;font-size:14.5px;margin:4px 0 14px}
 .contact-form .row{display:grid;grid-template-columns:1fr;gap:12px}
 .contact-form label{font-weight:700;font-size:14px;margin:2px 0;color:#0b1324}
-.input,textarea{width:100%;padding:14px 16px;border-radius:12px;border:2px solid #e7edff;background:#fbfdff;font:inherit}
-.input:focus,textarea:focus{box-shadow:0 0 0 4px var(--ring);border-color:#cfe0ff}
+.input,textarea,select{width:100%;padding:14px 16px;border-radius:12px;border:2px solid #e7edff;background:#fbfdff;font:inherit}
+.input:focus,textarea:focus,select:focus{box-shadow:0 0 0 4px var(--ring);border-color:#cfe0ff}
 textarea{min-height:120px}
 .contact-actions{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap}
 .btn-lg{padding:14px 18px;border-radius:12px;font-weight:800}
 .btn-ghost{background:#eef3ff;color:#2038c8;text-decoration:none}
+
+/* modal */
+.modal-backdrop{position:fixed;inset:0;background:rgba(12,22,44,.5);backdrop-filter:blur(2px);display:none;align-items:center;justify-content:center;z-index:80}
+.modal{background:#fff;border-radius:16px;box-shadow:var(--shadow);width:92%;max-width:520px;border:1px solid #e7edff}
+.modal header{padding:16px 18px;border-bottom:1px solid #eef3ff;display:flex;align-items:center;justify-content:space-between}
+.modal header h3{margin:0;font-size:18px;font-weight:800;color:#0a1f66}
+.modal .body{padding:16px 18px}
+.modal .actions{padding:14px 18px;border-top:1px solid #eef3ff;display:flex;gap:10px;justify-content:flex-end}
+.modal .close{background:none;border:0;font-size:22px;cursor:pointer;color:#0b1324}
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:18px;background:#0e2ea8;color:#fff;padding:10px 14px;border-radius:12px;box-shadow:var(--shadow);display:none;z-index:90}
 
 /* footer */
 .footer{padding:36px 20px;text-align:center;color:#6b7a99}
@@ -130,7 +140,7 @@ textarea{min-height:120px}
 
       <!-- KiiS acronym note -->
       <p class="h-note en"><b>KiiS</b> = <b>Kim’s Ingrowth Implant System</b> (current product). Also refers to <b>Kim’s Injectable Implant System</b> for our drug-delivery roadmap.</p>
-      <p class="h-note kr" style="display:none"><b>KiiS</b>는 현재 제품인 <b><b>KiiS</b>는 현재 제품인 <b>Kim's Ingrowth Implant System</b>(골내생장 임플란트 시스템)과 향후 약물전달 플랫폼인 <b>Kim's Injectable Implant System</b>(주사형 임플란트 시스템)을 모두 지칭합니다.</p>
+      <p class="h-note kr" style="display:none"><b>KiiS</b>는 현재 제품인 <b>Kim's Ingrowth Implant System</b>(골내생장 임플란트 시스템)과 향후 약물전달 플랫폼인 <b>Kim's Injectable Implant System</b>(주사형 임플란트 시스템)을 모두 지칭합니다.</p>
 
       <ul class="h-bullets en">
         <li>Patented internal bone-ingrowth chamber → 3D load sharing & sustained performance</li>
@@ -144,7 +154,8 @@ textarea{min-height:120px}
       </ul>
 
       <div class="cta-row">
-        <a class="btn" href="files/KiiS-OnePage-Brief.pdf" target="_blank" rel="noopener">⬇️ One-Pager</a>
+        <!-- One-Pager button opens modal -->
+        <button class="btn" id="openOpModal">⬇️ One-Pager</button>
         <a class="btn primary" href="#contact">✉️ <span class="en">Contact CEO</span><span class="kr" style="display:none">대표에게 문의</span></a>
       </div>
     </div>
@@ -164,7 +175,7 @@ textarea{min-height:120px}
     <div class="grid-3">
       <div class="card">
         <div class="kicker">Internal bone-ingrowth chamber</div>
-        <p class="en">Creates living bone inside the implant for early <b>and</b> long-term stability.</p>
+        <p class="en">Creates living bone inside the implant for early and long-term stability.</p>
         <p class="kr" style="display:none">임플란트 내부에 살아있는 뼈 조직을 형성하여 초기 및 장기 안정성을 모두 확보합니다.</p>
       </div>
 
@@ -190,7 +201,7 @@ textarea{min-height:120px}
       <div>
         <h2 class="h2 en" style="margin-top:0">3-D Integration, Visualized</h2>
         <h2 class="h2 kr" style="display:none;margin-top:0">3차원 골 통합 시각화</h2>
-        <p class="en">Micro-CT confirms bone growing <b>into</b> the internal chamber, enabling multi-directional fixation beyond surface contact.</p>
+        <p class="en">Micro-CT confirms bone growing into the internal chamber, enabling multi-directional fixation beyond surface contact.</p>
         <p class="kr" style="display:none">마이크로 CT로 내부 챔버 내 골 성장이 확인되어, 표면 접촉을 넘어 다방향 고정을 실현합니다.</p>
       </div>
       <div>
@@ -218,7 +229,7 @@ textarea{min-height:120px}
           <li>Reliable stability without premium pricing</li>
           <li>Predictable recovery; universal prosthetic compatibility</li>
           <li>11° conical seal → soft-tissue health</li>
-          <li><b>Early & long-term stability</b> from the bone-ingrowth chamber</li>
+          <li>Early & long-term stability from the bone-ingrowth chamber</li>
         </ul>
         <ul class="list kr" style="display:none">
           <li>합리적인 가격으로 신뢰할 수 있는 안정성</li>
@@ -232,7 +243,7 @@ textarea{min-height:120px}
         <div class="kicker en">Complex cases (soft/fragile bone & compromised sites)</div>
         <div class="kicker kr" style="display:none">복잡 케이스(연약 골·손상 부위)</div>
         <ul class="list en">
-          <li><b>Progressive thread design</b> secures soft/fragile bone with controlled torque</li>
+          <li>Progressive thread design secures soft/fragile bone with controlled torque</li>
           <li>Chamber supports staged regeneration & sustained load sharing</li>
           <li>Open drilling sequence — no exclusive kits required</li>
           <li>Bone compaction may reduce graft dependence</li>
@@ -370,6 +381,7 @@ textarea{min-height:120px}
       <p class="contact-sub en">Message the CEO — we typically reply within 24 hours.</p>
       <p class="contact-sub kr" style="display:none">대표이사에게 메시지를 보내주세요. 보통 24시간 내 회신합니다.</p>
 
+      <!-- Contact CEO (general inquiry) -->
       <form class="contact-form" action="https://formspree.io/f/xpwlpzpn" method="POST">
         <input type="hidden" name="_subject" value="New inquiry from HuMed website" />
         <input type="hidden" name="_language" id="formLang" value="en" />
@@ -385,8 +397,8 @@ textarea{min-height:120px}
         </div>
         <div class="contact-actions">
           <button class="btn primary btn-lg" type="submit"><span class="en">Send to CEO</span><span class="kr" style="display:none">대표에게 전송</span></button>
-          <a class="btn btn-ghost btn-lg" href="mailto:hskim@humedlifesciences.com">✉️ Email</a>
-          <a class="btn btn-ghost btn-lg" href="files/KiiS-OnePage-Brief.pdf" target="_blank" rel="noopener">⬇️ One-Pager</a>
+          <!-- Email button removed as requested -->
+          <button type="button" class="btn btn-ghost btn-lg" id="openOpModalBottom">⬇️ One-Pager</button>
         </div>
       </form>
     </div>
@@ -397,7 +409,54 @@ textarea{min-height:120px}
   © 2025 HuMed Lifesciences. All rights reserved.
 </footer>
 
+<!-- One-Pager modal -->
+<div class="modal-backdrop" id="opModal">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="opTitle">
+    <header>
+      <h3 class="en" id="opTitle">Request the One-Pager</h3>
+      <h3 class="kr" id="opTitleKR" style="display:none">원페이지어 받기</h3>
+      <button class="close" aria-label="Close" id="closeOp">&times;</button>
+    </header>
+    <div class="body">
+      <form id="opForm">
+        <input type="hidden" name="_subject" value="One-Pager request via humedlifesciences.com" />
+        <input type="hidden" name="source" value="onepager-inline" />
+        <input type="hidden" name="lang" id="opLang" value="en" />
+        <div style="margin-bottom:12px">
+          <label class="en" for="opEmail">Your Email *</label>
+          <label class="kr" for="opEmail" style="display:none">이메일 *</label>
+          <input class="input" type="email" id="opEmail" name="email" required placeholder="name@example.com" />
+        </div>
+        <div style="margin-bottom:12px">
+          <label class="en" for="opRole">Your Role *</label>
+          <label class="kr" for="opRole" style="display:none">역할 선택 *</label>
+          <select id="opRole" name="role" required class="input">
+            <option value="" disabled selected>— Select —</option>
+            <option value="investor">Investor</option>
+            <option value="clinician">Clinician / Dentist</option>
+            <option value="partner">Business Partner</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+      </form>
+      <p class="en" style="font-size:13px;color:#5a6a88;margin:8px 0 0">We’ll email you a view-only link. Your contact helps us follow up appropriately.</p>
+      <p class="kr" style="display:none;font-size:13px;color:#5a6a88;margin:8px 0 0">보기 전용 링크를 이메일로 보내드립니다. 역할 정보를 통해 적절히 후속 안내드리겠습니다.</p>
+    </div>
+    <div class="actions">
+      <button class="btn btn-ghost" id="cancelOp"><span class="en">Cancel</span><span class="kr" style="display:none">취소</span></button>
+      <button class="btn primary" id="submitOp"><span class="en">Send One-Pager</span><span class="kr" style="display:none">원페이지어 전송</span></button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">✓ Sent. Please check your inbox.</div>
+
 <script>
+/* ====== CONFIG ====== */
+const OP_FORMSPREE = "https://formspree.io/f/xandwvwd";   // One-Pager endpoint
+/* Contact CEO form uses action="https://formspree.io/f/xpwlpzpn" directly */
+
+/* ====== Language toggle ====== */
 function toggleLang(){
   const ens = document.querySelectorAll('.en');
   const krs = document.querySelectorAll('.kr');
@@ -405,6 +464,58 @@ function toggleLang(){
   ens.forEach(el=>el.style.display = krHidden ? 'none' : '');
   krs.forEach(el=>el.style.display = krHidden ? '' : 'none');
   document.getElementById('formLang').value = krHidden ? 'kr' : 'en';
+  document.getElementById('opLang').value = krHidden ? 'kr' : 'en';
+}
+
+/* ====== One-Pager modal open/close ====== */
+const opModal = document.getElementById('opModal');
+const openOpModal = document.getElementById('openOpModal');
+const openOpModalBottom = document.getElementById('openOpModalBottom');
+const closeOp = document.getElementById('closeOp');
+const cancelOp = document.getElementById('cancelOp');
+[openOpModal, openOpModalBottom].forEach(btn=>{
+  if(btn){ btn.addEventListener('click', ()=>{ opModal.style.display='flex'; document.getElementById('opEmail').focus(); }); }
+});
+[closeOp, cancelOp].forEach(btn=>{
+  btn.addEventListener('click', (e)=>{ e.preventDefault(); opModal.style.display='none'; });
+});
+opModal.addEventListener('click', e=>{ if(e.target===opModal){ opModal.style.display='none'; }});
+
+/* ====== Submit One-Pager to Formspree via fetch ====== */
+const opForm = document.getElementById('opForm');
+const submitOp = document.getElementById('submitOp');
+const toast = document.getElementById('toast');
+
+submitOp.addEventListener('click', async (e)=>{
+  e.preventDefault();
+  if(!opForm.reportValidity()) return;
+  submitOp.disabled = true; submitOp.textContent = (document.getElementById('opLang').value==='kr'?'전송 중…':'Sending…');
+
+  const data = new FormData(opForm);
+  try{
+    const res = await fetch(OP_FORMSPREE, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: data
+    });
+    if(res.ok){
+      opModal.style.display='none';
+      showToast(document.getElementById('opLang').value==='kr'?'전송되었습니다. 이메일을 확인해 주세요.':'Sent. Please check your inbox.');
+      opForm.reset();
+    }else{
+      showToast(document.getElementById('opLang').value==='kr'?'전송 중 오류가 발생했습니다.':'Oops, something went wrong.');
+    }
+  }catch(err){
+    showToast(document.getElementById('opLang').value==='kr'?'네트워크 오류입니다.':'Network error.');
+  }finally{
+    submitOp.disabled = false; submitOp.innerHTML = '<span class="en">Send One-Pager</span><span class="kr" style="display:none">원페이지어 전송</span>';
+  }
+});
+
+function showToast(msg){
+  toast.textContent = msg;
+  toast.style.display='block';
+  setTimeout(()=>toast.style.display='none', 2600);
 }
 </script>
 
