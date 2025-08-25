@@ -29,7 +29,8 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 .hero{background:linear-gradient(180deg,var(--bg),var(--bg-soft));color:#fff}
 .hero-wrap{max-width:1100px;margin:0 auto;padding:48px 20px 24px;display:grid;grid-template-columns:1.05fr .95fr;gap:28px;align-items:center}
 .h-title{font-size:40px;line-height:1.2;margin:0 0 12px;font-weight:800}
-.h-sub{font-size:18px;opacity:.95;margin-bottom:18px}
+.h-sub{font-size:18px;opacity:.95;margin-bottom:10px}
+.h-note{font-size:13.5px;opacity:.85;margin:0 0 18px}
 .h-bullets{list-style:none;padding:0;margin:0 0 26px}
 .h-bullets li{margin:10px 0;display:flex;gap:8px}
 .h-bullets li::before{content:"•";font-weight:800}
@@ -70,6 +71,7 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 .team{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .member{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;border:1px solid #eef3ff}
 .member b{font-size:1.05rem}
+.subtle{color:var(--ink-2);margin:.4rem 0 0}
 
 /* contact */
 .contact-wrap{max-width:900px;margin:0 auto}
@@ -121,20 +123,24 @@ textarea{min-height:120px}
   <div class="hero-wrap">
     <div>
       <h1 class="h-title en">KiiS — Proven Innovation for the Next Evolution of Dental Implants</h1>
-      <h1 class="h-title kr" style="display:none">KiiS — 입증된 혁신, 임플란트의 다음 진화</h1>
+      <h1 class="h-title kr" style="display:none">KiiS — 치과 임플란트의 차세대 진화를 위한 검증된 혁신</h1>
 
-      <p class="h-sub en">From surface fixation to enhanced 3-D bone integration — without changing your workflow.</p>
-      <p class="h-sub kr" style="display:none">기존 표면 고정을 넘어, 임플란트 내부에서 이루어지는 <b>3차원 골 통합</b>으로 진화합니다. 현행 워크플로우는 그대로 유지합니다.</p>
+      <p class="h-sub en">From surface fixation to enhanced 3D bone integration — without changing your workflow.</p>
+      <p class="h-sub kr" style="display:none">표면 고정에서 <b>임플란트 내부</b>의 <b>3차원 골 통합</b>으로 — 기존 워크플로우 변경 없이.</p>
+
+      <!-- KiiS acronym note -->
+      <p class="h-note en"><b>KiiS</b> = <b>Kim’s Ingrowth Implant System</b> (current product). Also refers to <b>Kim’s Injectable Implant System</b> for our drug-delivery roadmap.</p>
+      <p class="h-note kr" style="display:none"><b>KiiS</b>는 현재 제품인 <b><b>KiiS</b>는 현재 제품인 <b>Kim's Ingrowth Implant System</b>(골내생장 임플란트 시스템)과 향후 약물전달 플랫폼인 <b>Kim's Injectable Implant System</b>(주사형 임플란트 시스템)을 모두 지칭합니다.</p>
 
       <ul class="h-bullets en">
-        <li>Patented internal bone-ingrowth chamber → 3-D load sharing & sustained performance</li>
-        <li>Works with standard conical/straight connections & instruments</li>
-        <li>510(k) package ~90% complete; remaining: fatigue & surface characterization</li>
+        <li>Patented internal bone-ingrowth chamber → 3D load sharing & sustained performance</li>
+        <li>Works with standard <b>conical connection</b> and instruments</li>
+        <li>510(k) package ~90% complete — remaining low-risk items: fatigue verification & final surface characterization / admin docs</li>
       </ul>
       <ul class="h-bullets kr" style="display:none">
-        <li>특허 받은 <b>내부 골생장 챔버</b> → 3차원 하중 분산과 장기 성능</li>
-        <li>표준 코니컬/스트레이트 연결 및 기구와 호환</li>
-        <li>510(k) 패키지 약 90% 완료(잔여: 피로·표면 특성 평가)</li>
+        <li>특허받은 <b>내부 골성장 챔버</b> → 3차원 하중 분산 및 지속적 성능</li>
+        <li>표준 <b>원추형 연결부</b> 및 기구와 호환</li>
+        <li>510(k) 승인 서류 약 90% 완료 — 잔여 <b>저위험</b> 항목: <b>피로도 검증</b> 및 <b>최종 표면 특성화/행정 서류</b></li>
       </ul>
 
       <div class="cta-row">
@@ -144,7 +150,6 @@ textarea{min-height:120px}
     </div>
 
     <div class="hero-card">
-      <!-- 제품 실사 이미지 -->
       <img src="images/hero-implant.png" alt="KiiS hybrid dental implant product image" />
     </div>
   </div>
@@ -160,19 +165,19 @@ textarea{min-height:120px}
       <div class="card">
         <div class="kicker">Internal bone-ingrowth chamber</div>
         <p class="en">Creates living bone inside the implant for early <b>and</b> long-term stability.</p>
-        <p class="kr" style="display:none">임플란트 <b>내부</b>에 뼈가 자라 들어가 <b>초기와 장기</b> 안정성을 동시에 제공합니다.</p>
+        <p class="kr" style="display:none">임플란트 <b>내부</b>에 살아있는 뼈 조직을 형성하여 <b>초기 및 장기</b> 안정성을 모두 확보합니다.</p>
       </div>
 
       <div class="card">
         <div class="kicker">Seamless workflow</div>
         <p class="en">Conical connection compatible with proven clinical protocols.</p>
-        <p class="kr" style="display:none">검증된 임상 프로토콜과 호환되는 코니컬 연결부.</p>
+        <p class="kr" style="display:none">검증된 임상 프로토콜과 호환되는 원추형 연결부.</p>
       </div>
 
       <div class="card">
         <div class="kicker">Injectable platform roadmap</div>
         <p class="en">Future-ready antimicrobial/osteoinductive delivery for peri-implantitis defense and true healing.</p>
-        <p class="kr" style="display:none">임플란트 주위염 방어와 재생 치유를 위한 <b>주사형 약물전달</b> 로드맵.</p>
+        <p class="kr" style="display:none">임플란트 주위염 방어와 진정한 치유를 위한 <b>항균/골유도 약물전달</b> 시스템 준비.</p>
       </div>
     </div>
   </div>
@@ -184,16 +189,16 @@ textarea{min-height:120px}
     <div class="figure">
       <div>
         <h2 class="h2 en" style="margin-top:0">3-D Integration, Visualized</h2>
-        <h2 class="h2 kr" style="display:none;margin-top:0">3차원 골 통합 — 실증 이미지</h2>
+        <h2 class="h2 kr" style="display:none;margin-top:0">3차원 골 통합 시각화</h2>
         <p class="en">Micro-CT confirms bone growing <b>into</b> the internal chamber, enabling multi-directional fixation beyond surface contact.</p>
-        <p class="kr" style="display:none">마이크로 CT에서 <b>내부 챔버로 자라 들어가는 뼈</b>가 확인되며, 단순 표면 접촉을 넘어 다방향 고정을 구현합니다.</p>
+        <p class="kr" style="display:none">마이크로 CT로 <b>내부 챔버 내 골 성장</b>이 확인되어, 표면 접촉을 넘어 다방향 고정을 실현합니다.</p>
       </div>
       <div>
         <div class="imgwrap">
           <img class="img-fit" src="images/kiis-microct.png" alt="Micro-CT image showing bone ingrowth into internal chamber of KiiS" />
         </div>
         <div class="caption en">Micro-CT (10μ) of KiiS in canine mandibular bone — 6 weeks post-implantation.</div>
-        <div class="caption kr" style="display:none">마이크로 CT(10μ) — 식립 6주 후, KiiS 내부 챔버로 자라드는 골 소견.</div>
+        <div class="caption kr" style="display:none">KiiS 마이크로 CT(10μ) 이미지 — 개 하악골, 식립 6주 후.</div>
       </div>
     </div>
   </div>
@@ -216,10 +221,10 @@ textarea{min-height:120px}
           <li><b>Early & long-term stability</b> from the bone-ingrowth chamber</li>
         </ul>
         <ul class="list kr" style="display:none">
-          <li>합리적 비용으로 신뢰 가능한 고정력</li>
-          <li>예측 가능한 회복, 보편적 보철 호환성</li>
-          <li>11° 코니컬 실링 → 연조직 건강</li>
-          <li>골생장 챔버 기반의 <b>조기·장기 안정성</b></li>
+          <li>합리적인 가격으로 신뢰할 수 있는 안정성</li>
+          <li>예측 가능한 회복, 범용 보철 호환성</li>
+          <li>11° 원추형 실링 → 연조직 건강</li>
+          <li>골성장 챔버 기반의 <b>초기 및 장기 안정성</b></li>
         </ul>
       </div>
 
@@ -227,14 +232,14 @@ textarea{min-height:120px}
         <div class="kicker en">Complex cases (soft/fragile bone & compromised sites)</div>
         <div class="kicker kr" style="display:none">복잡 케이스(연약 골·손상 부위)</div>
         <ul class="list en">
-          <li>Gentle variable pitch engages fragile bone securely</li>
+          <li><b>Progressive thread design</b> secures soft/fragile bone with controlled torque</li>
           <li>Chamber supports staged regeneration & sustained load sharing</li>
           <li>Open drilling sequence — no exclusive kits required</li>
           <li>Bone compaction may reduce graft dependence</li>
         </ul>
         <ul class="list kr" style="display:none">
-          <li>가변 피치로 연약한 골을 부드럽게, 확실히 고정</li>
-          <li>챔버가 단계적 골재생과 장기 하중 분산을 지원</li>
+          <li><b>점진적 나사산</b> 설계로 연약골을 적절한 토크로 안정적으로 고정</li>
+          <li>챔버가 단계적 재생과 지속적 하중 분산을 지원</li>
           <li>개방형 드릴링 시퀀스 — 전용 키트 불필요</li>
           <li>골압축으로 이식재 의존도 감소 가능</li>
         </ul>
@@ -249,12 +254,53 @@ textarea{min-height:120px}
     <h2 class="h2 en">Progress & Validation</h2>
     <h2 class="h2 kr" style="display:none">진행 상황 및 검증</h2>
     <div class="card">
-      <p class="en">Sterility & biocompatibility complete; final bench tests near completion for FDA 510(k). Academic collaborations ongoing.</p>
-      <p class="kr" style="display:none">멸균·생체적합성 완료, 510(k) 제출을 위한 최종 벤치테스트 진행 중. 대학 협업 지속.</p>
+      <p class="en">
+        Sterility & biocompatibility complete. Final bench tests for FDA 510(k) are nearing completion. 
+        <b>Qualified manufacturing partner secured.</b> Recognized via non-dilutive grants — <b>KISED Grant ($100K)</b> and 
+        <b>TVSF II (Ohio State) Grant ($150K)</b>. 
+      </p>
+      <p class="kr" style="display:none">
+        멸균·생체적합성 완료. FDA 510(k) 승인을 위한 최종 벤치테스트가 마무리 단계입니다.
+        <b>검증된 제조 파트너를 확보</b>했으며, 비희석성 지원금으로 <b>KISED 약 1.4억 원</b>, 
+        <b>TVSF II(오하이오주립대) 약 2억 원</b>을 획득하여 기술력을 인정받았습니다.
+      </p>
       <div class="badges">
         <span class="badge">US Patent</span>
         <span class="badge">510(k) Path</span>
+        <span class="badge">Qualified Manufacturer</span>
         <span class="badge">KOL Support</span>
+        <span class="badge">KISED $100K</span>
+        <span class="badge">TVSF II $150K</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- US HQ / Corp Structure -->
+<section class="section">
+  <div class="wrap">
+    <h2 class="h2 en">US Headquarters & Corporate Structure</h2>
+    <h2 class="h2 kr" style="display:none">미국 본사 및 법인 구조</h2>
+    <div class="grid-2">
+      <div class="card">
+        <div class="kicker en">Structure</div>
+        <div class="kicker kr" style="display:none">구조</div>
+        <p class="en"><b>HuMed US (Delaware C-Corp)</b> as parent company with <b>HuMed Korea</b> as subsidiary — FDA, IP, and global governance centered in the US.</p>
+        <p class="kr" style="display:none"><b>HuMed US (델라웨어 C-Corp)</b>를 모회사로, <b>HuMed Korea</b>를 자회사로 하는 구조입니다. FDA 승인, 지식재산권, 글로벌 거버넌스는 미국 본사에서 관리합니다.</p>
+      </div>
+      <div class="card">
+        <div class="kicker en">Partner Benefits</div>
+        <div class="kicker kr" style="display:none">파트너 장점</div>
+        <ul class="list en">
+          <li>Direct US access for FDA, IP, and contracts</li>
+          <li>Transparent governance & standard VC terms</li>
+          <li>USD revenue, global partnerships, QSBS eligibility</li>
+        </ul>
+        <ul class="list kr" style="display:none">
+          <li>FDA, 지식재산권, 계약 관리의 미국 직접 접근</li>
+          <li>투명한 거버넌스 및 표준 VC 투자 조건</li>
+          <li>달러 매출, 글로벌 파트너십, QSBS 세제혜택 대상</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -269,13 +315,45 @@ textarea{min-height:120px}
     <div class="team">
       <div class="member">
         <b>Hongsuk Kim — CEO</b>
-        <p class="en" style="margin:.4rem 0 0;color:var(--ink-2)">Global commercialization (ex-Samsung/Johnson & Johnson/P&G), Harvard A.M.</p>
-        <p class="kr" style="display:none;margin:.4rem 0 0;color:var(--ink-2)">글로벌 사업화(前 삼성/존슨앤존슨/P&G), 하버드 A.M.</p>
+        <p class="subtle en">Global commercialization (ex-P&amp;G/J&amp;J/Samsung), Harvard A.M.</p>
+        <p class="subtle kr" style="display:none">글로벌 사업화(前 P&amp;G/J&amp;J/삼성), 하버드 A.M.</p>
       </div>
       <div class="member">
         <b>Dr. Do-Gyoon Kim — CTA, Founder</b>
-        <p class="en" style="margin:.4rem 0 0;color:var(--ink-2)">Ohio State Univ. Inventor of Hybrid Implant (KiiS), 20+ years R&amp;D.</p>
-        <p class="kr" style="display:none;margin:.4rem 0 0;color:var(--ink-2)">오하이오주립대, KiiS 발명자, 20년+ 연구개발.</p>
+        <p class="subtle en">Ohio State Univ. Inventor of Hybrid Implant (KiiS), 20+ years R&amp;D.</p>
+        <p class="subtle kr" style="display:none">오하이오주립대, KiiS 발명자, 20년+ 연구개발.</p>
+      </div>
+    </div>
+
+    <h3 class="h2" style="font-size:22px;margin-top:26px">
+      <span class="en">Advisory Board</span>
+      <span class="kr" style="display:none">어드바이저리 보드</span>
+    </h3>
+    <div class="team">
+      <div class="member">
+        <b>Jinyong Oh — Strategic Advisor</b>
+        <p class="subtle en">J&amp;J Medical Devices &amp; P&amp;G veteran; global scaling expert; MIT MBA</p>
+        <p class="subtle kr" style="display:none">J&amp;J·P&amp;G 출신, 글로벌 스케일링 전문가, MIT MBA</p>
+      </div>
+      <div class="member">
+        <b>John Y. Hong, DDS</b>
+        <p class="subtle en">Serial entrepreneur; Georgia Tech / Northwestern alum</p>
+        <p class="subtle kr" style="display:none">연쇄 창업가; 조지아텍/노스웨스턴 동문</p>
+      </div>
+      <div class="member">
+        <b>Paul Fagan</b>
+        <p class="subtle en">Serial life-science entrepreneur; ECM CEO; MIT MBA</p>
+        <p class="subtle kr" style="display:none">생명과학 연쇄 창업가; ECM CEO; MIT MBA</p>
+      </div>
+      <div class="member">
+        <b>Dr. Sreenivas Koka</b>
+        <p class="subtle en">Dean, Univ. of Mississippi Dentistry; former Mayo Clinic Chair</p>
+        <p class="subtle kr" style="display:none">미시시피대 치의학대학 학장; 前 메이요클리닉 체어</p>
+      </div>
+      <div class="member">
+        <b>Tom Cole</b>
+        <p class="subtle en">VP, Dentsply Sirona &amp; Inkbit (3D); MIT MBA</p>
+        <p class="subtle kr" style="display:none">Dentsply Sirona &amp; Inkbit(3D) 부사장; MIT MBA</p>
       </div>
     </div>
   </div>
