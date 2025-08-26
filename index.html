@@ -184,24 +184,27 @@ textarea{min-height:120px}
 
     <!-- 3D HERO VIEWER -->
     <div class="hero-3d-wrap">
-      <model-viewer>
-      id="hero3d"
-      src="/images/kiis.glb"
-      alt="KiiS dental implant 3D model"
-      camera-controls
-      auto-rotate rotation-per-second="12deg"
-      camera-orbit="30deg 70deg 115%"
-      field-of-view="30deg"
-      environment-image="legacy"     <!-- built-in, contrast 강함 -->
-      exposure="1.1"
-      shadow-intensity="0.7"
-      shadow-softness="0.95"
-      poster="/images/hero-implant.png"
-      loading="eager"
-      reveal="auto"
-      ar ar-modes="webxr scene-viewer quick-look"
-      style="width:100%;height:520px;background:#0e1f5a;border-radius:22px;">
-      </model-viewer>
+<!-- HERO 3D VIEWER (safe / HDR 없이) -->
+<model-viewer
+  id="hero3d"
+  src="/images/kiis.glb"
+  alt="KiiS dental implant 3D model"
+  camera-controls
+  camera-orbit="30deg 70deg 115%"
+  field-of-view="30deg"
+  auto-rotate
+  rotation-per-second="12deg"
+  environment-image="legacy"
+  exposure="1.1"
+  shadow-intensity="0.7"
+  shadow-softness="0.95"
+  poster="/images/hero-implant.png"
+  loading="eager"
+  reveal="auto"
+  ar
+  ar-modes="webxr scene-viewer quick-look"
+  style="width:100%;height:520px;background:#0e1f5a;border-radius:22px;">
+</model-viewer>
 
       <!-- No-JS fallback -->
       <noscript><img src="images/hero-implant.png" alt="KiiS hybrid dental implant product image" style="width:100%;height:100%;object-fit:contain"/></noscript>
