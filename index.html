@@ -39,24 +39,26 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 .btn{appearance:none;border:0;cursor:pointer;background:#fff;color:var(--brand);padding:12px 18px;border-radius:12px;font-weight:700;box-shadow:var(--shadow);display:inline-flex;align-items:center;gap:10px;text-decoration:none}
 .btn.primary{background:#0e2ea8;color:#fff}
 
-/* 3D hero viewer (clean) */
+/* 3D hero viewer (dark, high-contrast) */
 .hero-3d-wrap{
   position: relative;
   width: 100%;
   height: clamp(420px, 68vh, 720px);
-  background: transparent;      /* 박스 배경 제거 */
-  border-radius: 0;             /* 네모 박스 느낌 제거 */
-  box-shadow: 0 12px 28px rgba(0,0,0,.18); /* 은은한 그림자 */
+  background:
+    radial-gradient(1200px 700px at 70% 0%, #2146c6 0%, transparent 60%),
+    linear-gradient(180deg,#0f2a6a 0%, #0a1f56 50%, #081946 100%);
+  border-radius: 18px;
+  box-shadow: 0 16px 48px rgba(5,15,45,.45);
   overflow: hidden;
-  border: none;
+  border:1px solid rgba(255,255,255,.06);
 }
 model-viewer#hero3d{
   width: 100%;
   height: 100%;
   --poster-color: transparent;
   --progress-bar-color: #7aa5ff;
-  background: #f8faff;          /* 매우 옅은 배경 톤 */
-  border-radius: 12px;
+  background: transparent;       /* 어두운 컨테이너 배경을 그대로 사용 */
+  border-radius: 0;
 }
 
 /* sections */
@@ -92,20 +94,6 @@ model-viewer#hero3d{
 .member b{font-size:1.05rem}
 .subtle{color:#0b1324;margin:.4rem 0 0}
 
-/* contact */
-.contact-wrap{max-width:900px;margin:0 auto}
-.contact-card{background:#ffffff;border:1px solid #eaf0ff;border-radius:16px;box-shadow:0 8px 28px rgba(15,46,138,.08);padding:18px}
-.contact-title h2{margin:0;font-size:26px;font-weight:800;color:#0a1f66}
-.contact-sub{color:#4b5b7a;font-size:14.5px;margin:4px 0 14px}
-.contact-form .row{display:grid;grid-template-columns:1fr;gap:12px}
-.contact-form label{font-weight:700;font-size:14px;margin:2px 0;color:#0b1324}
-.input,textarea,select{width:100%;padding:14px 16px;border-radius:12px;border:2px solid #e7edff;background:#fbfdff;font:inherit}
-.input:focus,textarea:focus,select:focus{box-shadow:0 0 0 4px var(--ring);border-color:#cfe0ff}
-textarea{min-height:120px}
-.contact-actions{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap}
-.btn-lg{padding:14px 18px;border-radius:12px;font-weight:800}
-.note{font-size:.85rem;color:#5a6a88;margin-top:6px}
-
 /* legal */
 .legal{font-size:.9rem;color:#4b5b7a;line-height:1.6}
 .legal b{color:#0a1f66}
@@ -126,7 +114,6 @@ textarea{min-height:120px}
 
 <!-- model-viewer runtime -->
 <script type="module" src="https://unpkg.com/@google/model-viewer@3.3.0/dist/model-viewer.min.js"></script>
-<!-- Preload 3D asset -->
 <link rel="preload" href="images/kiis.glb" as="fetch" crossorigin>
 </head>
 <body>
@@ -171,7 +158,7 @@ textarea{min-height:120px}
       </ul>
 
       <div class="cta-row">
-        <a class="btn primary" href="#contact">✉️ <span class="en">Contact</span><span class="kr" style="display:none">문의하기</span></a>
+        <!-- Contact 버튼 제거, 법적 안내만 남김 -->
         <a class="btn" href="#legal"><span class="en">Regulatory & Legal</span><span class="kr" style="display:none">규제·법적 고지</span></a>
       </div>
     </div>
@@ -189,7 +176,7 @@ textarea{min-height:120px}
         rotation-per-second="12deg"
         environment-image="legacy"
         exposure="1.05"
-        shadow-intensity="0.8"
+        shadow-intensity="0.85"
         shadow-softness="0.95"
         poster="/images/hero-implant.png"
         loading="eager"
@@ -291,7 +278,7 @@ textarea{min-height:120px}
   </div>
 </section>
 
-<!-- Quality & Compliance ONLY (Structure removed) -->
+<!-- Quality & Compliance -->
 <section class="section inset">
   <div class="wrap">
     <h2 class="h2 en">Quality & Compliance</h2>
@@ -344,49 +331,6 @@ textarea{min-height:120px}
   </div>
 </section>
 
-<!-- Contact (purpose clarified + no investment) -->
-<section id="contact" class="section inset">
-  <div class="contact-wrap">
-    <div class="contact-card">
-      <div class="contact-title">
-        <h2 class="en">Contact HuMed</h2>
-        <h2 class="kr" style="display:none">HuMed 문의</h2>
-      </div>
-      <p class="contact-sub en">For clinical/research collaboration or general questions. This form is not for investment inquiries.</p>
-      <p class="contact-sub kr" style="display:none">임상·연구 협력 또는 일반 문의용입니다. 투자 관련 문의는 받지 않습니다.</p>
-
-      <form class="contact-form" action="https://formspree.io/f/xpwlpzpn" method="POST">
-        <input type="hidden" name="_subject" value="New inquiry from HuMed website" />
-        <input type="hidden" name="_language" id="formLang" value="en" />
-        <div class="row">
-          <div>
-            <label class="en" for="purpose">Purpose *</label><label class="kr" for="purpose" style="display:none">문의 목적 *</label>
-            <select id="purpose" name="purpose" class="input" required>
-              <option value="" disabled selected>— Select —</option>
-              <option value="clinical">Clinical collaboration</option>
-              <option value="research">Research inquiry</option>
-              <option value="general">General question</option>
-            </select>
-          </div>
-          <div>
-            <label class="en">Your Email *</label><label class="kr" style="display:none">이메일 *</label>
-            <input class="input" type="email" name="email" required placeholder="name@example.com" />
-          </div>
-          <div>
-            <label class="en">Your Message *</label><label class="kr" style="display:none">문의 내용 *</label>
-            <textarea name="message" required placeholder="Please share relevant details (no investment proposals)."></textarea>
-          </div>
-        </div>
-        <div class="note en">We do not accept or respond to investment proposals through this website.</div>
-        <div class="note kr" style="display:none">본 웹사이트를 통한 투자 제안은 접수/응답하지 않습니다.</div>
-        <div class="contact-actions">
-          <button class="btn primary btn-lg" type="submit"><span class="en">Send</span><span class="kr" style="display:none">전송</span></button>
-        </div>
-      </form>
-    </div>
-  </div>
-</section>
-
 <!-- Legal & Regulatory -->
 <section id="legal" class="section">
   <div class="wrap">
@@ -427,9 +371,6 @@ function toggleLang(){
   const krHidden = krs[0] && krs[0].style.display === 'none';
   ens.forEach(el=>el.style.display = krHidden ? 'none' : '');
   krs.forEach(el=>el.style.display = krHidden ? '' : 'none');
-  const lang = krHidden ? 'kr' : 'en';
-  const formLangInput = document.getElementById('formLang');
-  if(formLangInput) formLangInput.value = lang;
 }
 </script>
 
