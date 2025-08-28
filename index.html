@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>HuMed Lifesciences — KiiS Hybrid Dental Implant</title>
-<meta name="description" content="Proven innovation in dental implants: KiiS hybrid implant with bone-ingrowth chamber. Pre-FDA, partners and clinicians welcome." />
+<title>HuMed Lifesciences — KiiS Hybrid Dental Implant (Pre-FDA)</title>
+<meta name="description" content="Informational overview of the KiiS hybrid implant concept under development (not for sale). Pre-FDA. For professional audiences and research/clinical collaboration inquiries only." />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
@@ -44,7 +44,7 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   position:relative;
   width:100%;
   height:clamp(420px, 68vh, 720px);
-  background:#0f2a5f; /* hero 톤과 맞춤 */
+  background:#0f2a5f;
   border-radius:22px;
   box-shadow:var(--shadow);
   overflow:hidden;
@@ -80,7 +80,7 @@ model-viewer#hero3d{
 .img-fit{max-width:100%;height:auto;display:block}
 .caption{font-size:.92rem;color:#5a6a88;margin-top:8px}
 
-/* badges */
+/* badges (kept minimal/neutral) */
 .badges{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
 .badge{background:#ecf1ff;color:#2038c8;padding:8px 12px;border-radius:999px;font-weight:700}
 
@@ -88,7 +88,7 @@ model-viewer#hero3d{
 .team{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .member{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;border:1px solid #eef3ff}
 .member b{font-size:1.05rem}
-.subtle{color:var(--ink-2);margin:.4rem 0 0}
+.subtle{color:#0b1324;margin:.4rem 0 0}
 
 /* contact */
 .contact-wrap{max-width:900px;margin:0 auto}
@@ -104,15 +104,9 @@ textarea{min-height:120px}
 .btn-lg{padding:14px 18px;border-radius:12px;font-weight:800}
 .btn-ghost{background:#eef3ff;color:#2038c8;text-decoration:none}
 
-/* modal */
-.modal-backdrop{position:fixed;inset:0;background:rgba(12,22,44,.5);backdrop-filter:blur(2px);display:none;align-items:center;justify-content:center;z-index:80}
-.modal{background:#fff;border-radius:16px;box-shadow:var(--shadow);width:92%;max-width:520px;border:1px solid #e7edff}
-.modal header{padding:16px 18px;border-bottom:1px solid #eef3ff;display:flex;align-items:center;justify-content:space-between}
-.modal header h3{margin:0;font-size:18px;font-weight:800;color:#0a1f66}
-.modal .body{padding:16px 18px}
-.modal .actions{padding:14px 18px;border-top:1px solid #eef3ff;display:flex;gap:10px;justify-content:flex-end}
-.modal .close{background:none;border:0;font-size:22px;cursor:pointer;color:#0b1324}
-.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:18px;background:#0e2ea8;color:#fff;padding:10px 14px;border-radius:12px;box-shadow:var(--shadow);display:none;z-index:90}
+/* legal */
+.legal{font-size:.9rem;color:#4b5b7a;line-height:1.6}
+.legal b{color:#0a1f66}
 
 /* footer */
 .footer{padding:36px 20px;text-align:center;color:#6b7a99}
@@ -143,8 +137,8 @@ textarea{min-height:120px}
       <b>HuMed Lifesciences</b>
     </a>
     <div class="header-right">
-      <span class="en">Pre-FDA • Partners &amp; Clinicians Welcome</span>
-      <span class="kr" style="display:none">Pre-FDA • 파트너 &amp; 임상의 협력 환영</span>
+      <span class="en">Pre-FDA • Technology under development</span>
+      <span class="kr" style="display:none">Pre-FDA • 개발 중인 기술 소개</span>
       <button class="lang-toggle" onclick="toggleLang()">EN / KR</button>
     </div>
   </div>
@@ -154,59 +148,54 @@ textarea{min-height:120px}
 <section class="hero">
   <div class="hero-wrap">
     <div>
-      <h1 class="h-title en">KiiS — Proven Innovation for the Next Evolution of Dental Implants</h1>
-      <h1 class="h-title kr" style="display:none">KiiS — 치과 임플란트의 차세대 진화를 위한 검증된 혁신</h1>
+      <h1 class="h-title en">KiiS — Exploring the Next Evolution of Dental Implants</h1>
+      <h1 class="h-title kr" style="display:none">KiiS — 치과 임플란트의 다음 진화를 탐구합니다</h1>
 
-      <p class="h-sub en">From surface fixation to enhanced 3D bone integration — without changing your workflow.</p>
-      <p class="h-sub kr" style="display:none">표면 고정에서 임플란트 내부의 3차원 골 통합으로 — 기존 워크플로우 변경 없이.</p>
+      <p class="h-sub en">Researching a transition from surface fixation to 3-D bone integration — without changing established workflows.</p>
+      <p class="h-sub kr" style="display:none">표면 고정에서 3차원 골 통합으로의 전환을 연구합니다 — 기존 워크플로우 변경 없이.</p>
 
-      <!-- KiiS acronym note -->
-      <p class="h-note en"><b>KiiS</b> = <b>Kim’s Ingrowth Implant System</b> (current product). Also refers to <b>Kim’s Injectable Implant System</b> for our drug-delivery roadmap.</p>
-      <p class="h-note kr" style="display:none"><b>KiiS</b>는 현재 제품인 <b>Kim's Ingrowth Implant System</b>(골내생장 임플란트 시스템)과 향후 약물전달 플랫폼인 <b>Kim's Injectable Implant System</b>(주사형 임플란트 시스템)을 모두 지칭합니다.</p>
+      <p class="h-note en"><b>KiiS</b> = <b>Kim’s Ingrowth Implant System</b> (current R&amp;D); also used for <b>Kim’s Injectable Implant System</b> in our drug-delivery roadmap.</p>
+      <p class="h-note kr" style="display:none"><b>KiiS</b>는 현재 R&amp;D 단계의 <b>Kim's Ingrowth Implant System</b>과 향후 약물전달 로드맵의 <b>Kim's Injectable Implant System</b>을 지칭합니다.</p>
 
       <ul class="h-bullets en">
-        <li>Patented internal bone-ingrowth chamber → 3D load sharing & sustained performance</li>
-        <li>Works with standard conical connection and instruments</li>
-        <li>510(k) package ~90% complete — remaining low-risk items: fatigue verification & final surface characterization / admin docs</li>
+        <li>Patented internal chamber <em>designed to</em> enable research into 3-D load sharing</li>
+        <li>Compatible with standard conical connection and instruments</li>
+        <li>FDA 510(k) preparation in progress; remaining tasks include fatigue verification, final surface characterization, and documentation</li>
       </ul>
-      <ul class="h-bullets kr" style="display:none; letter-spacing:normal; word-spacing:normal;">
-        <li>특허받은 내부 골성장 챔버 → 3차원 하중 분산 및 지속적 성능</li>
-        <li>표준 원추형 연결부 및 기구와 호환</li>
-        <li>510(k) 승인 서류 약 90% 완료 — 잔여 저위험 항목: 피로도 검증 및 최종 표면 특성화/행정 서류</li>
+      <ul class="h-bullets kr" style="display:none">
+        <li>특허받은 내부 챔버는 3차원 하중 분산 <em>연구를 위해 설계</em>되었습니다</li>
+        <li>표준 원추형 연결부/기구와 호환</li>
+        <li>FDA 510(k) 서류 준비 진행 중 — 잔여 과제: 피로도 검증, 최종 표면 특성화, 문서화</li>
       </ul>
 
       <div class="cta-row">
-        <!-- One-Pager button opens modal -->
-        <button class="btn" id="openOpModal">⬇️ One-Pager</button>
-        <a class="btn primary" href="#contact">✉️ <span class="en">Contact CEO</span><span class="kr" style="display:none">대표에게 문의</span></a>
+        <a class="btn primary" href="#contact">✉️ <span class="en">Contact</span><span class="kr" style="display:none">문의하기</span></a>
+        <a class="btn" href="#legal"><span class="en">Regulatory & Legal</span><span class="kr" style="display:none">규제·법적 고지</span></a>
       </div>
     </div>
 
-    <!-- 3D HERO VIEWER -->
+    <!-- 3D HERO VIEWER (unchanged) -->
     <div class="hero-3d-wrap">
-<!-- HERO 3D VIEWER (safe / HDR 없이) -->
-<model-viewer
-  id="hero3d"
-  src="/images/kiis.glb"
-  alt="KiiS dental implant 3D model"
-  camera-controls
-  camera-orbit="30deg 70deg 115%"
-  field-of-view="30deg"
-  auto-rotate
-  rotation-per-second="12deg"
-  environment-image="legacy"
-  exposure="1.1"
-  shadow-intensity="0.7"
-  shadow-softness="0.95"
-  poster="/images/hero-implant.png"
-  loading="eager"
-  reveal="auto"
-  ar
-  ar-modes="webxr scene-viewer quick-look"
-  style="width:100%;height:520px;background:#0e1f5a;border-radius:22px;">
-</model-viewer>
-
-      <!-- No-JS fallback -->
+      <model-viewer
+        id="hero3d"
+        src="/images/kiis.glb"
+        alt="KiiS dental implant 3D model"
+        camera-controls
+        camera-orbit="30deg 70deg 115%"
+        field-of-view="30deg"
+        auto-rotate
+        rotation-per-second="12deg"
+        environment-image="legacy"
+        exposure="1.1"
+        shadow-intensity="0.7"
+        shadow-softness="0.95"
+        poster="/images/hero-implant.png"
+        loading="eager"
+        reveal="auto"
+        ar
+        ar-modes="webxr scene-viewer quick-look"
+        style="width:100%;height:520px;background:#0e1f5a;border-radius:22px;">
+      </model-viewer>
       <noscript><img src="images/hero-implant.png" alt="KiiS hybrid dental implant product image" style="width:100%;height:100%;object-fit:contain"/></noscript>
     </div>
   </div>
@@ -221,20 +210,20 @@ textarea{min-height:120px}
     <div class="grid-3">
       <div class="card">
         <div class="kicker">Internal bone-ingrowth chamber</div>
-        <p class="en">Creates living bone inside the implant for early and long-term stability.</p>
-        <p class="kr" style="display:none">임플란트 내부에 살아있는 뼈 조직을 형성하여 초기 및 장기 안정성을 모두 확보합니다.</p>
+        <p class="en">Concept intended to support research into multi-directional fixation beyond surface contact.</p>
+        <p class="kr" style="display:none">표면 접촉을 넘어 다방향 고정을 탐구하는 연구를 지원하기 위한 콘셉트입니다.</p>
       </div>
 
       <div class="card">
         <div class="kicker">Seamless workflow</div>
-        <p class="en">Conical connection compatible with proven clinical protocols.</p>
-        <p class="kr" style="display:none">검증된 임상 프로토콜과 호환되는 원추형 연결부.</p>
+        <p class="en">Standard conical connection designed for familiar clinical protocols.</p>
+        <p class="kr" style="display:none">익숙한 임상 프로토콜과의 호환을 염두에 둔 원추형 연결부 설계입니다.</p>
       </div>
 
       <div class="card">
         <div class="kicker">Injectable platform roadmap</div>
-        <p class="en">Future-ready antimicrobial/osteoinductive delivery for peri-implantitis defense and true healing.</p>
-        <p class="kr" style="display:none">임플란트 주위염 방어와 진정한 치유를 위한 항균/골유도 약물전달 시스템 준비.</p>
+        <p class="en">Conceptual roadmap for potential drug-delivery applications in peri-implant care research.</p>
+        <p class="kr" style="display:none">임플란트 주위 관리 연구에서의 잠재적 약물전달 적용을 위한 개념적 로드맵입니다.</p>
       </div>
     </div>
   </div>
@@ -247,41 +236,39 @@ textarea{min-height:120px}
       <div>
         <h2 class="h2 en" style="margin-top:0">3-D Integration, Visualized</h2>
         <h2 class="h2 kr" style="display:none;margin-top:0">3차원 골 통합 시각화</h2>
-        <p class="en">Micro-CT confirms bone growing into the internal chamber, enabling multi-directional fixation beyond surface contact.</p>
-        <p class="kr" style="display:none">마이크로 CT로 내부 챔버 내 골 성장이 확인되어, 표면 접촉을 넘어 다방향 고정을 실현합니다.</p>
+        <p class="en">Micro-CT observations in preclinical models show bone ingrowth into the internal chamber, supporting multi-directional fixation research.</p>
+        <p class="kr" style="display:none">전임상 모델의 마이크로 CT 관찰에서 내부 챔버 내 골 성장이 확인되어, 다방향 고정 연구를 뒷받침합니다.</p>
       </div>
       <div>
         <div class="imgwrap">
           <img class="img-fit" src="images/kiis-microct.png" alt="Micro-CT image showing bone ingrowth into internal chamber of KiiS" />
         </div>
-        <div class="caption en">Micro-CT (10μ) of KiiS in canine mandibular bone — 6 weeks post-implantation.</div>
-        <div class="caption kr" style="display:none">KiiS 마이크로 CT(10μ) 이미지 — 개 하악골, 식립 6주 후.</div>
+        <div class="caption en">Micro-CT (10μ) in canine mandibular bone — 6 weeks post-implantation.</div>
+        <div class="caption kr" style="display:none">개 하악골 마이크로 CT(10μ) — 식립 6주 후.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Who it helps -->
+<!-- Potential clinical contexts -->
 <section class="section">
   <div class="wrap">
-    <h2 class="h2 en">Who It Helps</h2>
-    <h2 class="h2 kr" style="display:none">누구에게 도움이 되는가</h2>
+    <h2 class="h2 en">Potential Clinical Contexts</h2>
+    <h2 class="h2 kr" style="display:none">예상 임상 적용 맥락</h2>
 
     <div class="grid-2">
       <div class="card">
         <div class="kicker en">Everyday cases (primary implants)</div>
         <div class="kicker kr" style="display:none">일반 케이스(1차 식립)</div>
         <ul class="list en">
-          <li>Reliable stability without premium pricing</li>
-          <li>Predictable recovery; universal prosthetic compatibility</li>
-          <li>11° conical seal → soft-tissue health</li>
-          <li>Early & long-term stability from the bone-ingrowth chamber</li>
+          <li>Compatible with universal prosthetic workflows</li>
+          <li>11° conical seal to support soft-tissue management</li>
+          <li>Chamber concept aims to inform research on early & long-term stability</li>
         </ul>
         <ul class="list kr" style="display:none">
-          <li>합리적인 가격으로 신뢰할 수 있는 안정성</li>
-          <li>예측 가능한 회복, 범용 보철 호환성</li>
-          <li>11° 원추형 실링 → 연조직 건강</li>
-          <li>골성장 챔버 기반의 초기 및 장기 안정성</li>
+          <li>범용 보철 워크플로우와 호환</li>
+          <li>연조직 관리 지원을 위한 11° 원추형 실링</li>
+          <li>챔버 콘셉트는 초기·장기 안정성 연구에 정보를 제공합니다</li>
         </ul>
       </div>
 
@@ -289,74 +276,62 @@ textarea{min-height:120px}
         <div class="kicker en">Complex cases (soft/fragile bone & compromised sites)</div>
         <div class="kicker kr" style="display:none">복잡 케이스(연약 골·손상 부위)</div>
         <ul class="list en">
-          <li>Progressive thread design secures soft/fragile bone with controlled torque</li>
-          <li>Chamber supports staged regeneration & sustained load sharing</li>
+          <li>Progressive thread design for controlled torque in soft bone</li>
+          <li>Chamber supports staged regeneration & sustained load-sharing research</li>
           <li>Open drilling sequence — no exclusive kits required</li>
-          <li>Bone compaction may reduce graft dependence</li>
         </ul>
         <ul class="list kr" style="display:none">
-          <li>점진적 나사산 설계로 연약골을 적절한 토크로 안정적으로 고정</li>
-          <li>챔버가 단계적 재생과 지속적 하중 분산을 지원</li>
+          <li>점진적 나사산 설계로 연약골에서 적절한 토크 확보</li>
+          <li>챔버가 단계적 재생과 지속적 하중 분산 연구를 지원</li>
           <li>개방형 드릴링 시퀀스 — 전용 키트 불필요</li>
-          <li>골압축으로 이식재 의존도 감소 가능</li>
         </ul>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Progress -->
+<!-- Progress (kept factual, cautious) -->
 <section class="section inset">
   <div class="wrap">
     <h2 class="h2 en">Progress & Validation</h2>
     <h2 class="h2 kr" style="display:none">진행 상황 및 검증</h2>
     <div class="card">
       <p class="en">
-        Sterility & biocompatibility complete. Final bench tests for FDA 510(k) are nearing completion. 
-        <b>Qualified manufacturing partner secured.</b> Recognized via non-dilutive grants — <b>KISED Grant ($100K)</b> and 
-        <b>TVSF II (Ohio State) Grant ($150K)</b>. 
+        Sterility & biocompatibility testing completed. FDA 510(k) preparation is advancing, with remaining bench tasks (fatigue verification and final surface characterization) and administrative documentation underway.
+        Manufacturing is being developed with an experienced partner. The work has received non-dilutive support (e.g., KISED and TVSF II grants).
       </p>
       <p class="kr" style="display:none">
-        멸균·생체적합성 완료. FDA 510(k) 승인을 위한 최종 벤치테스트가 마무리 단계입니다.
-        검증된 제조 파트너를 확보했으며, 비희석성 지원금으로 KISED 약 1.4억 원, 
-        TVSF II(오하이오주립대) 약 2억 원을 획득하여 기술력을 인정받았습니다.
+        멸균·생체적합성 시험을 완료했습니다. FDA 510(k) 준비가 진행 중이며, 남은 벤치 과제(피로도 검증, 최종 표면 특성화)와 행정 문서를 진행하고 있습니다.
+        숙련된 파트너와 제조 체계를 구축 중이며, KISED 및 TVSF II 등 비희석성 지원을 받았습니다.
       </p>
-      <div class="badges">
-        <span class="badge">US Patent</span>
-        <span class="badge">510(k) Path</span>
-        <span class="badge">Qualified Manufacturer</span>
-        <span class="badge">KOL Support</span>
-        <span class="badge">KISED $100K</span>
-        <span class="badge">TVSF II $150K</span>
-      </div>
     </div>
   </div>
 </section>
 
-<!-- US HQ / Corp Structure -->
+<!-- Company Overview -->
 <section class="section">
   <div class="wrap">
-    <h2 class="h2 en">US Headquarters & Corporate Structure</h2>
-    <h2 class="h2 kr" style="display:none">미국 본사 및 법인 구조</h2>
+    <h2 class="h2 en">Headquarters & Company Overview</h2>
+    <h2 class="h2 kr" style="display:none">본사 및 회사 개요</h2>
     <div class="grid-2">
       <div class="card">
         <div class="kicker en">Structure</div>
         <div class="kicker kr" style="display:none">구조</div>
-        <p class="en"><b>HuMed US (Delaware C-Corp)</b> as parent company with <b>HuMed Korea</b> as subsidiary — FDA, IP, and global governance centered in the US.</p>
-        <p class="kr" style="display:none"><b>HuMed US (델라웨어 C-Corp)</b>를 모회사로, <b>HuMed Korea</b>를 자회사로 하는 구조입니다. FDA 승인, 지식재산권, 글로벌 거버넌스는 미국 본사에서 관리합니다.</p>
+        <p class="en"><b>HuMed US</b> (Delaware corporation) with <b>HuMed Korea</b> subsidiary — FDA, IP, and global governance centered in the US.</p>
+        <p class="kr" style="display:none"><b>HuMed US</b>(델라웨어 법인)을 중심으로 <b>HuMed Korea</b> 자회사를 두고 있으며, FDA, 지식재산권, 글로벌 거버넌스를 미국 본사에서 관리합니다.</p>
       </div>
       <div class="card">
-        <div class="kicker en">Partner Benefits</div>
-        <div class="kicker kr" style="display:none">파트너 장점</div>
+        <div class="kicker en">Quality & Compliance</div>
+        <div class="kicker kr" style="display:none">품질·컴플라이언스</div>
         <ul class="list en">
-          <li>Direct US access for FDA, IP, and contracts</li>
-          <li>Transparent governance & standard VC terms</li>
-          <li>USD revenue, global partnerships, QSBS eligibility</li>
+          <li>Pre-FDA device concept — not available for sale</li>
+          <li>Sterility & biocompatibility complete</li>
+          <li>Manufacturing being developed with an experienced partner</li>
         </ul>
         <ul class="list kr" style="display:none">
-          <li>FDA, 지식재산권, 계약 관리의 미국 직접 접근</li>
-          <li>투명한 거버넌스 및 표준 VC 투자 조건</li>
-          <li>달러 매출, 글로벌 파트너십, QSBS 세제혜택 대상</li>
+          <li>Pre-FDA 단계 — 판매 불가</li>
+          <li>멸균·생체적합성 완료</li>
+          <li>숙련 파트너와 제조 체계 구축 중</li>
         </ul>
       </div>
     </div>
@@ -421,13 +396,13 @@ textarea{min-height:120px}
   <div class="contact-wrap">
     <div class="contact-card">
       <div class="contact-title">
-        <h2 class="en">Get in Touch</h2>
-        <h2 class="kr" style="display:none">문의하기</h2>
+        <h2 class="en">Contact HuMed</h2>
+        <h2 class="kr" style="display:none">HuMed 문의</h2>
       </div>
-      <p class="contact-sub en">Message the CEO — we typically reply within 24 hours.</p>
-      <p class="contact-sub kr" style="display:none">대표이사에게 메시지를 보내주세요. 보통 24시간 내 회신합니다.</p>
+      <p class="contact-sub en">For clinical/research collaboration or general questions.</p>
+      <p class="contact-sub kr" style="display:none">임상·연구 협력 또는 일반 문의에 사용해 주세요.</p>
 
-      <!-- Contact CEO (general inquiry) -->
+      <!-- General inquiry (no investor language) -->
       <form class="contact-form" action="https://formspree.io/f/xpwlpzpn" method="POST">
         <input type="hidden" name="_subject" value="New inquiry from HuMed website" />
         <input type="hidden" name="_language" id="formLang" value="en" />
@@ -438,14 +413,41 @@ textarea{min-height:120px}
           </div>
           <div>
             <label class="en">Your Message *</label><label class="kr" style="display:none">문의 내용 *</label>
-            <textarea name="message" required placeholder="Partnership, clinical interest, or investment…"></textarea>
+            <textarea name="message" required placeholder="Clinical collaboration, research inquiry, or general question…"></textarea>
           </div>
         </div>
         <div class="contact-actions">
-          <button class="btn primary btn-lg" type="submit"><span class="en">Send to CEO</span><span class="kr" style="display:none">대표에게 전송</span></button>
-          <button type="button" class="btn btn-ghost btn-lg" id="openOpModalBottom">⬇️ One-Pager</button>
+          <button class="btn primary btn-lg" type="submit"><span class="en">Send</span><span class="kr" style="display:none">전송</span></button>
         </div>
       </form>
+    </div>
+  </div>
+</section>
+
+<!-- Legal & Regulatory -->
+<section id="legal" class="section">
+  <div class="wrap">
+    <h2 class="h2 en">Regulatory Status & Legal Notices</h2>
+    <h2 class="h2 kr" style="display:none">규제 상태 및 법적 고지</h2>
+    <div class="card legal">
+      <p class="en">
+        <b>Regulatory Status.</b> KiiS is a device concept under development and has not been cleared or approved by the U.S. Food and Drug Administration (FDA). It is not available for sale in the United States or other jurisdictions requiring prior authorization.
+      </p>
+      <p class="kr" style="display:none">
+        <b>규제 상태.</b> KiiS는 개발 중인 디바이스 콘셉트로, 미국 FDA의 인가·승인을 받지 않았습니다. 미국 및 사전 인가가 필요한 지역에서 판매되지 않습니다.
+      </p>
+      <p class="en">
+        <b>No Offer or Solicitation.</b> Information on this website is for general informational purposes only and does not constitute an offer to sell or a solicitation of an offer to buy any securities.
+      </p>
+      <p class="kr" style="display:none">
+        <b>투자 권유 아님.</b> 본 웹사이트의 정보는 일반적인 안내 목적이며, 어떠한 증권의 매도 제안 또는 매수 제안의 권유를 구성하지 않습니다.
+      </p>
+      <p class="en">
+        <b>Forward-Looking Statements.</b> Certain statements may be forward-looking and are subject to risks and uncertainties; actual results may differ.
+      </p>
+      <p class="kr" style="display:none">
+        <b>미래예측 진술.</b> 일부 진술에는 불확실성이 내재된 미래예측 진술이 포함될 수 있으며, 실제 결과는 상이할 수 있습니다.
+      </p>
     </div>
   </div>
 </section>
@@ -454,53 +456,7 @@ textarea{min-height:120px}
   © 2025 HuMed Lifesciences. All rights reserved.
 </footer>
 
-<!-- One-Pager modal -->
-<div class="modal-backdrop" id="opModal">
-  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="opTitle">
-    <header>
-      <h3 class="en" id="opTitle">Request the One-Pager</h3>
-      <h3 class="kr" id="opTitleKR" style="display:none">원페이지어 받기</h3>
-      <button class="close" aria-label="Close" id="closeOp">&times;</button>
-    </header>
-    <div class="body">
-      <form id="opForm">
-        <input type="hidden" name="_subject" value="One-Pager request via humedlifesciences.com" />
-        <input type="hidden" name="source" value="onepager-inline" />
-        <input type="hidden" name="lang" id="opLang" value="en" />
-        <div style="margin-bottom:12px">
-          <label class="en" for="opEmail">Your Email *</label>
-          <label class="kr" for="opEmail" style="display:none">이메일 *</label>
-          <input class="input" type="email" id="opEmail" name="email" required placeholder="name@example.com" />
-        </div>
-        <div style="margin-bottom:12px">
-          <label class="en" for="opRole">Your Role *</label>
-          <label class="kr" for="opRole" style="display:none">역할 선택 *</label>
-          <select id="opRole" name="role" required class="input">
-            <option value="" disabled selected>— Select —</option>
-            <option value="investor">Investor</option>
-            <option value="clinician">Clinician / Dentist</option>
-            <option value="partner">Business Partner</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-      </form>
-      <p class="en" style="font-size:13px;color:#5a6a88;margin:8px 0 0">We’ll email you a view-only link. Your contact helps us follow up appropriately.</p>
-      <p class="kr" style="display:none;font-size:13px;color:#5a6a88;margin:8px 0 0">보기 전용 링크를 이메일로 보내드립니다. 역할 정보를 통해 적절히 후속 안내드리겠습니다.</p>
-    </div>
-    <div class="actions">
-      <button class="btn btn-ghost" id="cancelOp"><span class="en">Cancel</span><span class="kr" style="display:none">취소</span></button>
-      <button class="btn primary" id="submitOp"><span class="en">Send One-Pager</span><span class="kr" style="display:none">원페이지어 전송</span></button>
-    </div>
-  </div>
-</div>
-
-<div class="toast" id="toast">✓ Sent. Please check your inbox.</div>
-
 <script>
-/* ====== CONFIG ====== */
-const OP_FORMSPREE = "https://formspree.io/f/xandwvwd";   // One-Pager endpoint
-/* Contact CEO form uses action="https://formspree.io/f/xpwlpzpn" directly */
-
 /* ====== Language toggle ====== */
 function toggleLang(){
   const ens = document.querySelectorAll('.en');
@@ -508,59 +464,9 @@ function toggleLang(){
   const krHidden = krs[0] && krs[0].style.display === 'none';
   ens.forEach(el=>el.style.display = krHidden ? 'none' : '');
   krs.forEach(el=>el.style.display = krHidden ? '' : 'none');
-  document.getElementById('formLang').value = krHidden ? 'kr' : 'en';
-  document.getElementById('opLang').value = krHidden ? 'kr' : 'en';
-}
-
-/* ====== One-Pager modal open/close ====== */
-const opModal = document.getElementById('opModal');
-const openOpModal = document.getElementById('openOpModal');
-const openOpModalBottom = document.getElementById('openOpModalBottom');
-const closeOp = document.getElementById('closeOp');
-const cancelOp = document.getElementById('cancelOp');
-[openOpModal, openOpModalBottom].forEach(btn=>{
-  if(btn){ btn.addEventListener('click', ()=>{ opModal.style.display='flex'; document.getElementById('opEmail').focus(); }); }
-});
-[closeOp, cancelOp].forEach(btn=>{
-  btn.addEventListener('click', (e)=>{ e.preventDefault(); opModal.style.display='none'; });
-});
-opModal.addEventListener('click', e=>{ if(e.target===opModal){ opModal.style.display='none'; }});
-
-/* ====== Submit One-Pager to Formspree via fetch ====== */
-const opForm = document.getElementById('opForm');
-const submitOp = document.getElementById('submitOp');
-const toast = document.getElementById('toast');
-
-submitOp.addEventListener('click', async (e)=>{
-  e.preventDefault();
-  if(!opForm.reportValidity()) return;
-  submitOp.disabled = true; submitOp.textContent = (document.getElementById('opLang').value==='kr'?'전송 중…':'Sending…');
-
-  const data = new FormData(opForm);
-  try{
-    const res = await fetch(OP_FORMSPREE, {
-      method: 'POST',
-      headers: { 'Accept': 'application/json' },
-      body: data
-    });
-    if(res.ok){
-      opModal.style.display='none';
-      showToast(document.getElementById('opLang').value==='kr'?'전송되었습니다. 이메일을 확인해 주세요.':'Sent. Please check your inbox.');
-      opForm.reset();
-    }else{
-      showToast(document.getElementById('opLang').value==='kr'?'전송 중 오류가 발생했습니다.':'Oops, something went wrong.');
-    }
-  }catch(err){
-    showToast(document.getElementById('opLang').value==='kr'?'네트워크 오류입니다.':'Network error.');
-  }finally{
-    submitOp.disabled = false; submitOp.innerHTML = '<span class="en">Send One-Pager</span><span class="kr" style="display:none">원페이지어 전송</span>';
-  }
-});
-
-function showToast(msg){
-  toast.textContent = msg;
-  toast.style.display='block';
-  setTimeout(()=>toast.style.display='none', 2600);
+  const lang = krHidden ? 'kr' : 'en';
+  const formLangInput = document.getElementById('formLang');
+  if(formLangInput) formLangInput.value = lang;
 }
 </script>
 
