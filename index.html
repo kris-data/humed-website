@@ -39,22 +39,24 @@ body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 .btn{appearance:none;border:0;cursor:pointer;background:#fff;color:var(--brand);padding:12px 18px;border-radius:12px;font-weight:700;box-shadow:var(--shadow);display:inline-flex;align-items:center;gap:10px;text-decoration:none}
 .btn.primary{background:#0e2ea8;color:#fff}
 
-/* 3D hero viewer */
+/* 3D hero viewer (clean) */
 .hero-3d-wrap{
-  position:relative;
-  width:100%;
-  height:clamp(420px, 68vh, 720px);
-  background:#0f2a5f;
-  border-radius:22px;
-  box-shadow:var(--shadow);
-  overflow:hidden;
-  border:1px solid rgba(255,255,255,.08);
+  position: relative;
+  width: 100%;
+  height: clamp(420px, 68vh, 720px);
+  background: transparent;      /* 박스 배경 제거 */
+  border-radius: 0;             /* 네모 박스 느낌 제거 */
+  box-shadow: 0 12px 28px rgba(0,0,0,.18); /* 은은한 그림자 */
+  overflow: hidden;
+  border: none;
 }
 model-viewer#hero3d{
-  width:100%;
-  height:100%;
+  width: 100%;
+  height: 100%;
   --poster-color: transparent;
   --progress-bar-color: #7aa5ff;
+  background: #f8faff;          /* 매우 옅은 배경 톤 */
+  border-radius: 12px;
 }
 
 /* sections */
@@ -122,11 +124,14 @@ textarea{min-height:120px}
 }
 </style>
 
+<!-- model-viewer runtime -->
 <script type="module" src="https://unpkg.com/@google/model-viewer@3.3.0/dist/model-viewer.min.js"></script>
+<!-- Preload 3D asset -->
 <link rel="preload" href="images/kiis.glb" as="fetch" crossorigin>
 </head>
 <body>
 
+<!-- header -->
 <header class="header">
   <div class="header-inner">
     <a class="logo" href="#">
@@ -141,6 +146,7 @@ textarea{min-height:120px}
   </div>
 </header>
 
+<!-- hero -->
 <section class="hero">
   <div class="hero-wrap">
     <div>
@@ -170,7 +176,7 @@ textarea{min-height:120px}
       </div>
     </div>
 
-    <!-- 3D HERO VIEWER (unchanged) -->
+    <!-- 3D HERO VIEWER -->
     <div class="hero-3d-wrap">
       <model-viewer
         id="hero3d"
@@ -182,21 +188,21 @@ textarea{min-height:120px}
         auto-rotate
         rotation-per-second="12deg"
         environment-image="legacy"
-        exposure="1.1"
-        shadow-intensity="0.7"
+        exposure="1.05"
+        shadow-intensity="0.8"
         shadow-softness="0.95"
         poster="/images/hero-implant.png"
         loading="eager"
         reveal="auto"
         ar
-        ar-modes="webxr scene-viewer quick-look"
-        style="width:100%;height:520px;background:#0e1f5a;border-radius:22px;">
+        ar-modes="webxr scene-viewer quick-look">
       </model-viewer>
-      <noscript><img src="images/hero-implant.png" alt="KiiS hybrid dental implant product image" style="width:100%;height:100%;object-fit:contain"/></noscript>
+      <noscript><img src="images/hero-implant.png" alt="KiiS hybrid dental implant product image" class="img-fit"/></noscript>
     </div>
   </div>
 </section>
 
+<!-- Why -->
 <section class="section inset">
   <div class="wrap">
     <h2 class="h2 en">Why KiiS</h2>
@@ -224,6 +230,7 @@ textarea{min-height:120px}
   </div>
 </section>
 
+<!-- Micro-CT -->
 <section class="section">
   <div class="wrap">
     <div class="figure">
@@ -244,6 +251,7 @@ textarea{min-height:120px}
   </div>
 </section>
 
+<!-- Potential clinical contexts -->
 <section class="section">
   <div class="wrap">
     <h2 class="h2 en">Potential Clinical Contexts</h2>
@@ -303,6 +311,7 @@ textarea{min-height:120px}
   </div>
 </section>
 
+<!-- Team (minimal) -->
 <section class="section">
   <div class="wrap">
     <h2 class="h2 en">Team</h2>
@@ -335,6 +344,7 @@ textarea{min-height:120px}
   </div>
 </section>
 
+<!-- Contact (purpose clarified + no investment) -->
 <section id="contact" class="section inset">
   <div class="contact-wrap">
     <div class="contact-card">
@@ -377,6 +387,7 @@ textarea{min-height:120px}
   </div>
 </section>
 
+<!-- Legal & Regulatory -->
 <section id="legal" class="section">
   <div class="wrap">
     <h2 class="h2 en">Regulatory Status & Legal Notices</h2>
@@ -409,6 +420,7 @@ textarea{min-height:120px}
 </footer>
 
 <script>
+/* Language toggle */
 function toggleLang(){
   const ens = document.querySelectorAll('.en');
   const krs = document.querySelectorAll('.kr');
