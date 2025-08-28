@@ -72,7 +72,7 @@ model-viewer#hero3d{
 
 /* two-column list */
 .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.list{padding-left:18px;margin:0}.list li{margin:10px 0;color:var(--ink-2)}
+.list{padding-left:18px;margin:0}.list li{margin:10px 0;color:#4b5b7a}
 
 /* figure */
 .figure{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center}
@@ -122,13 +122,11 @@ textarea{min-height:120px}
 }
 </style>
 
-<!-- model-viewer runtime -->
 <script type="module" src="https://unpkg.com/@google/model-viewer@3.3.0/dist/model-viewer.min.js"></script>
 <link rel="preload" href="images/kiis.glb" as="fetch" crossorigin>
 </head>
 <body>
 
-<!-- header -->
 <header class="header">
   <div class="header-inner">
     <a class="logo" href="#">
@@ -143,7 +141,6 @@ textarea{min-height:120px}
   </div>
 </header>
 
-<!-- hero -->
 <section class="hero">
   <div class="hero-wrap">
     <div>
@@ -200,7 +197,6 @@ textarea{min-height:120px}
   </div>
 </section>
 
-<!-- Why -->
 <section class="section inset">
   <div class="wrap">
     <h2 class="h2 en">Why KiiS</h2>
@@ -228,7 +224,6 @@ textarea{min-height:120px}
   </div>
 </section>
 
-<!-- Micro-CT highlight -->
 <section class="section">
   <div class="wrap">
     <div class="figure">
@@ -249,7 +244,6 @@ textarea{min-height:120px}
   </div>
 </section>
 
-<!-- Potential clinical contexts -->
 <section class="section">
   <div class="wrap">
     <h2 class="h2 en">Potential Clinical Contexts</h2>
@@ -289,55 +283,26 @@ textarea{min-height:120px}
   </div>
 </section>
 
-<!-- Progress (more cautious) -->
+<!-- Quality & Compliance ONLY (Structure removed) -->
 <section class="section inset">
   <div class="wrap">
-    <h2 class="h2 en">Progress & Validation</h2>
-    <h2 class="h2 kr" style="display:none">진행 상황 및 검증</h2>
+    <h2 class="h2 en">Quality & Compliance</h2>
+    <h2 class="h2 kr" style="display:none">품질·컴플라이언스</h2>
     <div class="card">
-      <p class="en">
-        Sterility and biocompatibility testing have been completed. FDA 510(k) preparation continues, with remaining bench tasks (fatigue verification and final surface characterization) and administrative documentation underway.
-        Manufacturing is being developed with an experienced partner. The work has received non-dilutive support (e.g., KISED and TVSF II grants).
-      </p>
-      <p class="kr" style="display:none">
-        멸균·생체적합성 시험을 완료했습니다. FDA 510(k) 준비가 진행 중이며, 남은 벤치 과제(피로도 검증, 최종 표면 특성화)와 행정 문서를 진행하고 있습니다.
-        숙련된 파트너와 제조 체계를 구축 중이며, KISED 및 TVSF II 등 비희석성 지원을 받았습니다.
-      </p>
+      <ul class="list en">
+        <li>Pre-FDA device concept — not available for sale</li>
+        <li>Sterility & biocompatibility complete</li>
+        <li>Manufacturing being developed with an experienced partner</li>
+      </ul>
+      <ul class="list kr" style="display:none">
+        <li>Pre-FDA 단계 — 판매 불가</li>
+        <li>멸균·생체적합성 완료</li>
+        <li>숙련 파트너와 제조 체계 구축 중</li>
+      </ul>
     </div>
   </div>
 </section>
 
-<!-- Company Overview -->
-<section class="section">
-  <div class="wrap">
-    <h2 class="h2 en">Headquarters & Company Overview</h2>
-    <h2 class="h2 kr" style="display:none">본사 및 회사 개요</h2>
-    <div class="grid-2">
-      <div class="card">
-        <div class="kicker en">Structure</div>
-        <div class="kicker kr" style="display:none">구조</div>
-        <p class="en"><b>HuMed US</b> (Delaware corporation) with <b>HuMed Korea</b> subsidiary — FDA, IP, and global governance centered in the US.</p>
-        <p class="kr" style="display:none"><b>HuMed US</b>(델라웨어 법인)을 중심으로 <b>HuMed Korea</b> 자회사를 두고 있으며, FDA, 지식재산권, 글로벌 거버넌스를 미국 본사에서 관리합니다.</p>
-      </div>
-      <div class="card">
-        <div class="kicker en">Quality & Compliance</div>
-        <div class="kicker kr" style="display:none">품질·컴플라이언스</div>
-        <ul class="list en">
-          <li>Pre-FDA device concept — not available for sale</li>
-          <li>Sterility & biocompatibility complete</li>
-          <li>Manufacturing being developed with an experienced partner</li>
-        </ul>
-        <ul class="list kr" style="display:none">
-          <li>Pre-FDA 단계 — 판매 불가</li>
-          <li>멸균·생체적합성 완료</li>
-          <li>숙련 파트너와 제조 체계 구축 중</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Team (minimal) -->
 <section class="section">
   <div class="wrap">
     <h2 class="h2 en">Team</h2>
@@ -370,7 +335,6 @@ textarea{min-height:120px}
   </div>
 </section>
 
-<!-- Contact (purpose clarified + no investment) -->
 <section id="contact" class="section inset">
   <div class="contact-wrap">
     <div class="contact-card">
@@ -413,7 +377,6 @@ textarea{min-height:120px}
   </div>
 </section>
 
-<!-- Legal & Regulatory -->
 <section id="legal" class="section">
   <div class="wrap">
     <h2 class="h2 en">Regulatory Status & Legal Notices</h2>
