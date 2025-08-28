@@ -80,7 +80,7 @@ model-viewer#hero3d{
 .img-fit{max-width:100%;height:auto;display:block}
 .caption{font-size:.92rem;color:#5a6a88;margin-top:8px}
 
-/* badges (kept minimal/neutral) */
+/* badges (neutral) */
 .badges{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
 .badge{background:#ecf1ff;color:#2038c8;padding:8px 12px;border-radius:999px;font-weight:700}
 
@@ -102,7 +102,7 @@ model-viewer#hero3d{
 textarea{min-height:120px}
 .contact-actions{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap}
 .btn-lg{padding:14px 18px;border-radius:12px;font-weight:800}
-.btn-ghost{background:#eef3ff;color:#2038c8;text-decoration:none}
+.note{font-size:.85rem;color:#5a6a88;margin-top:6px}
 
 /* legal */
 .legal{font-size:.9rem;color:#4b5b7a;line-height:1.6}
@@ -124,7 +124,6 @@ textarea{min-height:120px}
 
 <!-- model-viewer runtime -->
 <script type="module" src="https://unpkg.com/@google/model-viewer@3.3.0/dist/model-viewer.min.js"></script>
-<!-- Preload 3D asset -->
 <link rel="preload" href="images/kiis.glb" as="fetch" crossorigin>
 </head>
 <body>
@@ -158,14 +157,14 @@ textarea{min-height:120px}
       <p class="h-note kr" style="display:none"><b>KiiS</b>는 현재 R&amp;D 단계의 <b>Kim's Ingrowth Implant System</b>과 향후 약물전달 로드맵의 <b>Kim's Injectable Implant System</b>을 지칭합니다.</p>
 
       <ul class="h-bullets en">
-        <li>Patented internal chamber <em>designed to</em> enable research into 3-D load sharing</li>
+        <li>Patented internal chamber designed to enable research into 3-D load sharing</li>
         <li>Compatible with standard conical connection and instruments</li>
-        <li>FDA 510(k) preparation in progress; remaining tasks include fatigue verification, final surface characterization, and documentation</li>
+        <li>FDA 510(k) preparation is ongoing; remaining tasks include fatigue verification, final surface characterization, and documentation</li>
       </ul>
       <ul class="h-bullets kr" style="display:none">
-        <li>특허받은 내부 챔버는 3차원 하중 분산 <em>연구를 위해 설계</em>되었습니다</li>
+        <li>특허받은 내부 챔버는 3차원 하중 분산 연구를 가능하게 하도록 설계되었습니다</li>
         <li>표준 원추형 연결부/기구와 호환</li>
-        <li>FDA 510(k) 서류 준비 진행 중 — 잔여 과제: 피로도 검증, 최종 표면 특성화, 문서화</li>
+        <li>FDA 510(k) 준비 진행 중 — 잔여 과제: 피로도 검증, 최종 표면 특성화, 문서화</li>
       </ul>
 
       <div class="cta-row">
@@ -290,14 +289,14 @@ textarea{min-height:120px}
   </div>
 </section>
 
-<!-- Progress (kept factual, cautious) -->
+<!-- Progress (more cautious) -->
 <section class="section inset">
   <div class="wrap">
     <h2 class="h2 en">Progress & Validation</h2>
     <h2 class="h2 kr" style="display:none">진행 상황 및 검증</h2>
     <div class="card">
       <p class="en">
-        Sterility & biocompatibility testing completed. FDA 510(k) preparation is advancing, with remaining bench tasks (fatigue verification and final surface characterization) and administrative documentation underway.
+        Sterility and biocompatibility testing have been completed. FDA 510(k) preparation continues, with remaining bench tasks (fatigue verification and final surface characterization) and administrative documentation underway.
         Manufacturing is being developed with an experienced partner. The work has received non-dilutive support (e.g., KISED and TVSF II grants).
       </p>
       <p class="kr" style="display:none">
@@ -338,7 +337,7 @@ textarea{min-height:120px}
   </div>
 </section>
 
-<!-- Team -->
+<!-- Team (minimal) -->
 <section class="section">
   <div class="wrap">
     <h2 class="h2 en">Team</h2>
@@ -346,14 +345,14 @@ textarea{min-height:120px}
 
     <div class="team">
       <div class="member">
-        <b>Hongsuk Kim — CEO</b>
-        <p class="subtle en">Global commercialization (ex-P&amp;G/J&amp;J/Samsung), Harvard A.M.</p>
-        <p class="subtle kr" style="display:none">글로벌 사업화(前 P&amp;G/J&amp;J/삼성), 하버드 A.M.</p>
+        <b>Hongsuk Kim</b>
+        <p class="subtle en">Chief Executive Officer</p>
+        <p class="subtle kr" style="display:none">대표이사</p>
       </div>
       <div class="member">
-        <b>Dr. Do-Gyoon Kim — CTA, Founder</b>
-        <p class="subtle en">Ohio State Univ. Inventor of Hybrid Implant (KiiS), 20+ years R&amp;D.</p>
-        <p class="subtle kr" style="display:none">오하이오주립대, KiiS 발명자, 20년+ 연구개발.</p>
+        <b>Do-Gyoon Kim, DDS, PhD</b>
+        <p class="subtle en">Founder & Chief Technology Advisor</p>
+        <p class="subtle kr" style="display:none">창업자 · 기술고문</p>
       </div>
     </div>
 
@@ -362,36 +361,16 @@ textarea{min-height:120px}
       <span class="kr" style="display:none">어드바이저리 보드</span>
     </h3>
     <div class="team">
-      <div class="member">
-        <b>Jinyong Oh — Strategic Advisor</b>
-        <p class="subtle en">J&amp;J Medical Devices &amp; P&amp;G veteran; global scaling expert; MIT MBA</p>
-        <p class="subtle kr" style="display:none">J&amp;J·P&amp;G 출신, 글로벌 스케일링 전문가, MIT MBA</p>
-      </div>
-      <div class="member">
-        <b>John Y. Hong, DDS</b>
-        <p class="subtle en">Serial entrepreneur; Georgia Tech / Northwestern alum</p>
-        <p class="subtle kr" style="display:none">연쇄 창업가; 조지아텍/노스웨스턴 동문</p>
-      </div>
-      <div class="member">
-        <b>Paul Fagan</b>
-        <p class="subtle en">Serial life-science entrepreneur; ECM CEO; MIT MBA</p>
-        <p class="subtle kr" style="display:none">생명과학 연쇄 창업가; ECM CEO; MIT MBA</p>
-      </div>
-      <div class="member">
-        <b>Dr. Sreenivas Koka</b>
-        <p class="subtle en">Dean, Univ. of Mississippi Dentistry; former Mayo Clinic Chair</p>
-        <p class="subtle kr" style="display:none">미시시피대 치의학대학 학장; 前 메이요클리닉 체어</p>
-      </div>
-      <div class="member">
-        <b>Tom Cole</b>
-        <p class="subtle en">VP, Dentsply Sirona &amp; Inkbit (3D); MIT MBA</p>
-        <p class="subtle kr" style="display:none">Dentsply Sirona &amp; Inkbit(3D) 부사장; MIT MBA</p>
-      </div>
+      <div class="member"><b>Jinyong Oh</b><p class="subtle">Strategic Advisor</p></div>
+      <div class="member"><b>John Y. Hong, DDS</b><p class="subtle">Advisor</p></div>
+      <div class="member"><b>Paul Fagan</b><p class="subtle">Advisor</p></div>
+      <div class="member"><b>Sreenivas Koka, DDS, PhD</b><p class="subtle">Advisor</p></div>
+      <div class="member"><b>Tom Cole</b><p class="subtle">Advisor</p></div>
     </div>
   </div>
 </section>
 
-<!-- Contact -->
+<!-- Contact (purpose clarified + no investment) -->
 <section id="contact" class="section inset">
   <div class="contact-wrap">
     <div class="contact-card">
@@ -399,23 +378,33 @@ textarea{min-height:120px}
         <h2 class="en">Contact HuMed</h2>
         <h2 class="kr" style="display:none">HuMed 문의</h2>
       </div>
-      <p class="contact-sub en">For clinical/research collaboration or general questions.</p>
-      <p class="contact-sub kr" style="display:none">임상·연구 협력 또는 일반 문의에 사용해 주세요.</p>
+      <p class="contact-sub en">For clinical/research collaboration or general questions. This form is not for investment inquiries.</p>
+      <p class="contact-sub kr" style="display:none">임상·연구 협력 또는 일반 문의용입니다. 투자 관련 문의는 받지 않습니다.</p>
 
-      <!-- General inquiry (no investor language) -->
       <form class="contact-form" action="https://formspree.io/f/xpwlpzpn" method="POST">
         <input type="hidden" name="_subject" value="New inquiry from HuMed website" />
         <input type="hidden" name="_language" id="formLang" value="en" />
         <div class="row">
+          <div>
+            <label class="en" for="purpose">Purpose *</label><label class="kr" for="purpose" style="display:none">문의 목적 *</label>
+            <select id="purpose" name="purpose" class="input" required>
+              <option value="" disabled selected>— Select —</option>
+              <option value="clinical">Clinical collaboration</option>
+              <option value="research">Research inquiry</option>
+              <option value="general">General question</option>
+            </select>
+          </div>
           <div>
             <label class="en">Your Email *</label><label class="kr" style="display:none">이메일 *</label>
             <input class="input" type="email" name="email" required placeholder="name@example.com" />
           </div>
           <div>
             <label class="en">Your Message *</label><label class="kr" style="display:none">문의 내용 *</label>
-            <textarea name="message" required placeholder="Clinical collaboration, research inquiry, or general question…"></textarea>
+            <textarea name="message" required placeholder="Please share relevant details (no investment proposals)."></textarea>
           </div>
         </div>
+        <div class="note en">We do not accept or respond to investment proposals through this website.</div>
+        <div class="note kr" style="display:none">본 웹사이트를 통한 투자 제안은 접수/응답하지 않습니다.</div>
         <div class="contact-actions">
           <button class="btn primary btn-lg" type="submit"><span class="en">Send</span><span class="kr" style="display:none">전송</span></button>
         </div>
@@ -457,7 +446,6 @@ textarea{min-height:120px}
 </footer>
 
 <script>
-/* ====== Language toggle ====== */
 function toggleLang(){
   const ens = document.querySelectorAll('.en');
   const krs = document.querySelectorAll('.kr');
