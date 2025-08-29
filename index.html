@@ -57,7 +57,7 @@ model-viewer#hero3d{
   height: 100%;
   --poster-color: transparent;
   --progress-bar-color: #7aa5ff;
-  background: transparent;       /* 어두운 컨테이너 배경을 그대로 사용 */
+  background: transparent;
   border-radius: 0;
 }
 
@@ -84,16 +84,6 @@ model-viewer#hero3d{
 .img-fit{max-width:100%;height:auto;display:block}
 .caption{font-size:.92rem;color:#5a6a88;margin-top:8px}
 
-/* badges (neutral) */
-.badges{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
-.badge{background:#ecf1ff;color:#2038c8;padding:8px 12px;border-radius:999px;font-weight:700}
-
-/* team */
-.team{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.member{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:18px;border:1px solid #eef3ff}
-.member b{font-size:1.05rem}
-.subtle{color:#0b1324;margin:.4rem 0 0}
-
 /* legal */
 .legal{font-size:.9rem;color:#4b5b7a;line-height:1.6}
 .legal b{color:#0a1f66}
@@ -112,13 +102,11 @@ model-viewer#hero3d{
 }
 </style>
 
-<!-- model-viewer runtime -->
 <script type="module" src="https://unpkg.com/@google/model-viewer@3.3.0/dist/model-viewer.min.js"></script>
 <link rel="preload" href="images/kiis.glb" as="fetch" crossorigin>
 </head>
 <body>
 
-<!-- header -->
 <header class="header">
   <div class="header-inner">
     <a class="logo" href="#">
@@ -133,7 +121,6 @@ model-viewer#hero3d{
   </div>
 </header>
 
-<!-- hero -->
 <section class="hero">
   <div class="hero-wrap">
     <div>
@@ -158,12 +145,10 @@ model-viewer#hero3d{
       </ul>
 
       <div class="cta-row">
-        <!-- Contact 버튼 제거, 법적 안내만 남김 -->
         <a class="btn" href="#legal"><span class="en">Regulatory & Legal</span><span class="kr" style="display:none">규제·법적 고지</span></a>
       </div>
     </div>
 
-    <!-- 3D HERO VIEWER -->
     <div class="hero-3d-wrap">
       <model-viewer
         id="hero3d"
@@ -189,7 +174,6 @@ model-viewer#hero3d{
   </div>
 </section>
 
-<!-- Why -->
 <section class="section inset">
   <div class="wrap">
     <h2 class="h2 en">Why KiiS</h2>
@@ -217,7 +201,6 @@ model-viewer#hero3d{
   </div>
 </section>
 
-<!-- Micro-CT -->
 <section class="section">
   <div class="wrap">
     <div class="figure">
@@ -238,7 +221,6 @@ model-viewer#hero3d{
   </div>
 </section>
 
-<!-- Potential clinical contexts -->
 <section class="section">
   <div class="wrap">
     <h2 class="h2 en">Potential Clinical Contexts</h2>
@@ -278,60 +260,28 @@ model-viewer#hero3d{
   </div>
 </section>
 
-<!-- Quality & Compliance -->
+<!-- NEW: IP & Patents -->
 <section class="section inset">
   <div class="wrap">
-    <h2 class="h2 en">Quality & Compliance</h2>
-    <h2 class="h2 kr" style="display:none">품질·컴플라이언스</h2>
+    <h2 class="h2 en">Intellectual Property</h2>
+    <h2 class="h2 kr" style="display:none">지식재산권(특허)</h2>
     <div class="card">
       <ul class="list en">
-        <li>Pre-FDA device concept — not available for sale</li>
-        <li>Sterility & biocompatibility complete</li>
-        <li>Manufacturing being developed with an experienced partner</li>
+        <li><b>U.S. Patent No. 9,757,213 B2</b> — Hybrid Dental Implant (issued Sept. 12, 2017)</li>
+        <li><b>PCT filing</b> to support international patent strategy under the Patent Cooperation Treaty</li>
       </ul>
       <ul class="list kr" style="display:none">
-        <li>Pre-FDA 단계 — 판매 불가</li>
-        <li>멸균·생체적합성 완료</li>
-        <li>숙련 파트너와 제조 체계 구축 중</li>
+        <li><b>미국 특허 제 9,757,213 B2호</b> — Hybrid Dental Implant (2017년 9월 12일 등록)</li>
+        <li><b>PCT 국제출원</b>을 통해 글로벌 특허 전략을 지원</li>
       </ul>
+      <p class="legal" style="margin-top:8px">
+        <span class="en">Patent listings are provided for notice only and do not imply product availability, regulatory clearance, or any license.</span>
+        <span class="kr" style="display:none">상기 특허 표기는 공지 목적이며, 제품 판매 가능성·규제 인가 또는 라이선스를 의미하지 않습니다.</span>
+      </p>
     </div>
   </div>
 </section>
 
-<!-- Team (minimal) -->
-<section class="section">
-  <div class="wrap">
-    <h2 class="h2 en">Team</h2>
-    <h2 class="h2 kr" style="display:none">팀</h2>
-
-    <div class="team">
-      <div class="member">
-        <b>Hongsuk Kim</b>
-        <p class="subtle en">Chief Executive Officer</p>
-        <p class="subtle kr" style="display:none">대표이사</p>
-      </div>
-      <div class="member">
-        <b>Do-Gyoon Kim, DDS, PhD</b>
-        <p class="subtle en">Founder & Chief Technology Advisor</p>
-        <p class="subtle kr" style="display:none">창업자 · 기술고문</p>
-      </div>
-    </div>
-
-    <h3 class="h2" style="font-size:22px;margin-top:26px">
-      <span class="en">Advisory Board</span>
-      <span class="kr" style="display:none">어드바이저리 보드</span>
-    </h3>
-    <div class="team">
-      <div class="member"><b>Jinyong Oh</b><p class="subtle">Strategic Advisor</p></div>
-      <div class="member"><b>John Y. Hong, DDS</b><p class="subtle">Advisor</p></div>
-      <div class="member"><b>Paul Fagan</b><p class="subtle">Advisor</p></div>
-      <div class="member"><b>Sreenivas Koka, DDS, PhD</b><p class="subtle">Advisor</p></div>
-      <div class="member"><b>Tom Cole</b><p class="subtle">Advisor</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- Legal & Regulatory -->
 <section id="legal" class="section">
   <div class="wrap">
     <h2 class="h2 en">Regulatory Status & Legal Notices</h2>
@@ -360,11 +310,17 @@ model-viewer#hero3d{
 </section>
 
 <footer class="footer">
-  © 2025 HuMed Lifesciences. All rights reserved.
+  <div class="wrap" style="max-width:1100px;margin:0 auto;">
+    <div class="legal" style="text-align:center;">
+      <span class="en">For clinical or research inquiries: </span>
+      <span class="kr" style="display:none">임상/연구 관련 문의: </span>
+      <a href="mailto:hskim@humedlifesciences.com">hskim@humedlifesciences.com</a>
+    </div>
+    <div style="margin-top:10px;color:#6b7a99;">© 2025 HuMed Lifesciences. All rights reserved.</div>
+  </div>
 </footer>
 
 <script>
-/* Language toggle */
 function toggleLang(){
   const ens = document.querySelectorAll('.en');
   const krs = document.querySelectorAll('.kr');
